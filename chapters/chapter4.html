@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第四章 · 三角函数 - 高职高考数学</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    .card-header { background: var(--ch4); }
+    .section-nav a:hover, .section-nav a.active { background: var(--ch4); }
+    .step-toggle { border-color: var(--ch4); color: var(--ch4); }
+    .step-detail .step-item { border-left-color: var(--ch4); }
+    .quiz-submit { background: var(--ch4); }
+    .progress-bar { background: var(--ch4); }
+    .example-block .example-title { background: #E8F5E9; color: #43A047; }
+  </style>
+</head>
+<body><div class="progress-bar" style="width:0%"></div>
+
+  <nav class="top-nav">
+    <a href="../index.html" class="back-btn">⬅ 返回首页</a>
+    <span class="nav-title">第四章 · 三角函数</span>
+  </nav>
+
+  <div class="chapter-container">
+
+    <div class="chapter-header">
+      <div class="ch-emoji">📐</div>
+      <h1>第四章 · 三角函数</h1>
+      <p class="ch-subtitle">从直角三角形出发，认识 sin、cos、tan 三兄弟 🔺</p>
+    </div>
+
+    <div class="section-nav">
+      <a href="#s1">角度与弧度</a>
+      <a href="#s2">三角函数定义</a>
+      <a href="#s3">三角函数图像与性质</a>
+    </div>
+
+    <!--==================== 知识点1：角度与弧度 ==================== -->
+    <div class="knowledge-card" id="s1">
+      <div class="card-header">🔄 知识点一：角度与弧度</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🎡</span>
+          我们从小学就用"度"来量角（如 $90°$），但在高中数学中还有一种更方便的单位——"弧度"（rad）。就像长度可以用厘米也可以用米，角度也有两套单位。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 角度与弧度的互换</span>
+          $$\pi \text{ rad} = 180°$$
+          $$1° = \frac{\pi}{180} \text{ rad}$$
+          $$1 \text{ rad} = \frac{180°}{\pi} \approx 57.3°$$</div>
+        <div class="explain-box">
+          常用角度对照表（必须背熟！）：<br><br>
+          <table style="width:100%;text-align:center;border-collapse:collapse;">
+            <tr style="background:#f0f0f0;font-weight:bold;">
+              <td style="padding:8px;border:1px solid #ddd;">角度</td>
+              <td style="padding:8px;border:1px solid #ddd;">0°</td>
+              <td style="padding:8px;border:1px solid #ddd;">30°</td>
+              <td style="padding:8px;border:1px solid #ddd;">45°</td>
+              <td style="padding:8px;border:1px solid #ddd;">60°</td>
+              <td style="padding:8px;border:1px solid #ddd;">90°</td>
+              <td style="padding:8px;border:1px solid #ddd;">180°</td>
+              <td style="padding:8px;border:1px solid #ddd;">360°</td>
+            </tr>
+            <tr>
+              <td style="padding:8px;border:1px solid #ddd;font-weight:bold;">弧度</td>
+              <td style="padding:8px;border:1px solid #ddd;">$0$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$\dfrac{\pi}{6}$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$\dfrac{\pi}{4}$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$\dfrac{\pi}{3}$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$\dfrac{\pi}{2}$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$\pi$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$2\pi$</td>
+            </tr>
+          </table><br>
+          💡 记忆技巧：$30°,45°, 60°$ 对应分母$6, 4, 3$，分子都是 $\pi$。分母从大到小：$6 \to 4 \to 3$。
+        </div>
+
+        <!--例题1-->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>将 $120°$ 转换为弧度。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$120° = 120 \times \dfrac{\pi}{180} = \dfrac{120\pi}{180} = \dfrac{2\pi}{3}$</div>
+                <div class="step-item">✅ 答案：$\dfrac{2\pi}{3}$ rad</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>将 $\dfrac{3\pi}{4}$ 转换为角度。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$\dfrac{3\pi}{4} = \dfrac{3\pi}{4} \times \dfrac{180°}{\pi} = \dfrac{3 \times 180°}{4} = 135°$</div>
+                <div class="step-item">✅ 答案：$135°$</div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+    </div>
+
+    <!-- ==================== 知识点2：三角函数的定义 ==================== -->
+    <div class="knowledge-card" id="s2">
+      <div class="card-header">🔺 知识点二：三角函数的定义与特殊值</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🏔️</span>
+          想象你站在一座山脚下（直角三角形）。$\sin$ 是"山有多高"（对边/斜边），$\cos$ 是"你走了多远"（邻边/斜边），$\tan$ 是"山有多陡"（对边/邻边）。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 直角三角形中的定义</span>
+          $$\sin \theta = \frac{\text{对边}}{\text{斜边}} \qquad \cos \theta = \frac{\text{邻边}}{\text{斜边}} \qquad \tan \theta = \frac{\text{对边}}{\text{邻边}}$$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 单位圆定义</span>
+          $$\text{角} \theta \text{ 终边与单位圆交点为 } P(x, y)$$
+          $$\sin \theta = y \qquad \cos \theta = x \qquad \tan \theta = \frac{y}{x}$$
+        </div>
+
+        <div class="explain-box">
+          <strong>特殊角的三角函数值（必须背！）</strong><br><br>
+          <table style="width:100%;text-align:center;border-collapse:collapse;">
+            <tr style="background:#f0f0f0;font-weight:bold;">
+              <td style="padding:8px;border:1px solid #ddd;">$\theta$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$0°$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$30°$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$45°$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$60°$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$90°$</td>
+            </tr>
+            <tr>
+              <td style="padding:8px;border:1px solid #ddd;">$\sin\theta$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$0$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$\dfrac{1}{2}$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$\dfrac{\sqrt{2}}{2}$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$\dfrac{\sqrt{3}}{2}$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$1$</td>
+            </tr>
+            <tr>
+              <td style="padding:8px;border:1px solid #ddd;">$\cos\theta$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$1$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$\dfrac{\sqrt{3}}{2}$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$\dfrac{\sqrt{2}}{2}$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$\dfrac{1}{2}$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$0$</td>
+            </tr>
+            <tr>
+              <td style="padding:8px;border:1px solid #ddd;">$\tan\theta$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$0$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$\dfrac{\sqrt{3}}{3}$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$1$</td>
+              <td style="padding:8px;border:1px solid #ddd;">$\sqrt{3}$</td>
+              <td style="padding:8px;border:1px solid #ddd;">不存在</td>
+            </tr>
+          </table>
+          <br>
+          💡 背诵口诀（sin值）：$\dfrac{\sqrt{0}}{2}, \dfrac{\sqrt{1}}{2}, \dfrac{\sqrt{2}}{2}, \dfrac{\sqrt{3}}{2}, \dfrac{\sqrt{4}}{2}$，即根号下 $0,1,2,3,4$ 再除以 $2$。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 基本恒等式</span>
+          $$\sin^2\theta + \cos^2\theta = 1$$
+          $$\tan\theta = \frac{\sin\theta}{\cos\theta}$$
+        </div>
+
+        <!-- 例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>求 $\sin 30° + \cos 60°$ 的值。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$\sin 30° = \dfrac{1}{2}$</div>
+                <div class="step-item">$\cos 60° = \dfrac{1}{2}$</div>
+                <div class="step-item">$\sin 30° + \cos 60° = \dfrac{1}{2} + \dfrac{1}{2} = 1$</div>
+                <div class="step-item">✅ 答案：$1$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>求 $2\sin 45° \cdot \cos 45°$ 的值。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$\sin 45° = \cos 45° = \dfrac{\sqrt{2}}{2}$</div>
+                <div class="step-item">$2 \times \dfrac{\sqrt{2}}{2} \times \dfrac{\sqrt{2}}{2} = 2 \times \dfrac{2}{4} = 1$</div>
+                <div class="step-item">✅ 答案：$1$</div>
+              </div>
+            </div>
+          </div>
+        </div><!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>已知 $\sin\theta = \dfrac{3}{5}$，$\theta$ 为第一象限角，求 $\cos\theta$ 和 $\tan\theta$。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">由 $\sin^2\theta + \cos^2\theta = 1$</div>
+                <div class="step-item">$\cos^2\theta = 1 - \dfrac{9}{25} = \dfrac{16}{25}$</div>
+                <div class="step-item">第一象限 $\cos\theta > 0$，所以 $\cos\theta = \dfrac{4}{5}$</div>
+                <div class="step-item">$\tan\theta = \dfrac{\sin\theta}{\cos\theta} = \dfrac{3/5}{4/5} = \dfrac{3}{4}$</div>
+                <div class="step-item">✅ 答案：$\cos\theta = \dfrac{4}{5}$，$\tan\theta = \dfrac{3}{4}$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题4 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题4 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>求 $\sin 150°$ 的值。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$150° = 180° - 30°$，在第二象限</div>
+                <div class="step-item">$\sin(180° - \theta) = \sin\theta$</div>
+                <div class="step-item">$\sin 150° = \sin30° = \dfrac{1}{2}$</div>
+                <div class="step-item">✅ 答案：$\dfrac{1}{2}$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 知识点3：三角函数图像与性质 ==================== -->
+    <div class="knowledge-card" id="s3">
+      <div class="card-header">🌊 知识点三：三角函数的图像与性质</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🌊</span>
+          $\sin x$ 的图像就像海浪一样，不停地上下波动。它有周期性（每 $2\pi$ 重复一次），有最高点和最低点。掌握图像的特征，很多题可以"看图说话"。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 正弦函数 $y = \sin x$ 的性质</span>
+          $$\text{定义域：} \mathbb{R} \qquad \text{值域：} [-1, 1]$$
+          $$\text{周期：} T = 2\pi$$
+          $$\text{奇函数：} \sin(-x) = -\sin x$$</div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 余弦函数 $y = \cos x$ 的性质</span>
+          $$\text{定义域：} \mathbb{R} \qquad \text{值域：} [-1, 1]$$
+          $$\text{周期：} T = 2\pi$$
+          $$\text{偶函数：} \cos(-x) = \cos x$$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 $y = A\sin(\omega x + \varphi)$ 的参数含义</span>
+          $$A \text{：振幅（波浪的高度）}$$
+          $$\omega \text{：角频率，周期 } T = \frac{2\pi}{\omega}$$
+          $$\varphi \text{：初相（图像左右平移）}$$
+        </div><div class="explain-box">
+          <strong>$A$</strong>：决定最高点和最低点，最大值为 $A$，最小值为 $-A$。<br>
+          <strong>$\omega$</strong>：$\omega$ 越大，波浪越"密"（周期越短）。<br>
+          <strong>$\varphi$</strong>：$\varphi > 0$ 图像左移，$\varphi < 0$ 图像右移。<br><br>
+          💡 考试中常考求周期：直接用 $T = \dfrac{2\pi}{\omega}$
+        </div>
+
+        <!-- 例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>函数 $y = \sin x$ 的最大值和最小值分别是多少？</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$\sin x$ 的值域是 $[-1, 1]$</div>
+                <div class="step-item">最大值为 $1$（在 $x = \dfrac{\pi}{2}$ 时取到）</div>
+                <div class="step-item">最小值为 $-1$（在 $x = \dfrac{3\pi}{2}$ 时取到）</div>
+                <div class="step-item">✅ 答案：最大值 $1$，最小值 $-1$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>求函数 $y = 3\sin(2x + \dfrac{\pi}{3})$ 的振幅、周期。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$A = 3$，振幅为 $3$（最大值3，最小值-3）</div>
+                <div class="step-item">$\omega = 2$，周期 $T = \dfrac{2\pi}{\omega} = \dfrac{2\pi}{2} = \pi$</div>
+                <div class="step-item">✅ 答案：振幅 $3$，周期 $\pi$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>求函数 $y = 2\sin x + 1$ 的值域。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$\sin x \in [-1, 1]$</div>
+                <div class="step-item">$2\sin x \in [-2, 2]$</div>
+                <div class="step-item">$2\sin x + 1 \in [-2+1, 2+1] = [-1, 3]$</div>
+                <div class="step-item">✅ 答案：值域为 $[-1, 3]$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题4 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题4 <span class="tag tag-hard">挑战</span></div>
+          <div class="example-content">
+            <p>函数 $y = \sin(2x - \dfrac{\pi}{6})$ 的单调递增区间是？</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$\sin u$ 在 $-\dfrac{\pi}{2} + 2k\pi \leq u \leq \dfrac{\pi}{2} + 2k\pi$ 上递增</div>
+                <div class="step-item">令 $u = 2x - \dfrac{\pi}{6}$</div>
+                <div class="step-item">$-\dfrac{\pi}{2} + 2k\pi \leq 2x - \dfrac{\pi}{6} \leq \dfrac{\pi}{2} + 2k\pi$</div>
+                <div class="step-item">$-\dfrac{\pi}{2} + \dfrac{\pi}{6} + 2k\pi \leq 2x \leq \dfrac{\pi}{2} + \dfrac{\pi}{6} + 2k\pi$</div>
+                <div class="step-item">$-\dfrac{\pi}{3} + 2k\pi \leq 2x \leq \dfrac{2\pi}{3} + 2k\pi$</div>
+                <div class="step-item">$-\dfrac{\pi}{6} + k\pi \leq x \leq \dfrac{\pi}{3} + k\pi$</div>
+                <div class="step-item">✅ 答案：$\left[-\dfrac{\pi}{6}+k\pi, \; \dfrac{\pi}{3}+k\pi\right]$，$k \in \mathbb{Z}$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 章节小测验 ==================== -->
+    <div class="quiz-section">
+      <div class="quiz-title">🧪 第四章 · 小测验</div><!--题目1 -->
+      <div class="quiz-card">
+        <div class="quiz-question">1. $60°$ 等于多少弧度？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $\dfrac{\pi}{4}$</button>
+          <button class="quiz-option" data-correct="true">B. $\dfrac{\pi}{3}$</button>
+          <button class="quiz-option" data-correct="false">C. $\dfrac{\pi}{6}$</button>
+          <button class="quiz-option" data-correct="false">D. $\dfrac{\pi}{2}$</button>
+        </div>
+        <div class="quiz-explanation">💡 $60° = 60\times \dfrac{\pi}{180} = \dfrac{\pi}{3}$。</div>
+      </div>
+
+      <!-- 题目2 -->
+      <div class="quiz-card">
+        <div class="quiz-question">2. $\sin 30°$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $\dfrac{1}{2}$</button>
+          <button class="quiz-option" data-correct="false">B. $\dfrac{\sqrt{2}}{2}$</button>
+          <button class="quiz-option" data-correct="false">C. $\dfrac{\sqrt{3}}{2}$</button>
+          <button class="quiz-option" data-correct="false">D. $1$</button>
+        </div>
+        <div class="quiz-explanation">💡 特殊角必背：$\sin 30° = \dfrac{1}{2}$。</div>
+      </div>
+
+      <!-- 题目3 -->
+      <div class="quiz-card">
+        <div class="quiz-question">3. $\cos 60°$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $\dfrac{1}{2}$</button>
+          <button class="quiz-option" data-correct="false">B. $\dfrac{\sqrt{3}}{2}$</button>
+          <button class="quiz-option" data-correct="false">C. $0$</button>
+          <button class="quiz-option" data-correct="false">D. $1$</button>
+        </div>
+        <div class="quiz-explanation">💡 $\cos 60° = \dfrac{1}{2}$。注意 $\sin 60° = \dfrac{\sqrt{3}}{2}$，别搞混了！</div>
+      </div>
+
+      <!-- 题目4 -->
+      <div class="quiz-card">
+        <div class="quiz-question">4. $\tan 45°$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $0$</button>
+          <button class="quiz-option" data-correct="true">B. $1$</button>
+          <button class="quiz-option" data-correct="false">C. $\sqrt{3}$</button>
+          <button class="quiz-option" data-correct="false">D. 不存在</button>
+        </div>
+        <div class="quiz-explanation">💡 $\tan 45° = \dfrac{\sin 45°}{\cos 45°} = \dfrac{\sqrt{2}/2}{\sqrt{2}/2} = 1$。</div>
+      </div>
+
+      <!-- 题目5 -->
+      <div class="quiz-card">
+        <div class="quiz-question">5. 已知 $\sin\theta = \dfrac{4}{5}$，$\theta$ 为第一象限角，则 $\cos\theta$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $\dfrac{3}{5}$</button>
+          <button class="quiz-option" data-correct="false">B. $\dfrac{4}{5}$</button>
+          <button class="quiz-option" data-correct="false">C. $-\dfrac{3}{5}$</button>
+          <button class="quiz-option" data-correct="false">D. $\dfrac{5}{4}$</button>
+        </div>
+        <div class="quiz-explanation">💡 $\cos^2\theta = 1 - \dfrac{16}{25} = \dfrac{9}{25}$，第一象限取正值 $\cos\theta = \dfrac{3}{5}$。</div>
+      </div>
+
+      <!-- 题目6 -->
+      <div class="quiz-card">
+        <div class="quiz-question">6. $\sin 150°$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $\dfrac{1}{2}$</button>
+          <button class="quiz-option" data-correct="false">B. $-\dfrac{1}{2}$</button>
+          <button class="quiz-option" data-correct="false">C. $\dfrac{\sqrt{3}}{2}$</button>
+          <button class="quiz-option" data-correct="false">D. $-\dfrac{\sqrt{3}}{2}$</button>
+        </div>
+        <div class="quiz-explanation">💡 $\sin 150° = \sin(180°-30°) = \sin 30° = \dfrac{1}{2}$。第二象限 sin 为正。</div>
+      </div>
+
+      <!-- 题目7 -->
+      <div class="quiz-card">
+        <div class="quiz-question">7. 函数 $y = \sin x$ 是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. 奇函数</button>
+          <button class="quiz-option" data-correct="false">B. 偶函数</button>
+          <button class="quiz-option" data-correct="false">C. 非奇非偶</button>
+          <button class="quiz-option" data-correct="false">D. 既奇又偶</button>
+        </div>
+        <div class="quiz-explanation">💡 $\sin(-x) = -\sin x$，满足奇函数定义 $f(-x) = -f(x)$。</div>
+      </div>
+
+      <!-- 题目8 -->
+      <div class="quiz-card">
+        <div class="quiz-question">8. 函数 $y = 2\sin(3x)$ 的周期是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $2\pi$</button>
+          <button class="quiz-option" data-correct="false">B. $\pi$</button>
+          <button class="quiz-option" data-correct="true">C. $\dfrac{2\pi}{3}$</button>
+          <button class="quiz-option" data-correct="false">D. $3\pi$</button>
+        </div>
+        <div class="quiz-explanation">💡 $T = \dfrac{2\pi}{\omega} = \dfrac{2\pi}{3}$。$\omega$ 越大周期越短。</div>
+      </div>
+
+      <!-- 题目9 -->
+      <div class="quiz-card">
+        <div class="quiz-question">9. 函数 $y = 3\sin x - 1$ 的最大值是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $3$</button>
+          <button class="quiz-option" data-correct="true">B. $2$</button>
+          <button class="quiz-option" data-correct="false">C. $4$</button>
+          <button class="quiz-option" data-correct="false">D. $-1$</button>
+        </div>
+        <div class="quiz-explanation">💡 $\sin x$ 最大值为 $1$，所以 $y$ 最大值 $= 3 \times 1 - 1 = 2$。</div>
+      </div>
+
+      <!-- 题目10 -->
+      <div class="quiz-card">
+        <div class="quiz-question">10. $\sin^2 60° + \cos^2 60°$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $0$</button>
+          <button class="quiz-option" data-correct="true">B. $1$</button>
+          <button class="quiz-option" data-correct="false">C. $\dfrac{1}{2}$</button>
+          <button class="quiz-option" data-correct="false">D. $2$</button>
+        </div>
+        <div class="quiz-explanation">💡 这是基本恒等式 $\sin^2\theta + \cos^2\theta = 1$，对任意角都成立！不用算具体值。</div>
+      </div>
+
+      <!-- 测验结果 -->
+      <div class="quiz-result">
+        <div class="score">0/ 10</div>
+        <div class="score-text">正确率：0%</div>
+        <div class="encouragement"></div>
+        <button class="quiz-submit mt-3" onclick="resetQuiz()" style="background: var(--ch4);">🔄 重新测验</button>
+      </div></div>
+
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <p>📐 高职高考数学 ·轻松学</p>
+    <p>第四章 · 三角函数 ✅</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
