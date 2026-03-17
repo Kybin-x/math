@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第七章 · 直线与圆 - 高职高考数学</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- KaTeX（方案三：cloudflare CDN）-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+  <style>
+    .card-header { background: var(--ch7); }
+    .section-nav a:hover, .section-nav a.active { background: var(--ch7); }
+    .step-toggle { border-color: var(--ch7); color: var(--ch7); }
+    .step-detail .step-item { border-left-color: var(--ch7); }
+    .quiz-submit { background: var(--ch7); }
+    .progress-bar { background: var(--ch7); }
+    .example-block .example-title { background: #FCE4EC; color: #C62828; }
+  </style>
+</head>
+<body><div class="progress-bar" style="width:0%"></div>
+
+  <nav class="top-nav">
+    <a href="../index.html" class="back-btn">⬅ 返回首页</a>
+    <span class="nav-title">第七章 · 直线与圆</span>
+  </nav>
+
+  <div class="chapter-container">
+
+    <div class="chapter-header">
+      <div class="ch-emoji">📏</div>
+      <h1>第七章 · 直线与圆</h1>
+      <p class="ch-subtitle">用方程描述图形——解析几何入门 🎯</p>
+    </div>
+
+    <div class="section-nav">
+      <a href="#s1">直线方程</a>
+      <a href="#s2">两直线关系</a>
+      <a href="#s3">圆的方程</a>
+      <a href="#s4">直线与圆</a>
+    </div>
+
+    <!--==================== 知识点1：直线方程 ==================== -->
+    <div class="knowledge-card" id="s1">
+      <div class="card-header">📐 知识点一：直线的方程</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🛤️</span>
+          一条笔直的铁轨可以用一个方程来描述。<strong>斜率</strong>描述它有多"陡"，<strong>截距</strong>告诉我们它在哪里穿过坐标轴。掌握直线方程，就能精确定位任何一条直线！
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐斜率公式</span>
+          $$k = \frac{y_2 - y_1}{x_2 - x_1} \quad (x_1 \neq x_2)$$
+        </div>
+        <div class="explain-box">
+          💡 斜率就是"上升量÷ 前进量"。<br>
+          · $k > 0$：直线从左下到右上（上坡）↗<br>
+          · $k < 0$：直线从左上到右下（下坡）↘<br>
+          · $k = 0$：水平线 →<br>
+          · 斜率不存在：垂直线（$x_1 = x_2$）↑
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 直线方程的常见形式</span>
+          $$\text{斜截式：} y = kx + b$$
+          $$\text{点斜式：} y - y_0 = k(x - x_0)$$
+          $$\text{一般式：} Ax + By + C = 0$$
+        </div>
+        <div class="explain-box">
+          <strong>斜截式</strong> $y = kx + b$：$k$ 是斜率，$b$ 是 $y$ 轴截距（直线穿过 $(0, b)$）。<br><br>
+          <strong>点斜式</strong>：已知一个点 $(x_0, y_0)$ 和斜率 $k$ 时使用。<br><br>
+          <strong>一般式</strong>：最万能的形式，任何直线都能写成这样（包括垂直线）。<br><br>
+          ⚠️ 垂直线（如 $x = 3$）没有斜率，不能写成斜截式！
+        </div>
+
+        <!--例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>求过点 $A(1, 2)$ 和 $B(3, 6)$ 的直线方程。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$k = \dfrac{6-2}{3-1} = \dfrac{4}{2} = 2$</div>
+                <div class="step-item">用点斜式，取点 $A(1,2)$：$y - 2 = 2(x-1)$</div>
+                <div class="step-item">$y = 2x$</div>
+                <div class="step-item">✅ 答案：$y = 2x$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>直线 $y = -3x + 5$ 的斜率和$y$ 轴截距分别是？</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">对照$y = kx + b$</div>
+                <div class="step-item">斜率 $k = -3$，$y$ 轴截距 $b = 5$</div>
+                <div class="step-item">✅ 答案：$k = -3$，$b = 5$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 知识点2：两直线关系 ==================== -->
+    <div class="knowledge-card" id="s2">
+      <div class="card-header">🔀 知识点二：两直线的位置关系</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">✂️</span>
+          两条直线要么<strong>平行</strong>（永远不相交）、要么<strong>相交</strong>（有一个交点）、要么<strong>重合</strong>（完全重叠）。判断它们的关系，只需看<strong>斜率</strong>！
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 平行与垂直条件</span>
+          $$l_1 \parallel l_2\iff k_1 = k_2 \text{（且不重合）}$$
+          $$l_1 \perp l_2 \iff k_1 \cdot k_2 = -1$$
+        </div>
+        <div class="explain-box">
+          💡 <strong>平行</strong>：斜率相等（坡度一样，当然不会交叉）。<br>💡 <strong>垂直</strong>：斜率之积为 $-1$（一条上坡、一条下坡，且刚好互为"负倒数"）。<br><br>
+          例：$k_1=2$，则与之垂直的直线斜率 $k_2 = -\dfrac{1}{2}$。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 点到直线的距离</span>
+          $$d = \frac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}$$
+          $$\text{点 } P(x_0, y_0) \text{ 到直线 } Ax + By + C = 0 \text{ 的距离}$$
+        </div>
+        <div class="explain-box">
+          💡 记忆口诀：<strong>点代入、取绝对、除以根下A²加B²</strong>。
+        </div>
+
+        <!-- 例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>判断 $l_1: y = 2x + 1$ 和 $l_2: y = 2x - 3$ 的位置关系。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$k_1 = 2$，$k_2 = 2$，$k_1 = k_2$</div>
+                <div class="step-item">截距不同（$b_1 = 1 \neq b_2 = -3$），不重合</div>
+                <div class="step-item">✅ 答案：$l_1 \parallel l_2$（平行）</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>直线 $l_1: y = 3x + 1$，求与 $l_1$ 垂直的直线的斜率。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$k_1 = 3$</div>
+                <div class="step-item">垂直条件：$k_1 \cdot k_2 = -1$</div>
+                <div class="step-item">$k_2 = -\dfrac{1}{3}$</div>
+                <div class="step-item">✅ 答案：垂直线的斜率为 $-\dfrac{1}{3}$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>求点 $P(1, 2)$ 到直线 $3x + 4y - 5= 0$ 的距离。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$A=3, B=4, C=-5$，$P(1,2)$</div>
+                <div class="step-item">$d = \dfrac{|3\times1+4\times2-5|}{\sqrt{3^2+4^2}}$</div>
+                <div class="step-item">$= \dfrac{|3+8-5|}{\sqrt{9+16}} = \dfrac{|6|}{\sqrt{25}} = \dfrac{6}{5}$</div>
+                <div class="step-item">✅ 答案：$d = \dfrac{6}{5} = 1.2$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 知识点3：圆的方程 ==================== -->
+    <div class="knowledge-card" id="s3">
+      <div class="card-header">⭕ 知识点三：圆的方程</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🎯</span>
+          圆就是"到一个固定点（圆心）距离相等（半径）的所有点的集合"。知道圆心和半径，就能写出圆的方程！
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 圆的标准方程</span>
+          $$(x-a)^2 + (y-b)^2 = r^2$$
+          $$\text{圆心 } C(a, b)\text{，半径 } r$$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 圆的一般方程</span>
+          $$x^2 + y^2 + Dx + Ey + F = 0$$
+          $$\text{圆心}\left(-\frac{D}{2},\ -\frac{E}{2}\right)\text{，半径} r = \frac{1}{2}\sqrt{D^2+E^2-4F}$$
+        </div>
+        <div class="explain-box">
+          💡 标准方程 → 一般方程：展开即可。<br>
+          💡 一般方程 → 标准方程：<strong>配方</strong>！<br><br>
+          ⚠️ 一般方程表示圆的条件：$D^2+E^2-4F > 0$
+        </div>
+
+        <!-- 例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>写出圆心 $C(2, -1)$、半径 $r = 3$ 的圆的方程。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">代入标准方程：$(x-a)^2+(y-b)^2=r^2$</div>
+                <div class="step-item">$(x-2)^2+(y+1)^2=9$</div>
+                <div class="step-item">✅ 答案：$(x-2)^2+(y+1)^2=9$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>求$x^2+y^2-4x+6y+4=0$ 的圆心和半径。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">配方 $x$：$x^2-4x = (x-2)^2-4$</div>
+                <div class="step-item">配方 $y$：$y^2+6y = (y+3)^2-9$</div>
+                <div class="step-item">$(x-2)^2 -4 + (y+3)^2 - 9 + 4 = 0$</div>
+                <div class="step-item">$(x-2)^2 + (y+3)^2 = 9$</div>
+                <div class="step-item">圆心 $(2, -3)$，半径 $r = 3$</div>
+                <div class="step-item">✅ 答案：圆心 $(2,-3)$，$r=3$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>圆 $x^2+y^2-2x+4y-4=0$，用公式法求圆心和半径。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$D=-2,\ E=4,\ F=-4$</div>
+                <div class="step-item">圆心 $= \left(-\dfrac{-2}{2},\ -\dfrac{4}{2}\right) = (1, -2)$</div>
+                <div class="step-item">$r = \dfrac{1}{2}\sqrt{4+16+16} = \dfrac{1}{2}\sqrt{36} = 3$</div>
+                <div class="step-item">✅ 答案：圆心 $(1,-2)$，$r=3$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 知识点4：直线与圆的位置关系 ==================== -->
+    <div class="knowledge-card" id="s4">
+      <div class="card-header">🎯 知识点四：直线与圆的位置关系</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🏀</span>
+          把圆想象成一个篮球框，直线是投球路线：<br>
+          · 球飞过框外（<strong>相离</strong>）：$d > r$<br>
+          · 球刚好擦框（<strong>相切</strong>）：$d = r$<br>
+          · 球穿过框（<strong>相交</strong>）：$d < r$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 判断方法：圆心到直线的距离 $d$ 与半径 $r$ 的比较</span>
+          $$d > r \implies \text{相离（无交点）}$$
+          $$d = r \implies \text{相切（1个交点）}$$
+          $$d < r \implies \text{相交（2个交点）}$$
+        </div>
+        <div class="explain-box">
+          💡 步骤：① 找圆心和半径 → ② 用点到直线距离公式算 $d$ → ③ 比较 $d$ 和 $r$。
+        </div>
+
+        <!-- 例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>判断直线 $3x+4y-15=0$ 与圆 $x^2+y^2=9$ 的位置关系。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">圆心 $O(0,0)$，$r=3$</div>
+                <div class="step-item">$d = \dfrac{|3\times0+4\times0-15|}{\sqrt{9+16}} = \dfrac{15}{5} = 3$</div>
+                <div class="step-item">$d = r = 3$</div>
+                <div class="step-item">✅ 答案：相切（有1个切点）</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>判断直线 $x - y + 1 = 0$ 与圆 $(x-1)^2+(y-1)^2=4$ 的位置关系。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">圆心 $C(1,1)$，$r = 2$</div>
+                <div class="step-item">$d = \dfrac{|1-1+1|}{\sqrt{1+1}} = \dfrac{1}{\sqrt{2}} = \dfrac{\sqrt{2}}{2} \approx 0.707$</div>
+                <div class="step-item">$d = \dfrac{\sqrt{2}}{2} < r = 2$</div>
+                <div class="step-item">✅ 答案：相交（有2个交点）</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-hard">挑战</span></div>
+          <div class="example-content">
+            <p>求圆 $x^2+y^2=5$ 过点 $P(1,2)$ 的切线方程。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">先验证 $P$ 在圆上：$1^2+2^2=5$ ✓</div>
+                <div class="step-item">圆心 $O(0,0)$，$OP$ 的斜率 $k_{OP}=\dfrac{2}{1}=2$</div>
+                <div class="step-item">切线 $\perp OP$，所以切线斜率 $k = -\dfrac{1}{2}$</div>
+                <div class="step-item">切线过$P(1,2)$：$y-2=-\dfrac{1}{2}(x-1)$</div>
+                <div class="step-item">$y = -\dfrac{1}{2}x + \dfrac{5}{2}$，即 $x+2y-5=0$</div>
+                <div class="step-item">✅ 答案：$x+2y-5=0$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 章节小测验 ==================== -->
+    <div class="quiz-section">
+      <div class="quiz-title">🧪 第七章 · 小测验</div>
+
+      <!-- 题目1 -->
+      <div class="quiz-card">
+        <div class="quiz-question">1. 过点 $(1,3)$ 和 $(3,7)$ 的直线斜率是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $2$</button>
+          <button class="quiz-option" data-correct="false">B. $4$</button>
+          <button class="quiz-option" data-correct="false">C. $\dfrac{1}{2}$</button>
+          <button class="quiz-option" data-correct="false">D. $3$</button>
+        </div>
+        <div class="quiz-explanation">💡 $k = \dfrac{7-3}{3-1} = \dfrac{4}{2} = 2$。</div>
+      </div>
+
+      <!-- 题目2 -->
+      <div class="quiz-card">
+        <div class="quiz-question">2. 直线 $y = -2x + 3$ 的 $y$ 轴截距是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $-2$</button>
+          <button class="quiz-option" data-correct="true">B. $3$</button>
+          <button class="quiz-option" data-correct="false">C. $-3$</button>
+          <button class="quiz-option" data-correct="false">D. $2$</button>
+        </div>
+        <div class="quiz-explanation">💡 $y = kx + b$，$b = 3$ 即 $y$ 轴截距。</div>
+      </div>
+
+      <!-- 题目3 -->
+      <div class="quiz-card">
+        <div class="quiz-question">3. 与$y = 3x + 1$ 平行的直线，斜率是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $3$</button>
+          <button class="quiz-option" data-correct="false">B. $-3$</button>
+          <button class="quiz-option" data-correct="false">C. $\dfrac{1}{3}$</button>
+          <button class="quiz-option" data-correct="false">D. $-\dfrac{1}{3}$</button>
+        </div>
+        <div class="quiz-explanation">💡 平行 →斜率相等，$k = 3$。</div>
+      </div>
+
+      <!-- 题目4 -->
+      <div class="quiz-card">
+        <div class="quiz-question">4. 与 $y =2x - 5$ 垂直的直线，斜率是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $2$</button>
+          <button class="quiz-option" data-correct="false">B. $-2$</button>
+          <button class="quiz-option" data-correct="true">C. $-\dfrac{1}{2}$</button>
+          <button class="quiz-option" data-correct="false">D. $\dfrac{1}{2}$</button>
+        </div>
+        <div class="quiz-explanation">💡 垂直 → $k_1 \cdot k_2 = -1$，$k_2 = -\dfrac{1}{2}$。</div>
+      </div>
+
+      <!-- 题目5 -->
+      <div class="quiz-card">
+        <div class="quiz-question">5. 圆 $(x-1)^2+(y+2)^2=16$ 的圆心和半径？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. 圆心 $(1,-2)$，$r=4$</button>
+          <button class="quiz-option" data-correct="false">B. 圆心 $(-1,2)$，$r=4$</button>
+          <button class="quiz-option" data-correct="false">C. 圆心 $(1,-2)$，$r=16$</button>
+          <button class="quiz-option" data-correct="false">D. 圆心 $(1,2)$，$r=4$</button>
+        </div>
+        <div class="quiz-explanation">💡 $(x-1)^2 → a=1$，$(y+2)^2=(y-(-2))^2 → b=-2$，$r^2=16 → r=4$。</div>
+      </div>
+
+      <!-- 题目6 -->
+      <div class="quiz-card">
+        <div class="quiz-question">6. 点 $(0,0)$ 到直线 $3x+4y-10=0$ 的距离是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $2$</button>
+          <button class="quiz-option" data-correct="false">B. $10$</button>
+          <button class="quiz-option" data-correct="false">C. $\dfrac{10}{7}$</button>
+          <button class="quiz-option" data-correct="false">D. $5$</button>
+        </div>
+        <div class="quiz-explanation">💡 $d=\dfrac{|0+0-10|}{\sqrt{9+16}}=\dfrac{10}{5}=2$。</div>
+      </div>
+
+      <!-- 题目7 -->
+      <div class="quiz-card">
+        <div class="quiz-question">7. 圆 $x^2+y^2=25$ 的圆心和半径？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. 圆心 $(0,0)$，$r=5$</button>
+          <button class="quiz-option" data-correct="false">B. 圆心 $(0,0)$，$r=25$</button>
+          <button class="quiz-option" data-correct="false">C. 圆心 $(5,5)$，$r=5$</button>
+          <button class="quiz-option" data-correct="false">D. 圆心 $(0,0)$，$r=\sqrt{5}$</button>
+        </div>
+        <div class="quiz-explanation">💡 $(x-0)^2+(y-0)^2=25$，圆心原点，$r=\sqrt{25}=5$。</div>
+      </div>
+
+      <!-- 题目8 -->
+      <div class="quiz-card">
+        <div class="quiz-question">8. 直线 $x+y-6=0$ 与圆 $x^2+y^2=9$ 的位置关系？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. 相交</button>
+          <button class="quiz-option" data-correct="false">B. 相切</button>
+          <button class="quiz-option" data-correct="true">C. 相离</button>
+          <button class="quiz-option" data-correct="false">D. 无法判断</button>
+        </div>
+        <div class="quiz-explanation">💡 圆心 $(0,0)$，$r=3$。$d=\dfrac{|0+0-6|}{\sqrt{2}}=\dfrac{6}{\sqrt{2}}=3\sqrt{2}\approx 4.24 > 3=r$，相离。</div>
+      </div>
+
+      <!-- 题目9 -->
+      <div class="quiz-card">
+        <div class="quiz-question">9. 过原点且斜率为 $-1$ 的直线方程是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $y = x$</button>
+          <button class="quiz-option" data-correct="true">B. $y = -x$</button>
+          <button class="quiz-option" data-correct="false">C. $x = -1$</button>
+          <button class="quiz-option" data-correct="false">D. $y = -1$</button>
+        </div>
+        <div class="quiz-explanation">💡 过原点 → $b=0$，$k=-1$，所以 $y=-x$。</div>
+      </div>
+
+      <!-- 题目10 -->
+      <div class="quiz-card">
+        <div class="quiz-question">10. 直线 $x = 5$ 的斜率是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $0$</button>
+          <button class="quiz-option" data-correct="false">B. $5$</button>
+          <button class="quiz-option" data-correct="false">C. $1$</button>
+          <button class="quiz-option" data-correct="true">D. 不存在</button>
+        </div>
+        <div class="quiz-explanation">💡 $x=5$ 是一条垂直线（竖线），斜率不存在！只有水平线斜率才为 $0$。</div>
+      </div>
+
+      <!-- 测验结果 -->
+      <div class="quiz-result">
+        <div class="score">0/ 10</div>
+        <div class="score-text">正确率：0%</div>
+        <div class="encouragement"></div>
+        <button class="quiz-submit mt-3" onclick="resetQuiz()" style="background: var(--ch7);">🔄 重新测验</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <p>📐 高职高考数学 · 轻松学</p>
+    <p>第七章 · 直线与圆 ✅</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
