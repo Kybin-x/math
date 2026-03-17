@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第五章 · 数列 - 高职高考数学</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    .card-header { background: var(--ch5); }
+    .section-nav a:hover, .section-nav a.active { background: var(--ch5); }
+    .step-toggle { border-color: var(--ch5); color: var(--ch5); }
+    .step-detail .step-item { border-left-color: var(--ch5); }
+    .quiz-submit { background: var(--ch5); }
+    .progress-bar { background: var(--ch5); }
+    .example-block .example-title { background: #FFF3E0; color: #FB8C00; }
+  </style>
+</head>
+<body>
+
+  <div class="progress-bar" style="width:0%"></div>
+
+  <nav class="top-nav">
+    <a href="../index.html" class="back-btn">⬅ 返回首页</a>
+    <span class="nav-title">第五章 · 数列</span>
+  </nav>
+
+  <div class="chapter-container">
+
+    <div class="chapter-header">
+      <div class="ch-emoji">🔢</div>
+      <h1>第五章 · 数列</h1>
+      <p class="ch-subtitle">找规律、算总和——数列就是"排好队的数字"🧮</p>
+    </div>
+
+    <div class="section-nav">
+      <a href="#s1">等差数列</a>
+      <a href="#s2">等比数列</a>
+    </div>
+
+    <!--==================== 知识点1：等差数列 ==================== -->
+    <div class="knowledge-card" id="s1">
+      <div class="card-header">📊 知识点一：等差数列</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🪜</span>
+          爬楼梯，每层都高3米：$0, 3, 6, 9, 12, ...$，每相邻两个数的差都是 $3$，这就是<strong>等差数列</strong>。那个固定的差叫<strong>公差 $d$</strong>。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 等差数列的通项公式</span>
+          $$a_n = a_1 + (n-1)d$$
+          $$\text{其中 } a_1 \text{ 是首项，} d \text{ 是公差}$$
+        </div><div class="explain-box">
+          $a_1$：第一个数（起点）<br>
+          $d$：每次增加多少（步长）<br>
+          $n$：第几个数<br><br>
+          💡 理解方式：从第1项出发，走 $(n-1)$ 步，每步走 $d$，就到了第 $n$ 项。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 等差数列的前n项和</span>
+          $$S_n = \frac{n(a_1 + a_n)}{2} = \frac{n[2a_1 + (n-1)d]}{2}$$
+        </div>
+        <div class="explain-box">
+          第一个公式更好记：前 $n$ 项和 = 项数 × (首项 + 末项)÷ 2。<br>
+          💡 就像高斯算 $1+2+...+100$ 的方法：首尾配对！<br>
+          $(1+100) \times 100 \div 2 = 5050$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 等差中项</span>
+          $$\text{若 } a, A, b \text{ 成等差数列，则 } A = \frac{a+b}{2}$$
+        </div>
+
+        <!--例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>等差数列 $2, 5, 8, 11, ...$，求第 $10$ 项。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$a_1 = 2$，$d = 5- 2 = 3$</div>
+                <div class="step-item">$a_{10} = a_1 + (10-1)d = 2 + 9 \times 3 = 2 + 27 = 29$</div>
+                <div class="step-item">✅ 答案：$a_{10} = 29$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>求等差数列 $1, 3, 5, 7, ...$ 的前 $20$ 项和。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$a_1 = 1$，$d = 2$</div>
+                <div class="step-item">$a_{20} = 1 + 19 \times 2 = 39$</div>
+                <div class="step-item">$S_{20} = \dfrac{20 \times (1 + 39)}{2} = \dfrac{20 \times 40}{2} = 400$</div>
+                <div class="step-item">✅ 答案：$S_{20} = 400$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>等差数列中，$a_3 = 7$，$a_7 = 19$，求 $a_1$ 和 $d$。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$a_3 = a_1 + 2d = 7$ ...①</div>
+                <div class="step-item">$a_7 = a_1 + 6d = 19$ ... ②</div>
+                <div class="step-item">② - ①：$4d = 12$，$d = 3$</div>
+                <div class="step-item">代入①：$a_1 + 6 = 7$，$a_1 = 1$</div>
+                <div class="step-item">✅ 答案：$a_1 = 1$，$d = 3$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题4 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题4 <span class="tag tag-hard">挑战</span></div>
+          <div class="example-content">
+            <p>等差数列 $\{a_n\}$，$S_n$ 为前 $n$ 项和，已知 $S_{10} = 100$，求 $a_5+ a_6$。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$S_{10} = \dfrac{10(a_1+a_{10})}{2} =5(a_1+a_{10}) = 100$</div>
+                <div class="step-item">$a_1 + a_{10} = 20$</div>
+                <div class="step-item">等差数列性质：$a_1+a_{10} = a_5+a_6$（首尾对称）</div>
+                <div class="step-item">✅ 答案：$a_5 + a_6 = 20$</div>
+              </div>
+            </div>
+          </div>
+        </div></div>
+    </div>
+
+    <!-- ==================== 知识点2：等比数列 ==================== -->
+    <div class="knowledge-card" id="s2">
+      <div class="card-header">📈 知识点二：等比数列</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🦠</span>
+          细菌分裂：$1, 2, 4, 8, 16, ...$，每个数都是前一个数的$2$ 倍，这就是<strong>等比数列</strong>。那个固定的倍数叫<strong>公比 $q$</strong>。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 等比数列的通项公式</span>
+          $$a_n = a_1 \cdot q^{n-1}$$
+          $$\text{其中 } a_1 \text{ 是首项，} q \text{ 是公比}(q \neq 0)$$
+        </div>
+        <div class="explain-box">
+          $a_1$：第一个数<br>
+          $q$：每次乘以多少（倍率）<br><br>
+          💡 理解方式：从第1项出发，乘 $(n-1)$ 次$q$，就到了第 $n$ 项。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 等比数列的前n项和</span>
+          $$S_n = \begin{cases} na_1, & q = 1 \\ \dfrac{a_1(1-q^n)}{1-q}, & q \neq 1 \end{cases}$$
+        </div>
+        <div class="explain-box">
+          当 $q = 1$ 时，数列是常数列，如 $3,3,3,...$，前 $n$ 项和就是 $3n$。<br>
+          当 $q \neq 1$ 时用公式。<br><br>
+          💡 另一种写法：$S_n = \dfrac{a_1 - a_n \cdot q}{1 - q}$，有时更方便。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 等比中项</span>
+          $$\text{若 } a, G, b \text{ 成等比数列，则 } G^2 = ab$$
+        </div>
+
+        <!-- 例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>等比数列 $1, 2, 4, 8, ...$，求第 $8$ 项。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$a_1 = 1$，$q = 2$</div>
+                <div class="step-item">$a_8 = 1 \times 2^{8-1} = 2^7 = 128$</div>
+                <div class="step-item">✅ 答案：$a_8 = 128$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>等比数列 $3, 6, 12, 24, ...$，求前 $5$ 项和。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$a_1 = 3$，$q = 2$，$q \neq 1$</div>
+                <div class="step-item">$S_5 = \dfrac{3(1-2^5)}{1-2} = \dfrac{3(1-32)}{-1} = \dfrac{3 \times (-31)}{-1} = 93$</div>
+                <div class="step-item">验证：$3+6+12+24+48 = 93$ ✓</div>
+                <div class="step-item">✅ 答案：$S_5 = 93$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>等比数列中，$a_2 = 6$，$a_5 = 162$，求 $a_1$ 和 $q$。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$a_2 = a_1 q = 6$ ... ①</div>
+                <div class="step-item">$a_5 = a_1 q^4 = 162$ ... ②</div>
+                <div class="step-item">② ÷ ①：$q^3 = \dfrac{162}{6} = 27$</div>
+                <div class="step-item">$q = 3$</div>
+                <div class="step-item">代入①：$a_1 \times 3 = 6$，$a_1 = 2$</div>
+                <div class="step-item">✅ 答案：$a_1 = 2$，$q = 3$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题4 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题4 <span class="tag tag-hard">挑战</span></div>
+          <div class="example-content">
+            <p>等比数列 $\{a_n\}$，$a_1 = 1$，$q = -2$，求 $S_6$。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$q = -2 \neq 1$，用公式</div>
+                <div class="step-item">$S_6 = \dfrac{1 \times (1-(-2)^6)}{1-(-2)} = \dfrac{1-64}{1+2} = \dfrac{-63}{3} = -21$</div>
+                <div class="step-item">验证：$1+(-2)+4+(-8)+16+(-32) = 1-2+4-8+16-32 = -21$ ✓</div>
+                <div class="step-item">✅ 答案：$S_6 = -21$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 章节小测验 ==================== -->
+    <div class="quiz-section">
+      <div class="quiz-title">🧪 第五章 · 小测验</div>
+
+      <!-- 题目1 -->
+      <div class="quiz-card">
+        <div class="quiz-question">1. 等差数列 $3, 7, 11, 15, ...$ 的公差是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $3$</button>
+          <button class="quiz-option" data-correct="true">B. $4$</button>
+          <button class="quiz-option" data-correct="false">C. $7$</button>
+          <button class="quiz-option" data-correct="false">D. $11$</button>
+        </div>
+        <div class="quiz-explanation">💡 $d = 7 - 3 = 4$。</div>
+      </div>
+
+      <!-- 题目2 -->
+      <div class="quiz-card">
+        <div class="quiz-question">2. 等差数列 $a_1 = 5$，$d = 3$，则$a_{20}$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $60$</button>
+          <button class="quiz-option" data-correct="true">B. $62$</button>
+          <button class="quiz-option" data-correct="false">C. $65$</button>
+          <button class="quiz-option" data-correct="false">D. $58$</button>
+        </div>
+        <div class="quiz-explanation">💡 $a_{20} = 5 + 19 \times 3 = 5 + 57 = 62$。</div>
+      </div>
+
+      <!-- 题目3 -->
+      <div class="quiz-card">
+        <div class="quiz-question">3. 求$1+2+3+...+100$ 的值？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $4950$</button>
+          <button class="quiz-option" data-correct="true">B. $5050$</button>
+          <button class="quiz-option" data-correct="false">C. $5150$</button>
+          <button class="quiz-option" data-correct="false">D. $10000$</button>
+        </div>
+        <div class="quiz-explanation">💡 $S_{100} = \dfrac{100 \times (1+100)}{2} = 50 \times 101 = 5050$。高斯的经典！</div>
+      </div>
+
+      <!-- 题目4 -->
+      <div class="quiz-card">
+        <div class="quiz-question">4. 等比数列 $2, 6, 18, 54, ...$ 的公比是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $2$</button>
+          <button class="quiz-option" data-correct="true">B. $3$</button>
+          <button class="quiz-option" data-correct="false">C. $4$</button>
+          <button class="quiz-option" data-correct="false">D. $6$</button>
+        </div>
+        <div class="quiz-explanation">💡 $q = \dfrac{6}{2} = 3$。</div>
+      </div>
+
+      <!-- 题目5 -->
+      <div class="quiz-card">
+        <div class="quiz-question">5. 等比数列 $a_1 = 3$，$q = 2$，则 $a_6$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $48$</button>
+          <button class="quiz-option" data-correct="true">B. $96$</button>
+          <button class="quiz-option" data-correct="false">C. $64$</button>
+          <button class="quiz-option" data-correct="false">D. $192$</button>
+        </div>
+        <div class="quiz-explanation">💡 $a_6 = 3 \times 2^5 = 3 \times 32 = 96$。</div>
+      </div>
+
+      <!-- 题目6 -->
+      <div class="quiz-card">
+        <div class="quiz-question">6. 等差数列中，$a_1 + a_9 = 20$，则 $a_5$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $10$</button>
+          <button class="quiz-option" data-correct="false">B. $20$</button>
+          <button class="quiz-option" data-correct="false">C. $5$</button>
+          <button class="quiz-option" data-correct="false">D. 无法确定</button>
+        </div>
+        <div class="quiz-explanation">💡 等差数列性质：$a_1+a_9 = 2a_5$（首尾对称）。$2a_5=20$，$a_5=10$。</div>
+      </div>
+
+      <!-- 题目7 -->
+      <div class="quiz-card">
+        <div class="quiz-question">7. 等比数列 $1, -2, 4, -8, ...$ 的公比是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $2$</button>
+          <button class="quiz-option" data-correct="true">B. $-2$</button>
+          <button class="quiz-option" data-correct="false">C. $-\dfrac{1}{2}$</button>
+          <button class="quiz-option" data-correct="false">D. $\dfrac{1}{2}$</button>
+        </div>
+        <div class="quiz-explanation">💡 $q = \dfrac{-2}{1} = -2$。公比可以是负数！</div>
+      </div>
+
+      <!-- 题目8 -->
+      <div class="quiz-card">
+        <div class="quiz-question">8. 等差数列 $2, 5, 8, 11, ...$ 的前 $10$ 项和是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $145$</button>
+          <button class="quiz-option" data-correct="false">B. $150$</button>
+          <button class="quiz-option" data-correct="true">C. $155$</button>
+          <button class="quiz-option" data-correct="false">D. $160$</button>
+        </div>
+        <div class="quiz-explanation">💡 $a_{10}=2+9\times3=29$，$S_{10}=\dfrac{10(2+29)}{2}=\dfrac{310}{2}=155$。</div>
+      </div>
+
+      <!-- 题目9 -->
+      <div class="quiz-card">
+        <div class="quiz-question">9. 若$a$，$6$，$b$ 成等比数列，则 $ab$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $12$</button>
+          <button class="quiz-option" data-correct="true">B. $36$</button>
+          <button class="quiz-option" data-correct="false">C. $6$</button>
+          <button class="quiz-option" data-correct="false">D. 无法确定</button>
+        </div>
+        <div class="quiz-explanation">💡 等比中项：$6^2 = ab$，$ab = 36$。</div>
+      </div>
+
+      <!-- 题目10 -->
+      <div class="quiz-card">
+        <div class="quiz-question">10. 等比数列 $a_1=1$，$q=3$，则 $S_4$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $30$</button>
+          <button class="quiz-option" data-correct="true">B. $40$</button>
+          <button class="quiz-option" data-correct="false">C. $36$</button>
+          <button class="quiz-option" data-correct="false">D. $81$</button>
+        </div>
+        <div class="quiz-explanation">💡 $S_4 = \dfrac{1(1-3^4)}{1-3} = \dfrac{1-81}{-2} = \dfrac{-80}{-2} = 40$。验证：$1+3+9+27=40$ ✓</div>
+      </div>
+
+      <!-- 测验结果 -->
+      <div class="quiz-result">
+        <div class="score">0/ 10</div>
+        <div class="score-text">正确率：0%</div>
+        <div class="encouragement"></div>
+        <button class="quiz-submit mt-3" onclick="resetQuiz()" style="background: var(--ch5);">🔄 重新测验</button>
+      </div></div>
+
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <p>📐 高职高考数学 · 轻松学</p>
+    <p>第五章 · 数列 ✅</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
