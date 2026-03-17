@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第八章 · 概率与统计 - 高职高考数学</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- KaTeX（方案三：cloudflare CDN）-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+  <style>
+    .card-header { background: var(--ch8); }
+    .section-nav a:hover, .section-nav a.active { background: var(--ch8); }
+    .step-toggle { border-color: var(--ch8); color: var(--ch8); }
+    .step-detail .step-item { border-left-color: var(--ch8); }
+    .quiz-submit { background: var(--ch8); }
+    .progress-bar { background: var(--ch8); }
+    .example-block .example-title { background: #E8F5E9; color: #2E7D32; }
+  </style>
+</head>
+<body>
+  <div class="progress-bar" style="width:0%"></div>
+
+  <nav class="top-nav">
+    <a href="../index.html" class="back-btn">⬅ 返回首页</a>
+    <span class="nav-title">第八章 · 概率与统计</span>
+  </nav>
+
+  <div class="chapter-container">
+
+    <div class="chapter-header">
+      <div class="ch-emoji">🎲</div>
+      <h1>第八章 · 概率与统计</h1>
+      <p class="ch-subtitle">用数字衡量"可能性"——生活中处处有概率 🍀</p>
+    </div>
+
+    <div class="section-nav">
+      <a href="#s1">统计基础</a>
+      <a href="#s2">概率基础</a>
+      <a href="#s3">古典概型</a>
+      <a href="#s4">概率计算</a>
+    </div>
+
+    <!--==================== 知识点1：统计基础 ==================== -->
+    <div class="knowledge-card" id="s1">
+      <div class="card-header">📊 知识点一：统计基础</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">📋</span>
+          统计就是"用数据说话"。全班同学的身高数据，怎么用几个数字来概括？这就需要<strong>平均数</strong>、<strong>中位数</strong>、<strong>众数</strong>和<strong>方差</strong>。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 平均数</span>
+          $$\bar{x} = \frac{x_1 + x_2 + \cdots + x_n}{n} = \frac{1}{n}\sum_{i=1}^{n}x_i$$
+        </div><div class="explain-box">
+          💡 就是所有数据加起来除以个数，反映数据的<strong>"中心水平"</strong>。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 中位数</span>
+          $$\text{把数据从小到大排列，正中间那个数就是中位数}$$
+          $$\text{偶数个数据时，中位数 = 中间两个数的平均值}$$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 众数</span>
+          $$\text{出现次数最多的那个数}$$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 方差与标准差</span>
+          $$S^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2$$
+          $$\text{标准差 } S = \sqrt{S^2}$$
+        </div><div class="explain-box">
+          💡 方差衡量数据的<strong>"分散程度"</strong>：<br>
+          · 方差<strong>越大</strong> → 数据<strong>越分散</strong>（波动大）<br>
+          · 方差<strong>越小</strong> → 数据<strong>越集中</strong>（稳定）<br><br>
+          🎯 考试常考：两组数据谁更稳定？→ 比较方差，方差小的更稳定！
+        </div>
+
+        <!-- 例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>数据 $3, 5, 7, 5, 10$，求平均数、中位数和众数。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">平均数：$\bar{x} = \dfrac{3+5+7+5+10}{5} = \dfrac{30}{5} = 6$</div>
+                <div class="step-item">排序：$3, 5, 5, 7, 10$，中位数 = $5$（正中间）</div>
+                <div class="step-item">$5$ 出现了 $2$ 次，最多 → 众数 = $5$</div>
+                <div class="step-item">✅ 答案：平均数 $6$，中位数 $5$，众数 $5$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>甲射击成绩：$9, 10, 8, 10, 8$；乙射击成绩：$10, 9, 9, 9, 8$。谁更稳定？</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$\bar{x}_甲 = \dfrac{9+10+8+10+8}{5} = \dfrac{45}{5} = 9$</div>
+                <div class="step-item">$\bar{x}_乙 = \dfrac{10+9+9+9+8}{5} = \dfrac{45}{5} = 9$</div>
+                <div class="step-item">$S^2_甲 = \dfrac{(9-9)^2+(10-9)^2+(8-9)^2+(10-9)^2+(8-9)^2}{5}$</div>
+                <div class="step-item">$= \dfrac{0+1+1+1+1}{5} = \dfrac{4}{5} = 0.8$</div>
+                <div class="step-item">$S^2_乙 = \dfrac{(10-9)^2+(9-9)^2+(9-9)^2+(9-9)^2+(8-9)^2}{5}$</div>
+                <div class="step-item">$= \dfrac{1+0+0+0+1}{5} = \dfrac{2}{5} = 0.4$</div>
+                <div class="step-item">$S^2_乙 < S^2_甲$，乙更稳定</div><div class="step-item">✅ 答案：乙更稳定（方差更小）</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--==================== 知识点2：概率基础 ==================== -->
+    <div class="knowledge-card" id="s2">
+      <div class="card-header">🎯 知识点二：概率基础概念</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🎰</span>
+          明天下雨的概率是 $60\%$ ——概率就是用一个$0$ 到 $1$ 之间的数来衡量某件事发生的<strong>可能性大小</strong>。$0$ = 不可能发生，$1$ = 一定发生。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 基本概念</span>
+          $$0 \leq P(A) \leq 1$$
+          $$P(\text{必然事件}) = 1$$
+          $$P(\text{不可能事件}) = 0$$
+        </div>
+        <div class="explain-box">
+          <strong>随机试验</strong>：结果不确定的实验（如掷骰子）。<br>
+          <strong>样本空间 $\Omega$</strong>：所有可能结果的集合。<br>
+          <strong>事件</strong>：样本空间的子集。<br><br>
+          💡 掷骰子的样本空间：$\Omega = \{1,2,3,4,5,6\}$<br>
+          "掷出偶数"这个事件：$A = \{2,4,6\}$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 对立事件</span>
+          $$P(\bar{A}) = 1 - P(A)$$
+        </div>
+        <div class="explain-box">
+          💡 "$A$ 不发生"的概率 = $1$减去"$A$ 发生"的概率。<br>
+          例：掷骰子，掷出$6$的概率 = $\dfrac{1}{6}$，掷不出$6$的概率 = $1-\dfrac{1}{6}=\dfrac{5}{6}$。<br><br>
+          🎯 <strong>技巧</strong>：题目说"至少一个…"时，用对立事件更简单！<br>
+          $P(\text{至少一个}) = 1 - P(\text{一个都没有})$
+        </div></div>
+    </div>
+
+    <!-- ==================== 知识点3：古典概型 ==================== -->
+    <div class="knowledge-card" id="s3">
+      <div class="card-header">🎲 知识点三：古典概型</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🪙</span>
+          如果每种结果出现的可能性都<strong>相等</strong>（等可能性），就叫古典概型。掷硬币、掷骰子、从袋子里摸球……都是古典概型！
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 古典概型公式</span>
+          $$P(A) = \frac{\text{事件A包含的基本事件数}}{\text{基本事件总数}} = \frac{m}{n}$$
+        </div>
+        <div class="explain-box">
+          💡 三步走：<br>
+          ① 列出所有可能结果（总数 $n$）<br>
+          ② 数出满足条件的结果（$m$ 个）<br>
+          ③ $P = \dfrac{m}{n}$<br><br>
+          ⚠️ 前提条件：每个基本事件出现的概率<strong>相等</strong>！
+        </div>
+
+        <!-- 例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>掷一个骰子，求掷出点数大于 $4$ 的概率。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">样本空间：$\{1,2,3,4,5,6\}$，共 $6$ 个</div>
+                <div class="step-item">点数大于 $4$：$\{5,6\}$，共 $2$ 个</div>
+                <div class="step-item">$P = \dfrac{2}{6} = \dfrac{1}{3}$</div>
+                <div class="step-item">✅ 答案：$P = \dfrac{1}{3}$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>袋中有 $3$ 个红球、$2$ 个白球，随机摸一个，求摸到红球的概率。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">总球数：$3+2=5$</div>
+                <div class="step-item">红球数：$3$</div>
+                <div class="step-item">$P(\text{红球})=\dfrac{3}{5}$</div>
+                <div class="step-item">✅ 答案：$P = \dfrac{3}{5}$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>同时掷两个骰子，求点数之和为 $7$ 的概率。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">总共$6 \times 6 = 36$ 种等可能结果</div>
+                <div class="step-item">和为 $7$ 的组合：$(1,6)(2,5)(3,4)(4,3)(5,2)(6,1)$</div>
+                <div class="step-item">共$6$ 种</div>
+                <div class="step-item">$P = \dfrac{6}{36} = \dfrac{1}{6}$</div>
+                <div class="step-item">✅ 答案：$P = \dfrac{1}{6}$</div>
+              </div>
+            </div>
+          </div>
+        </div><!-- 例题4 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题4 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>从$1,2,3,4,5$ 中随机取 $2$ 个数，求两数之和为偶数的概率。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">总共取法：$C_5^2 = \dfrac{5!}{2!3!} = 10$ 种</div>
+                <div class="step-item">和为偶数 →两个都是奇数或两个都是偶数</div>
+                <div class="step-item">奇数有 $\{1,3,5\}$，取2个：$C_3^2 = 3$ 种</div>
+                <div class="step-item">偶数有 $\{2,4\}$，取2个：$C_2^2 = 1$ 种</div>
+                <div class="step-item">满足条件：$3+1=4$ 种</div>
+                <div class="step-item">$P = \dfrac{4}{10} = \dfrac{2}{5}$</div>
+                <div class="step-item">✅ 答案：$P = \dfrac{2}{5}$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 知识点4：概率计算技巧 ==================== -->
+    <div class="knowledge-card" id="s4">
+      <div class="card-header">🧮 知识点四：概率计算技巧</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🔗</span>
+          多个事件同时或分别发生时，概率怎么算？<strong>互斥用加法，独立用乘法</strong>——这就是概率计算的两大法宝！
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 互斥事件（加法公式）</span>
+          $$\text{A和B不能同时发生（互斥）：}$$
+          $$P(A \cup B) = P(A) + P(B)$$
+        </div>
+        <div class="explain-box">
+          💡 掷骰子：掷出 $1$ 和掷出 $2$ 不能同时发生 → 互斥<br>
+          $P(\text{掷出1或2}) = \dfrac{1}{6}+\dfrac{1}{6}=\dfrac{2}{6}=\dfrac{1}{3}$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 独立事件（乘法公式）</span>
+          $$\text{A和B互不影响（独立）：}$$
+          $$P(A \cap B) = P(A) \times P(B)$$
+        </div>
+        <div class="explain-box">
+          💡 掷两次骰子：第一次的结果不影响第二次 → 独立<br>
+          $P(\text{两次都掷出6}) = \dfrac{1}{6}\times\dfrac{1}{6}=\dfrac{1}{36}$<br><br>
+          🎯 <strong>口诀</strong>：分步用乘（且），分类用加（或）。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 对立事件的妙用</span>
+          $$P(\text{至少一次}) = 1 - P(\text{一次都没有})$$
+        </div>
+
+        <!-- 例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>甲命中目标的概率为 $0.6$，乙命中的概率为 $0.5$，两人各射一次，求都命中的概率。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">甲乙互不影响 → 独立事件，用乘法</div>
+                <div class="step-item">$P(\text{都命中}) = 0.6 \times 0.5 = 0.3$</div>
+                <div class="step-item">✅ 答案：$P = 0.3$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>甲命中概率 $0.6$，乙命中概率 $0.5$，各射一次，求至少一人命中的概率。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">用对立事件："至少一人命中"的对立是"都没命中"</div>
+                <div class="step-item">$P(\text{甲不中})=1-0.6=0.4$</div>
+                <div class="step-item">$P(\text{乙不中})=1-0.5=0.5$</div>
+                <div class="step-item">$P(\text{都不中})=0.4 \times 0.5 = 0.2$</div>
+                <div class="step-item">$P(\text{至少一人命中})=1-0.2=0.8$</div>
+                <div class="step-item">✅ 答案：$P = 0.8$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-hard">挑战</span></div>
+          <div class="example-content">
+            <p>某产品合格率为 $0.9$，从中随机抽取 $3$ 件，求恰好有 $2$ 件合格的概率。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">合格概率 $p=0.9$，不合格 $q=0.1$</div>
+                <div class="step-item">$3$ 件中恰好 $2$ 件合格：$C_3^2 \cdot p^2 \cdot q^1$</div>
+                <div class="step-item">$= 3 \times 0.9^2 \times 0.1$</div>
+                <div class="step-item">$= 3 \times 0.81 \times 0.1 = 0.243$</div>
+                <div class="step-item">✅ 答案：$P = 0.243$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 章节小测验 ==================== -->
+    <div class="quiz-section">
+      <div class="quiz-title">🧪 第八章 · 小测验</div>
+
+      <!-- 题目1 -->
+      <div class="quiz-card">
+        <div class="quiz-question">1. 数据$2, 3, 3, 5, 7$ 的众数是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $2$</button>
+          <button class="quiz-option" data-correct="true">B. $3$</button>
+          <button class="quiz-option" data-correct="false">C. $4$</button>
+          <button class="quiz-option" data-correct="false">D. $5$</button>
+        </div>
+        <div class="quiz-explanation">💡 $3$ 出现了 $2$ 次，最多，所以众数是 $3$。</div>
+      </div>
+
+      <!-- 题目2 -->
+      <div class="quiz-card">
+        <div class="quiz-question">2. 数据 $1, 3, 5, 7$ 的中位数是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $3$</button>
+          <button class="quiz-option" data-correct="true">B. $4$</button>
+          <button class="quiz-option" data-correct="false">C. $5$</button>
+          <button class="quiz-option" data-correct="false">D. $4.5$</button>
+        </div>
+        <div class="quiz-explanation">💡 偶数个数据，中位数 =中间两个数的平均 = $\dfrac{3+5}{2} = 4$。</div>
+      </div>
+
+      <!-- 题目3 -->
+      <div class="quiz-card">
+        <div class="quiz-question">3.掷一个骰子，掷出偶数的概率是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $\dfrac{1}{2}$</button>
+          <button class="quiz-option" data-correct="false">B. $\dfrac{1}{3}$</button>
+          <button class="quiz-option" data-correct="false">C. $\dfrac{2}{3}$</button>
+          <button class="quiz-option" data-correct="false">D. $\dfrac{1}{6}$</button>
+        </div>
+        <div class="quiz-explanation">💡 偶数 $\{2,4,6\}$，$3$ 个，$P=\dfrac{3}{6}=\dfrac{1}{2}$。</div>
+      </div>
+
+      <!-- 题目4 -->
+      <div class="quiz-card">
+        <div class="quiz-question">4. 某事件概率为 $0.3$，其对立事件的概率是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $0.7$</button>
+          <button class="quiz-option" data-correct="false">B. $0.3$</button>
+          <button class="quiz-option" data-correct="false">C. $-0.3$</button>
+          <button class="quiz-option" data-correct="false">D. $1.3$</button>
+        </div>
+        <div class="quiz-explanation">💡 $P(\bar{A}) = 1 - P(A) = 1 - 0.3 = 0.7$。</div>
+      </div>
+
+      <!-- 题目5 -->
+      <div class="quiz-card">
+        <div class="quiz-question">5. 两个独立事件 $A$、$B$，$P(A)=0.4$，$P(B)=0.5$，则 $P(AB)$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $0.9$</button>
+          <button class="quiz-option" data-correct="true">B. $0.2$</button>
+          <button class="quiz-option" data-correct="false">C. $0.1$</button>
+          <button class="quiz-option" data-correct="false">D. $0.45$</button>
+        </div>
+        <div class="quiz-explanation">💡 独立事件，$P(AB)=P(A)\times P(B)=0.4\times0.5=0.2$。</div>
+      </div>
+
+      <!-- 题目6 -->
+      <div class="quiz-card">
+        <div class="quiz-question">6. 袋中有 $4$ 红、$6$ 白球，摸一个是白球的概率？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $\dfrac{2}{5}$</button>
+          <button class="quiz-option" data-correct="true">B. $\dfrac{3}{5}$</button>
+          <button class="quiz-option" data-correct="false">C. $\dfrac{1}{2}$</button>
+          <button class="quiz-option" data-correct="false">D. $\dfrac{6}{4}$</button>
+        </div>
+        <div class="quiz-explanation">💡 $P=\dfrac{6}{4+6}=\dfrac{6}{10}=\dfrac{3}{5}$。</div>
+      </div>
+
+      <!-- 题目7 -->
+      <div class="quiz-card">
+        <div class="quiz-question">7. 方差越大，说明数据？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. 越集中</button>
+          <button class="quiz-option" data-correct="true">B. 越分散</button>
+          <button class="quiz-option" data-correct="false">C. 平均值越大</button>
+          <button class="quiz-option" data-correct="false">D. 数据个数越多</button>
+        </div>
+        <div class="quiz-explanation">💡 方差衡量分散程度，方差越大= 越分散 = 波动越大。</div>
+      </div>
+
+      <!-- 题目8 -->
+      <div class="quiz-card">
+        <div class="quiz-question">8. 同时掷两枚硬币，至少一枚正面朝上的概率？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $\dfrac{1}{2}$</button>
+          <button class="quiz-option" data-correct="true">B. $\dfrac{3}{4}$</button>
+          <button class="quiz-option" data-correct="false">C. $\dfrac{1}{4}$</button>
+          <button class="quiz-option" data-correct="false">D. $1$</button>
+        </div>
+        <div class="quiz-explanation">💡 用对立事件：$P(\text{都反面})=\dfrac{1}{2}\times\dfrac{1}{2}=\dfrac{1}{4}$，$P(\text{至少一正})=1-\dfrac{1}{4}=\dfrac{3}{4}$。</div>
+      </div>
+
+      <!-- 题目9 -->
+      <div class="quiz-card">
+        <div class="quiz-question">9. $1,2,3,4,5$ 的平均数是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $3$</button>
+          <button class="quiz-option" data-correct="false">B. $2.5$</button>
+          <button class="quiz-option" data-correct="false">C. $15$</button>
+          <button class="quiz-option" data-correct="false">D. $4$</button>
+        </div>
+        <div class="quiz-explanation">💡 $\bar{x}=\dfrac{1+2+3+4+5}{5}=\dfrac{15}{5}=3$。</div>
+      </div>
+
+      <!-- 题目10 -->
+      <div class="quiz-card">
+        <div class="quiz-question">10. 互斥事件 $A$、$B$，$P(A)=0.3$，$P(B)=0.4$，则 $P(A\cup B)$？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $0.12$</button>
+          <button class="quiz-option" data-correct="true">B. $0.7$</button>
+          <button class="quiz-option" data-correct="false">C. $0.1$</button>
+          <button class="quiz-option" data-correct="false">D. $1$</button>
+        </div>
+        <div class="quiz-explanation">💡 互斥用加法：$P(A\cup B)=P(A)+P(B)=0.3+0.4=0.7$。</div>
+      </div>
+
+      <!-- 测验结果 -->
+      <div class="quiz-result">
+        <div class="score">0/ 10</div>
+        <div class="score-text">正确率：0%</div>
+        <div class="encouragement"></div>
+        <button class="quiz-submit mt-3" onclick="resetQuiz()" style="background: var(--ch8);">🔄 重新测验</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <p>📐 高职高考数学 · 轻松学</p>
+    <p>第八章 · 概率与统计 ✅</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
