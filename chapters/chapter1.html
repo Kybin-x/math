@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一章 · 集合与充要条件 - 高职高考数学</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <style>
+        .card-header {
+            background: var(--ch1);
+        }
+
+        .section-nav a:hover,
+        .section-nav a.active {
+            background: var(--ch1);
+        }
+
+        .step-toggle {
+            border-color: var(--ch1);
+            color: var(--ch1);
+        }
+
+        .step-detail .step-item {
+            border-left-color: var(--ch1);
+        }
+
+        .quiz-submit {
+            background: var(--ch1);
+        }
+
+        .progress-bar {
+            background: var(--ch1);
+        }
+
+        .example-block .example-title {
+            background: #E8FAF8;
+            color: #2BA89E;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="progress-bar" style="width:0%"></div>
+
+    <nav class="top-nav">
+        <a href="../index.html" class="back-btn">⬅ 返回首页</a>
+        <span class="nav-title">第一章 · 集合与充要条件</span>
+    </nav>
+
+    <div class="chapter-container">
+
+        <div class="chapter-header">
+            <div class="ch-emoji">🧩</div>
+            <h1>第一章 · 集合与充要条件</h1>
+            <p class="ch-subtitle">数学的"分类整理术"，把东西归好类，问题就清晰了 🗂️</p>
+        </div>
+
+        <div class="section-nav">
+            <a href="#s1">集合的概念</a>
+            <a href="#s2">集合的运算</a>
+            <a href="#s3">充分条件与必要条件</a>
+        </div>
+
+        <!-- ==================== 知识点1：集合的概念 ==================== -->
+        <div class="knowledge-card" id="s1">
+            <div class="card-header">📦 知识点一：集合的概念</div>
+            <div class="card-body">
+
+                <div class="intro-box">
+                    <span class="intro-icon">🎒</span>
+                    想象你的书包里有课本、笔、橡皮擦。把这些东西"打包"在一起，就形成了一个"集合"。集合就是<strong>一堆确定的、互不相同的对象放在一起</strong>。
+                </div>
+
+                <div class="formula-box">
+                    <span class="formula-label">📐 集合的三要素</span>
+                    $$\text{确定性：每个对象要么属于，要么不属于}$$
+                    $$\text{互异性：集合中没有重复元素}$$
+                    $$\text{无序性：元素没有先后顺序}$$
+                </div>
+                <div class="explain-box">
+                    <strong>确定性</strong>：不能模糊。"好看的人"不能构成集合（标准不确定），但"身高超过170cm的人"可以。<br>
+                    <strong>互异性</strong>：不能重复。$\{1, 1, 2\}$ 是错的，应该写成 $\{1, 2\}$。<br>
+                    <strong>无序性</strong>：$\{1, 2, 3\}$ 和 $\{3, 1, 2\}$ 是同一个集合。
+                </div>
+
+                <div class="formula-box">
+                    <span class="formula-label">📐 集合的表示方法</span>
+                    $$\text{列举法：} A = \{1, 2, 3, 4, 5\}$$
+                    $$\text{描述法：} B = \{x \mid x \text{是小于6的正整数}\}$$
+                </div>
+                <div class="explain-box">
+                    <strong>列举法</strong>：把元素一个一个列出来，用大括号括起来。<br>
+                    <strong>描述法</strong>：用一句话描述元素的特征。竖线 "$\mid$" 读作"满足"。<br><br>
+                    常见数集符号（要记住！）：<br>
+                    • $\mathbb{N}$：自然数集 $\{0, 1, 2, 3, ...\}$<br>
+                    • $\mathbb{N^*}$ 或 $\mathbb{N_+}$：正整数集 $\{1, 2, 3, ...\}$<br>
+                    • $\mathbb{Z}$：整数集 $\{..., -2, -1, 0, 1, 2, ...\}$<br>
+                    • $\mathbb{R}$：实数集（所有实数）<br>
+                    • $\varnothing$：空集（什么元素都没有的集合）
+                </div>
+
+                <div class="formula-box">
+                    <span class="formula-label">📐 元素与集合的关系</span>
+                    $$a \in A \quad \text{（a 属于 A）}$$
+                    $$a \notin A \quad \text{（a 不属于 A）}$$
+                </div>
+
+                <div class="formula-box">
+                    <span class="formula-label">📐 子集</span>
+                    $$A \subseteq B \quad \text{（A 是 B 的子集：A 中所有元素都在 B 中）}$$
+                    $$A \subsetneq B \quad \text{（A 是 B 的真子集：A 是子集且 A} \neq \text{B）}$$
+                </div>
+                <div class="explain-box">
+                    子集就像"小圈套在大圈里面"。如果 $A = \{1, 2\}$，$B = \{1, 2, 3\}$，那么 A 的所有元素都在 B 里面，所以 $A \subseteq B$。<br>
+                    ⚠️ 注意：<strong>空集是任何集合的子集</strong>，即 $\varnothing \subseteq A$ 对任何集合 A 都成立。<br>
+                    ⚠️ <strong>任何集合是自身的子集</strong>，即 $A \subseteq A$。
+                </div>
+
+                <!-- 例题1 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+                    <div class="example-content">
+                        <p>下列能构成集合的是？<br>A. 比较高的同学<br>B. 所有的偶数<br>C. 好看的花<br>D. 大约5个人</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">A. "比较高"标准不确定 ❌</div>
+                                <div class="step-item">B. "所有偶数"是确定的 ✅</div>
+                                <div class="step-item">C. "好看"标准不确定 ❌</div>
+                                <div class="step-item">D. "大约"不确定 ❌</div>
+                                <div class="step-item">✅ 答案：B</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题2 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+                    <div class="example-content">
+                        <p>已知 $A = \{1, 2, 3\}$，下列正确的是？<br>A. $1 \subseteq A$<br>B. $\{1\} \in A$<br>C. $1 \in A$<br>D.
+                            $\{1, 2, 3, 4\} \subseteq A$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">A. $\subseteq$ 是集合与集合的关系，1是元素不是集合 ❌</div>
+                                <div class="step-item">B. $\in$ 是元素与集合的关系，$\{1\}$ 是集合不是元素 ❌</div>
+                                <div class="step-item">C. 1是元素，A是集合，$1 \in A$ ✅</div>
+                                <div class="step-item">D. $\{1,2,3,4\}$ 包含4，但4不在A中 ❌</div>
+                                <div class="step-item">✅ 答案：C</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题3 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+                    <div class="example-content">
+                        <p>集合 $A = \{1, 2\}$ 的所有子集有哪些？</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">含0个元素的子集：$\varnothing$</div>
+                                <div class="step-item">含1个元素的子集：$\{1\}$，$\{2\}$</div>
+                                <div class="step-item">含2个元素的子集：$\{1, 2\}$</div>
+                                <div class="step-item">✅ 答案：$\varnothing, \{1\}, \{2\}, \{1,2\}$，共 $2^2 = 4$ 个子集</div>
+                                <div class="step-item">💡 规律：含 $n$ 个元素的集合有 $2^n$ 个子集</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==================== 知识点2：集合的运算 ==================== -->
+        <div class="knowledge-card" id="s2">
+            <div class="card-header">🔗 知识点二：集合的运算</div>
+            <div class="card-body">
+
+                <div class="intro-box">
+                    <span class="intro-icon">🎯</span>
+                    班上喜欢篮球的同学是一个集合A，喜欢足球的同学是另一个集合B。那"既喜欢篮球又喜欢足球"的同学就是 $A \cap B$（交集），"喜欢篮球或足球（至少一个）"的同学就是 $A \cup
+                    B$（并集）。
+                </div>
+
+                <div class="formula-box">
+                    <span class="formula-label">📐 交集</span>
+                    $$A \cap B = \{x \mid x \in A \text{ 且 } x \in B\}$$
+                </div>
+                <div class="explain-box">
+                    交集就是<strong>两个集合的公共部分</strong>，"既……又……"。<br>
+                    比如 $A = \{1,2,3\}$，$B = \{2,3,4\}$，那么 $A \cap B = \{2,3\}$。
+                </div>
+
+                <div class="formula-box">
+                    <span class="formula-label">📐 并集</span>
+                    $$A \cup B = \{x \mid x \in A \text{ 或 } x \in B\}$$
+                </div>
+                <div class="explain-box">
+                    并集就是<strong>把两个集合合在一起</strong>，去掉重复的。<br>
+                    比如 $A = \{1,2,3\}$，$B = \{2,3,4\}$，那么 $A \cup B = \{1,2,3,4\}$。
+                </div>
+
+                <div class="formula-box">
+                    <span class="formula-label">📐 补集</span>
+                    $$\complement_U A = \{x \mid x \in U \text{ 且 } x \notin A\}$$
+                </div>
+                <div class="explain-box">
+                    补集就是<strong>全集中去掉A剩下的部分</strong>。<br>
+                    比如全集 $U = \{1,2,3,4,5\}$，$A = \{1,3,5\}$，那么 $\complement_U A = \{2,4\}$。<br>
+                    简单理解：全集减去A就是A的补集。
+                </div>
+
+                <!-- 例题1 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+                    <div class="example-content">
+                        <p>$A = \{1,2,3,4\}$，$B = \{3,4,5,6\}$，求 $A \cap B$ 和 $A \cup B$。</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">$A \cap B$：找公共元素 → $\{3, 4\}$</div>
+                                <div class="step-item">$A \cup B$：合在一起去重 → $\{1, 2, 3, 4, 5, 6\}$</div>
+                                <div class="step-item">✅ 答案：$A \cap B = \{3,4\}$，$A \cup B = \{1,2,3,4,5,6\}$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题2 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+                    <div class="example-content">
+                        <p>全集 $U = \{1,2,3,4,5,6,7\}$，$A = \{2,4,6\}$，求 $\complement_U A$。</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">从U中去掉A的元素：去掉2、4、6</div>
+                                <div class="step-item">剩下：$\{1, 3, 5, 7\}$</div>
+                                <div class="step-item">✅ 答案：$\complement_U A = \{1, 3, 5, 7\}$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题3 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+                    <div class="example-content">
+                        <p>$A = \{x \mid x > 1\}$，$B = \{x \mid x < 4\}$，求 $A \cap B$。</p>
+                                <button class="step-toggle">👀 查看解题步骤</button>
+                                <div class="step-detail">
+                                    <div class="step-inner">
+                                        <div class="step-item">第一步：A 是所有大于1的数，在数轴上是 $(1, +\infty)$</div>
+                                        <div class="step-item">第二步：B 是所有小于4的数，在数轴上是 $(-\infty, 4)$</div>
+                                        <div class="step-item">第三步：交集就是两个区间的重叠部分</div>
+                                        <div class="step-item">✅ 答案：$A \cap B = \{x \mid 1 < x < 4\}=(1, 4)$</div>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+
+                    <!-- 例题4 -->
+                    <div class="example-block">
+                        <div class="example-title">✏️ 例题4 <span class="tag tag-medium">进阶</span></div>
+                        <div class="example-content">
+                            <p>全集 $U = \mathbb{R}$，$A = \{x \mid x \geq 2\}$，求 $\complement_U A$。</p>
+                            <button class="step-toggle">👀 查看解题步骤</button>
+                            <div class="step-detail">
+                                <div class="step-inner">
+                                    <div class="step-item">A 是所有大于等于2的数：$[2, +\infty)$</div>
+                                    <div class="step-item">补集就是"不在A中的数"：所有小于2的数</div>
+                                    <div class="step-item">✅ 答案：$\complement_U A = \{x \mid x < 2\}=(-\infty, 2)$</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 例题5 -->
+                        <div class="example-block">
+                            <div class="example-title">✏️ 例题5 <span class="tag tag-hard">挑战</span></div>
+                            <div class="example-content">
+                                <p>已知 $A = \{x \mid 1 \leq x \leq 5\}$，$B = \{x \mid a \leq x \leq a+4\}$，且 $A \subseteq
+                                    B$，求 $a$ 的取值范围。</p>
+                                <button class="step-toggle">👀 查看解题步骤</button>
+                                <div class="step-detail">
+                                    <div class="step-inner">
+                                        <div class="step-item">第一步：$A \subseteq B$ 意味着 A 被 B 完全包含</div>
+                                        <div class="step-item">第二步：B 的左端点 $\leq$ A 的左端点：$a \leq 1$</div>
+                                        <div class="step-item">第三步：B 的右端点 $\geq$ A 的右端点：$a + 4 \geq 5$，即 $a \geq 1$
+                                        </div>
+                                        <div class="step-item">第四步：综合 $a \leq 1$ 且 $a \geq 1$</div>
+                                        <div class="step-item">✅ 答案：$a = 1$</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ==================== 知识点3：充分条件与必要条件 ==================== -->
+                <div class="knowledge-card" id="s3">
+                    <div class="card-header">🔄 知识点三：充分条件与必要条件</div>
+                    <div class="card-body">
+
+                        <div class="intro-box">
+                            <span class="intro-icon">☂️</span>
+                            "下雨"和"地面湿"是什么关系？下雨 → 地面一定湿（充分条件），但地面湿 → 不一定是下雨（可能有人浇水）。所以"下雨"是"地面湿"的充分不必要条件。
+                        </div>
+
+                        <div class="formula-box">
+                            <span class="formula-label">📐 充分条件与必要条件</span>
+                            $$p \Rightarrow q \text{（p能推出q）：p 是 q 的充分条件，q 是 p 的必要条件}$$
+                        </div>
+                        <div class="explain-box">
+                            <strong>充分条件</strong>：有它就够了（sufficient）。$p \Rightarrow q$，有 p 就一定有 q。<br>
+                            <strong>必要条件</strong>：没它不行（necessary）。$p \Rightarrow q$，要有 q 才可能有 p。<br><br>
+                            四种关系：<br>
+                            ① $p \Rightarrow q$ 且 $q \Rightarrow p$：<strong>充要条件</strong>（互相推出）<br>
+                            ② $p \Rightarrow q$ 但 $q \nRightarrow p$：p 是 q 的<strong>充分不必要条件</strong><br>
+                            ③ $p \nRightarrow q$ 但 $q \Rightarrow p$：p 是 q 的<strong>必要不充分条件</strong><br>
+                            ④ $p \nRightarrow q$ 且 $q \nRightarrow p$：<strong>既不充分也不必要</strong><br><br>
+                            💡 判断技巧：用集合的观点！<br>
+                            如果 p 对应的集合 $A \subseteq B$（q 对应的集合），那么 p 是 q 的充分条件。<br>
+                            简记：<strong>"小范围是大范围的充分条件"</strong>
+                        </div>
+
+                        <!-- 例题1 -->
+                        <div class="example-block">
+                            <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+                            <div class="example-content">
+                                <p>p："$x = 1$"，q："$x^2 = 1$"。p 是 q 的什么条件？</p>
+                                <button class="step-toggle">👀 查看解题步骤</button>
+                                <div class="step-detail">
+                                    <div class="step-inner">
+                                        <div class="step-item">第一步：$p \Rightarrow q$？$x=1$ → $x^2=1$ ✅ 能推出</div>
+                                        <div class="step-item">第二步：$q \Rightarrow p$？$x^2=1$ → $x=1$？不一定，$x$ 也可能等于 $-1$
+                                            ❌</div>
+                                        <div class="step-item">第三步：$p \Rightarrow q$ 成立，$q \Rightarrow p$ 不成立</div>
+                                        <div class="step-item">✅ 答案：p 是 q 的<strong>充分不必要条件</strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 例题2 -->
+                        <div class="example-block">
+                            <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+                            <div class="example-content">
+                                <p>p："$x > 3$"，q："$x > 1$"。p 是 q 的什么条件？</p>
+                                <button class="step-toggle">👀 查看解题步骤</button>
+                                <div class="step-detail">
+                                    <div class="step-inner">
+                                        <div class="step-item">第一步：$p \Rightarrow q$？$x>3$ → $x>1$ ✅（大于3肯定大于1）</div>
+                                        <div class="step-item">第二步：$q \Rightarrow p$？$x>1$ → $x>3$？不一定，$x=2$ 就不行 ❌</div>
+                                        <div class="step-item">第三步：用集合看，$\{x|x>3\} \subsetneq \{x|x>1\}$，小集合 → 大集合</div>
+                                        <div class="step-item">✅ 答案：p 是 q 的<strong>充分不必要条件</strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 例题3 -->
+                        <div class="example-block">
+                            <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+                            <div class="example-content">
+                                <p>p："$x^2 - 3x + 2 = 0$"，q："$x = 1$"。p 是 q 的什么条件？</p>
+                                <button class="step-toggle">👀 查看解题步骤</button>
+                                <div class="step-detail">
+                                    <div class="step-inner">
+                                        <div class="step-item">第一步：先解方程 $x^2-3x+2=0$，因式分解 $(x-1)(x-2)=0$，解为 $x=1$ 或
+                                            $x=2$</div>
+                                        <div class="step-item">第二步：$p \Rightarrow q$？$x^2-3x+2=0$ → $x=1$？不一定，$x$ 也可能等于2
+                                            ❌</div>
+                                        <div class="step-item">第三步：$q \Rightarrow p$？$x=1$ → $x^2-3x+2=1-3+2=0$ ✅ 能推出
+                                        </div>
+                                        <div class="step-item">第四步：$q \Rightarrow p$ 成立，$p \Rightarrow q$ 不成立</div>
+                                        <div class="step-item">✅ 答案：p 是 q 的<strong>必要不充分条件</strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 例题4 -->
+                        <div class="example-block">
+                            <div class="example-title">✏️ 例题4 <span class="tag tag-medium">进阶</span></div>
+                            <div class="example-content">
+                                <p>p："$x = 2$"，q："$x^2 = 4$ 且 $x > 0$"。p 是 q 的什么条件？</p>
+                                <button class="step-toggle">👀 查看解题步骤</button>
+                                <div class="step-detail">
+                                    <div class="step-inner">
+                                        <div class="step-item">第一步：$p \Rightarrow q$？$x=2$ → $x^2=4$ 且 $x>0$ ✅</div>
+                                        <div class="step-item">第二步：$q \Rightarrow p$？$x^2=4$ 且 $x>0$ → $x=2$ ✅（排除了 $-2$）
+                                        </div>
+                                        <div class="step-item">第三步：两个方向都能推出</div>
+                                        <div class="step-item">✅ 答案：p 是 q 的<strong>充要条件</strong>（等价关系）</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 例题5 -->
+                        <div class="example-block">
+                            <div class="example-title">✏️ 例题5 <span class="tag tag-hard">挑战</span></div>
+                            <div class="example-content">
+                                <p>p："$x > 5$"，q："$x > 3$ 且 $x < 4$"。p 是 q 的什么条件？</p>
+                                        <button class="step-toggle">👀 查看解题步骤</button>
+                                        <div class="step-detail">
+                                            <div class="step-inner">
+                                                <div class="step-item">第一步：$p \Rightarrow q$？$x>5$ → $3 < x <
+                                                        4$？不行，$x=6$ 不满足 $x<4$ ❌</div>
+                                                        <div class="step-item">第二步：$q \Rightarrow p$？$3 < x < 4$ → $x>
+                                                                5$？不行，$x=3.5$ 不满足 $x>5$ ❌</div>
+                                                        <div class="step-item">第三步：两个方向都推不出</div>
+                                                        <div class="step-item">✅ 答案：p 是 q 的<strong>既不充分也不必要条件</strong>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ==================== 章节小测验 ==================== -->
+                    <div class="quiz-section">
+                        <div class="quiz-title">🧪 第一章 · 小测验</div>
+
+                        <!-- 题目1 -->
+                        <div class="quiz-card">
+                            <div class="quiz-question">1. 下列能构成集合的是？</div>
+                            <div class="quiz-options">
+                                <button class="quiz-option" data-correct="false">A. 比较小的数</button>
+                                <button class="quiz-option" data-correct="false">B. 长得帅的人</button>
+                                <button class="quiz-option" data-correct="true">C. 不超过10的正整数</button>
+                                <button class="quiz-option" data-correct="false">D. 差不多大的苹果</button>
+                            </div>
+                            <div class="quiz-explanation">💡
+                                集合要求确定性。"比较小""长得帅""差不多大"都是模糊的标准。"不超过10的正整数"是确定的：$\{1,2,3,...,10\}$。</div>
+                        </div>
+
+                        <!-- 题目2 -->
+                        <div class="quiz-card">
+                            <div class="quiz-question">2. 集合 $\{1, 2, 3\}$ 的子集个数为？</div>
+                            <div class="quiz-options">
+                                <button class="quiz-option" data-correct="false">A. 3</button>
+                                <button class="quiz-option" data-correct="false">B. 6</button>
+                                <button class="quiz-option" data-correct="false">C. 7</button>
+                                <button class="quiz-option" data-correct="true">D. 8</button>
+                            </div>
+                            <div class="quiz-explanation">💡 含 $n$ 个元素的集合有 $2^n$ 个子集。$n=3$，所以有 $2^3=8$
+                                个子集。选C的同学可能忘了算空集或集合本身！</div>
+                        </div>
+
+                        <!-- 题目3 -->
+                        <div class="quiz-card">
+                            <div class="quiz-question">3. $A=\{1,3,5,7\}$，$B=\{2,3,5,8\}$，则 $A \cap B$ 等于？</div>
+                            <div class="quiz-options">
+                                <button class="quiz-option" data-correct="false">A. $\{1,2,3,5,7,8\}$</button>
+                                <button class="quiz-option" data-correct="true">B. $\{3,5\}$</button>
+                                <button class="quiz-option" data-correct="false">C. $\{1,7\}$</button>
+                                <button class="quiz-option" data-correct="false">D. $\{2,8\}$</button>
+                            </div>
+                            <div class="quiz-explanation">💡 交集是公共元素。A和B都有的元素是3和5。选A的同学求的是并集 $A \cup B$！</div>
+                        </div>
+
+                        <!-- 题目4 -->
+                        <div class="quiz-card">
+                            <div class="quiz-question">4. 全集 $U=\{1,2,3,4,5\}$，$A=\{1,3\}$，则 $\complement_U A$ 等于？</div>
+                            <div class="quiz-options">
+                                <button class="quiz-option" data-correct="false">A. $\{1,3\}$</button>
+                                <button class="quiz-option" data-correct="true">B. $\{2,4,5\}$</button>
+                                <button class="quiz-option" data-correct="false">C. $\{1,2,3,4,5\}$</button>
+                                <button class="quiz-option" data-correct="false">D. $\varnothing$</button>
+                            </div>
+                            <div class="quiz-explanation">💡 补集就是全集中去掉A的元素。$U$ 中去掉1和3，剩下 $\{2,4,5\}$。</div>
+                        </div>
+
+                        <!-- 题目5 -->
+                        <div class="quiz-card">
+                            <div class="quiz-question">5. $A=\{x \mid x \geq 2\}$，$B=\{x \mid x < 5\}$，则 $A \cap B$
+                                    等于？</div>
+                                    <div class="quiz-options">
+                                        <button class="quiz-option" data-correct="false">A. $\{x \mid x \geq
+                                            2\}$</button>
+                                        <button class="quiz-option" data-correct="false">B. $\{x \mid x < 5\}$</button>
+                                                <button class="quiz-option" data-correct="true">C. $\{x \mid 2 \leq x <
+                                                        5\}$</button>
+                                                        <button class="quiz-option" data-correct="false">D.
+                                                            $\varnothing$</button>
+                                    </div>
+                                    <div class="quiz-explanation">💡 在数轴上画出来：A 是 $[2,+\infty)$，B 是 $(-\infty,5)$，重叠部分就是
+                                        $[2,5)$。</div>
+                            </div>
+
+                            <!-- 题目6 -->
+                            <div class="quiz-card">
+                                <div class="quiz-question">6. $A=\{1,2\}$，$B=\{1,2,3\}$，则 $A \cup B$ 等于？</div>
+                                <div class="quiz-options">
+                                    <button class="quiz-option" data-correct="false">A. $\{1,2\}$</button>
+                                    <button class="quiz-option" data-correct="true">B. $\{1,2,3\}$</button>
+                                    <button class="quiz-option" data-correct="false">C. $\{3\}$</button>
+                                    <button class="quiz-option" data-correct="false">D. $\varnothing$</button>
+                                </div>
+                                <div class="quiz-explanation">💡 并集是合在一起去重。$A \cup B = \{1,2,3\}$。当 $A \subseteq B$ 时，$A
+                                    \cup B = B$。</div>
+                            </div>
+
+                            <!-- 题目7 -->
+                            <div class="quiz-card">
+                                <div class="quiz-question">7. p："$x=2$"，q："$x^2=4$"。p 是 q 的什么条件？</div>
+                                <div class="quiz-options">
+                                    <button class="quiz-option" data-correct="true">A. 充分不必要条件</button>
+                                    <button class="quiz-option" data-correct="false">B. 必要不充分条件</button>
+                                    <button class="quiz-option" data-correct="false">C. 充要条件</button>
+                                    <button class="quiz-option" data-correct="false">D. 既不充分也不必要条件</button>
+                                </div>
+                                <div class="quiz-explanation">💡 $x=2 \Rightarrow x^2=4$ ✅，但 $x^2=4 \nRightarrow
+                                    x=2$（$x$ 可能是 $-2$）。所以 p 是 q 的充分不必要条件。</div>
+                            </div>
+
+                            <!-- 题目8 -->
+                            <div class="quiz-card">
+                                <div class="quiz-question">8. p："$x>3$"，q："$x>5$"。p 是 q 的什么条件？</div>
+                                <div class="quiz-options">
+                                    <button class="quiz-option" data-correct="false">A. 充分不必要条件</button>
+                                    <button class="quiz-option" data-correct="true">B. 必要不充分条件</button>
+                                    <button class="quiz-option" data-correct="false">C. 充要条件</button>
+                                    <button class="quiz-option" data-correct="false">D. 既不充分也不必要条件</button>
+                                </div>
+                                <div class="quiz-explanation">💡 $x>3 \nRightarrow x>5$（$x=4$ 就不行），但 $x>5 \Rightarrow
+                                    x>3$ ✅。所以 p 是 q 的必要不充分条件。大范围是小范围的必要条件！</div>
+                            </div>
+
+                            <!-- 题目9 -->
+                            <div class="quiz-card">
+                                <div class="quiz-question">9. 下列说法正确的是？</div>
+                                <div class="quiz-options">
+                                    <button class="quiz-option" data-correct="false">A. 空集没有子集</button>
+                                    <button class="quiz-option" data-correct="false">B. $\{0\}$ 就是空集</button>
+                                    <button class="quiz-option" data-correct="true">C. 空集是任何集合的子集</button>
+                                    <button class="quiz-option" data-correct="false">D. $\{1,1,2\}$ 是一个集合</button>
+                                </div>
+                                <div class="quiz-explanation">💡 A错：空集有一个子集（它自己）。B错：$\{0\}$ 含有元素0，不是空集。C对：$\varnothing
+                                    \subseteq A$ 对任何集合成立。D错：集合中元素不能重复。</div>
+                            </div>
+
+                            <!-- 题目10 -->
+                            <div class="quiz-card">
+                                <div class="quiz-question">10. p："四边形是正方形"，q："四边形是矩形"。p 是 q 的什么条件？</div>
+                                <div class="quiz-options">
+                                    <button class="quiz-option" data-correct="true">A. 充分不必要条件</button>
+                                    <button class="quiz-option" data-correct="false">B. 必要不充分条件</button>
+                                    <button class="quiz-option" data-correct="false">C. 充要条件</button>
+                                    <button class="quiz-option" data-correct="false">D. 既不充分也不必要条件</button>
+                                </div>
+                                <div class="quiz-explanation">💡 正方形一定是矩形 ✅，但矩形不一定是正方形 ❌。正方形是矩形的"特殊情况"（小范围），所以是充分不必要条件。
+                                </div>
+                            </div>
+
+                            <!-- 测验结果 -->
+                            <div class="quiz-result">
+                                <div class="score">0 / 10</div>
+                                <div class="score-text">正确率：0%</div>
+                                <div class="encouragement"></div>
+                                <button class="quiz-submit mt-3" onclick="resetQuiz()"
+                                    style="background: var(--ch1);">🔄 重新测验</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- 页脚 -->
+                    <footer class="site-footer">
+                        <p>📐 高职高考数学 · 轻松学</p>
+                        <p>第一章 · 集合与充要条件 ✅</p>
+                    </footer>
+
+                    <script src="../js/main.js"></script>
+</body>
+
+</html>

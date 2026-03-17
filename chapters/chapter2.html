@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二章 · 不等式 - 高职高考数学</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <style>
+        .card-header {
+            background: var(--ch2);
+        }
+
+        .section-nav a:hover,
+        .section-nav a.active {
+            background: var(--ch2);
+        }
+
+        .step-toggle {
+            border-color: var(--ch2);
+            color: var(--ch2);
+        }
+
+        .step-detail .step-item {
+            border-left-color: var(--ch2);
+        }
+
+        .quiz-submit {
+            background: var(--ch2);
+        }
+
+        .progress-bar {
+            background: var(--ch2);
+        }
+
+        .example-block .example-title {
+            background: #FFF8E1;
+            color: #F5A623;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="progress-bar" style="width:0%"></div>
+
+    <nav class="top-nav">
+        <a href="../index.html" class="back-btn">⬅ 返回首页</a>
+        <span class="nav-title">第二章 · 不等式</span>
+    </nav>
+
+    <div class="chapter-container">
+
+        <div class="chapter-header">
+            <div class="ch-emoji">⚖️</div>
+            <h1>第二章 · 不等式</h1>
+            <p class="ch-subtitle">比大小的艺术！学会不等式，就能圈出答案的范围 🎯</p>
+        </div>
+
+        <div class="section-nav">
+            <a href="#s1">不等式的性质</a>
+            <a href="#s2">一元一次不等式</a>
+            <a href="#s3">一元二次不等式</a>
+        </div>
+
+        <!-- ==================== 知识点1：不等式的性质 ==================== -->
+        <div class="knowledge-card" id="s1">
+            <div class="card-header">📋 知识点一：不等式的性质</div>
+            <div class="card-body">
+
+                <div class="intro-box">
+                    <span class="intro-icon">⚖️</span>
+                    不等式就像一个天平，左边和右边不一样重。我们对天平两边做同样的操作（加减乘除），天平会怎么变？这就是不等式的性质要告诉你的事情。
+                </div>
+
+                <div class="formula-box">
+                    <span class="formula-label">📐 不等式的基本性质</span>
+                    $$\text{性质1：} a > b \Rightarrow a+c > b+c$$
+                    $$\text{性质2：} a > b, \; c > 0 \Rightarrow ac > bc$$
+                    $$\text{性质3：} a > b, \; c < 0 \Rightarrow ac < bc$$ $$\text{性质4：} a> b, \; b > c \Rightarrow a > c$$
+                </div>
+                <div class="explain-box">
+                    <strong>性质1</strong>：两边同时加（或减）同一个数，不等号方向<strong>不变</strong>。<br>
+                    <strong>性质2</strong>：两边同时乘以（或除以）一个<strong>正数</strong>，不等号方向<strong>不变</strong>。<br>
+                    <strong>性质3</strong>：两边同时乘以（或除以）一个<strong>负数</strong>，不等号方向<strong>要反转</strong>！⚠️<br>
+                    <strong>性质4</strong>：传递性，大于大于的还是大于。<br><br>
+                    🔥 最容易出错的就是<strong>性质3</strong>！乘以负数要翻转不等号，很多同学忘了这一点。
+                </div>
+
+                <!-- 例题1 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+                    <div class="example-content">
+                        <p>已知 $a > b$，下列哪个一定成立？<br>A. $2a > 2b$<br>B. $-a > -b$<br>C. $a^2 > b^2$<br>D. $a - b < 0$</p>
+                                <button class="step-toggle">👀 查看解题步骤</button>
+                                <div class="step-detail">
+                                    <div class="step-inner">
+                                        <div class="step-item">A. 两边乘以正数2，不等号不变 → $2a > 2b$ ✅</div>
+                                        <div class="step-item">B. 两边乘以 $-1$（负数），不等号要反转 → $-a < -b$ ❌</div>
+                                                <div class="step-item">C. 不一定，比如 $a=1, b=-2$，$1 < 4$ ❌</div>
+                                                        <div class="step-item">D. $a > b$ 意味着 $a-b > 0$ ❌</div>
+                                                        <div class="step-item">✅ 答案：A</div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 例题2 -->
+                                <div class="example-block">
+                                    <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+                                    <div class="example-content">
+                                        <p>已知 $a > b > 0$，$c < 0$，比较 $ac$ 和 $bc$ 的大小。</p>
+                                                <button class="step-toggle">👀 查看解题步骤</button>
+                                                <div class="step-detail">
+                                                    <div class="step-inner">
+                                                        <div class="step-item">$a > b$，两边乘以负数 $c$</div>
+                                                        <div class="step-item">乘以负数，不等号反转</div>
+                                                        <div class="step-item">✅ 答案：$ac < bc$</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                    </div>
+
+                                    <!-- 例题3 -->
+                                    <div class="example-block">
+                                        <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+                                        <div class="example-content">
+                                            <p>已知 $a > b$，$c > d$，下列一定成立的是？<br>A. $a+c > b+d$<br>B. $ac > bd$<br>C. $a-c
+                                                > b-d$<br>D. $\dfrac{a}{c} > \dfrac{b}{d}$</p>
+                                            <button class="step-toggle">👀 查看解题步骤</button>
+                                            <div class="step-detail">
+                                                <div class="step-inner">
+                                                    <div class="step-item">A. $a > b$ 且 $c > d$，同向不等式可以相加：$a+c > b+d$ ✅
+                                                    </div>
+                                                    <div class="step-item">B. 不一定，$a,b,c,d$ 可能有负数，比如
+                                                        $a=1,b=-1,c=-1,d=-2$，$ac=-1, bd=2$ ❌</div>
+                                                    <div class="step-item">C. 不一定，同向不等式不能相减 ❌</div>
+                                                    <div class="step-item">D. 不一定，$c,d$ 的正负不确定 ❌</div>
+                                                    <div class="step-item">✅ 答案：A</div>
+                                                    <div class="step-item">💡 记住：同向不等式可以相加，但不能相减、相乘、相除！</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                    </div>
+
+                    <!-- ==================== 知识点2：一元一次不等式 ==================== -->
+                    <div class="knowledge-card" id="s2">
+                        <div class="card-header">📊 知识点二：一元一次不等式（组）</div>
+                        <div class="card-body">
+
+                            <div class="intro-box">
+                                <span class="intro-icon">🚦</span>
+                                解不等式就像找"合格区间"。比如考试60分及格，你的分数 $x$ 要满足 $x \geq 60$。一元一次不等式就是找出 $x$ 的范围。
+                            </div>
+
+                            <div class="formula-box">
+                                <span class="formula-label">📐 解一元一次不等式的步骤</span>
+                                $$\text{1. 去分母 → 2. 去括号 → 3. 移项 → 4. 合并同类项 → 5. 系数化为1}$$
+                            </div>
+                            <div class="explain-box">
+                                和解一元一次方程的步骤完全一样！唯一的区别：<br>
+                                ⚠️ <strong>两边乘以或除以负数时，不等号要反转！</strong><br><br>
+                                不等式组的解法口诀：<br>
+                                <strong>"同大取大，同小取小，大小小大取中间，大大小小无解"</strong><br>
+                                即：两个都是 $x >$ 的形式，取较大的那个；两个都是 $x <$ 的形式，取较小的那个。 </div>
+
+                                    <!-- 例题1 -->
+                                    <div class="example-block">
+                                        <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+                                        <div class="example-content">
+                                            <p>解不等式：$2x - 3 > 5$</p>
+                                            <button class="step-toggle">👀 查看解题步骤</button>
+                                            <div class="step-detail">
+                                                <div class="step-inner">
+                                                    <div class="step-item">第一步：移项，$2x > 5 + 3 = 8$</div>
+                                                    <div class="step-item">第二步：两边除以2（正数，不等号不变），$x > 4$</div>
+                                                    <div class="step-item">✅ 答案：$x > 4$，即 $(4, +\infty)$</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 例题2 -->
+                                    <div class="example-block">
+                                        <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+                                        <div class="example-content">
+                                            <p>解不等式：$-3x + 6 \leq 0$</p>
+                                            <button class="step-toggle">👀 查看解题步骤</button>
+                                            <div class="step-detail">
+                                                <div class="step-inner">
+                                                    <div class="step-item">第一步：移项，$-3x \leq -6$</div>
+                                                    <div class="step-item">第二步：两边除以 $-3$（负数！不等号反转），$x \geq 2$</div>
+                                                    <div class="step-item">✅ 答案：$x \geq 2$，即 $[2, +\infty)$</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 例题3 -->
+                                    <div class="example-block">
+                                        <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+                                        <div class="example-content">
+                                            <p>解不等式组：$\begin{cases} 2x - 1 > 3 \\ x + 2 < 7 \end{cases}$</p>
+                                                    <button class="step-toggle">👀 查看解题步骤</button>
+                                                    <div class="step-detail">
+                                                        <div class="step-inner">
+                                                            <div class="step-item">第一步：解第一个不等式 $2x - 1 > 3 \Rightarrow
+                                                                2x > 4 \Rightarrow x > 2$</div>
+                                                            <div class="step-item">第二步：解第二个不等式 $x + 2 < 7 \Rightarrow x
+                                                                    < 5$</div>
+                                                                    <div class="step-item">第三步：取交集，$x > 2$ 且 $x <
+                                                                            5$（大小小大取中间）</div>
+                                                                            <div class="step-item">✅ 答案：$2 < x < 5$，即
+                                                                                    $(2, 5)$</div>
+                                                                            </div>
+                                                                    </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- 例题4 -->
+                                                        <div class="example-block">
+                                                            <div class="example-title">✏️ 例题4 <span
+                                                                    class="tag tag-medium">进阶</span></div>
+                                                            <div class="example-content">
+                                                                <p>解不等式组：$\begin{cases} 3x + 1 > 10 \\ 2x - 3 > 7
+                                                                    \end{cases}$</p>
+                                                                <button class="step-toggle">👀 查看解题步骤</button>
+                                                                <div class="step-detail">
+                                                                    <div class="step-inner">
+                                                                        <div class="step-item">第一步：$3x + 1 > 10
+                                                                            \Rightarrow x > 3$</div>
+                                                                        <div class="step-item">第二步：$2x - 3 > 7
+                                                                            \Rightarrow x > 5$</div>
+                                                                        <div class="step-item">第三步：两个都是 $x >$，同大取大 → $x
+                                                                            > 5$</div>
+                                                                        <div class="step-item">✅ 答案：$x > 5$，即 $(5,
+                                                                            +\infty)$</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                        </div>
+
+                                        <!-- ==================== 知识点3：一元二次不等式 ==================== -->
+                                        <div class="knowledge-card" id="s3">
+                                            <div class="card-header">📈 知识点三：一元二次不等式</div>
+                                            <div class="card-body">
+
+                                                <div class="intro-box">
+                                                    <span class="intro-icon">🎢</span>
+                                                    一元二次不等式和一元二次方程是"亲兄弟"。方程是找"等于零的点"，不等式是找"大于零或小于零的区间"。画个抛物线图，一切就清楚了！
+                                                </div>
+
+                                                <div class="formula-box">
+                                                    <span class="formula-label">📐 一元二次不等式的解法（$a > 0$ 时）</span>
+                                                    $$ax^2 + bx + c = 0 \text{ 的两根为 } x_1 < x_2 \text{ 时：}$$ $$ax^2 + bx
+                                                        + c> 0 \Rightarrow x < x_1 \text{ 或 } x> x_2$$
+                                                            $$ax^2 + bx + c < 0 \Rightarrow x_1 < x < x_2$$ </div>
+                                                                <div class="explain-box">
+                                                                    核心思路：<strong>先求方程的根，再看不等式的方向</strong>。<br><br>
+                                                                    当 $a > 0$ 时，抛物线开口朝上（像一个碗 🥣）：<br>
+                                                                    • <strong>大于零</strong>（$> 0$）：抛物线在 x
+                                                                    轴<strong>上方</strong>的部分 →
+                                                                    两根<strong>外侧</strong>（"大于取两边"）<br>
+                                                                    • <strong>小于零</strong>（$< 0$）：抛物线在 x 轴<strong>
+                                                                        下方</strong>的部分 →
+                                                                        两根<strong>中间</strong>（"小于取中间"）<br><br>
+                                                                        💡 口诀：<strong>"大于取两边，小于取中间"</strong>（前提是 $a >
+                                                                        0$）
+                                                                </div>
+
+                                                                <div class="formula-box">
+                                                                    <span class="formula-label">📐 三种情况汇总（$a >
+                                                                        0$）</span>
+                                                                    $$\Delta > 0 \text{（两个不等实根 } x_1 < x_2 \text{）：}$$
+                                                                        $$\quad> 0 \Rightarrow (-\infty, x_1) \cup (x_2,
+                                                                        +\infty)$$
+                                                                        $$\quad < 0 \Rightarrow (x_1, x_2)$$ $$\Delta=0
+                                                                            \text{（重根 } x_0 \text{）：}$$ $$\quad> 0
+                                                                            \Rightarrow x \neq x_0 \text{ 的所有实数}$$
+                                                                            $$\quad < 0 \Rightarrow \varnothing
+                                                                                \text{（无解）}$$ $$\Delta < 0
+                                                                                \text{（无实根）：}$$ $$\quad> 0 \Rightarrow
+                                                                                \mathbb{R} \text{（所有实数）}$$
+                                                                                $$\quad < 0 \Rightarrow \varnothing
+                                                                                    \text{（无解）}$$ </div>
+
+                                                                                    <!-- 例题1 -->
+                                                                                    <div class="example-block">
+                                                                                        <div class="example-title">✏️
+                                                                                            例题1 <span
+                                                                                                class="tag tag-easy">入门</span>
+                                                                                        </div>
+                                                                                        <div class="example-content">
+                                                                                            <p>解不等式：$x^2 - 5x + 6 > 0$
+                                                                                            </p>
+                                                                                            <button
+                                                                                                class="step-toggle">👀
+                                                                                                查看解题步骤</button>
+                                                                                            <div class="step-detail">
+                                                                                                <div class="step-inner">
+                                                                                                    <div
+                                                                                                        class="step-item">
+                                                                                                        第一步：先解方程
+                                                                                                        $x^2-5x+6=0$，因式分解
+                                                                                                        $(x-2)(x-3)=0$
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="step-item">
+                                                                                                        第二步：两根
+                                                                                                        $x_1=2$，$x_2=3$
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="step-item">
+                                                                                                        第三步：$a=1>0$，且是
+                                                                                                        $>0$，用"大于取两边"
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="step-item">
+                                                                                                        ✅ 答案：$x < 2$ 或
+                                                                                                            $x> 3$，即
+                                                                                                            $(-\infty,
+                                                                                                            2) \cup (3,
+                                                                                                            +\infty)$
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <!-- 例题2 -->
+                                                                                    <div class="example-block">
+                                                                                        <div class="example-title">✏️
+                                                                                            例题2 <span
+                                                                                                class="tag tag-easy">入门</span>
+                                                                                        </div>
+                                                                                        <div class="example-content">
+                                                                                            <p>解不等式：$x^2 - 5x + 6 <
+                                                                                                    0$</p>
+                                                                                                    <button
+                                                                                                        class="step-toggle">👀
+                                                                                                        查看解题步骤</button>
+                                                                                                    <div
+                                                                                                        class="step-detail">
+                                                                                                        <div
+                                                                                                            class="step-inner">
+                                                                                                            <div
+                                                                                                                class="step-item">
+                                                                                                                第一步：和上题一样，两根
+                                                                                                                $x_1=2$，$x_2=3$
+                                                                                                            </div>
+                                                                                                            <div
+                                                                                                                class="step-item">
+                                                                                                                第二步：$a=1>0$，且是
+                                                                                                                $
+                                                                                                                <0$，用"小于取中间"<
+                                                                                                                    /div>
+                                                                                                                    <div
+                                                                                                                        class="step-item">
+                                                                                                                        ✅
+                                                                                                                        答案：$2
+                                                                                                                        < x <
+                                                                                                                            3$，即
+                                                                                                                            $(2,
+                                                                                                                            3)$</div>
+                                                                                                                    </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+
+                                                                                                    <!-- 例题3 -->
+                                                                                                    <div
+                                                                                                        class="example-block">
+                                                                                                        <div
+                                                                                                            class="example-title">
+                                                                                                            ✏️ 例题3 <span
+                                                                                                                class="tag tag-medium">进阶</span>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="example-content">
+                                                                                                            <p>解不等式：$2x^2
+                                                                                                                + 3x - 2
+                                                                                                                \leq 0$
+                                                                                                            </p>
+                                                                                                            <button
+                                                                                                                class="step-toggle">👀
+                                                                                                                查看解题步骤</button>
+                                                                                                            <div
+                                                                                                                class="step-detail">
+                                                                                                                <div
+                                                                                                                    class="step-inner">
+                                                                                                                    <div
+                                                                                                                        class="step-item">
+                                                                                                                        第一步：解方程
+                                                                                                                        $2x^2+3x-2=0$
+                                                                                                                    </div>
+                                                                                                                    <div
+                                                                                                                        class="step-item">
+                                                                                                                        第二步：$\Delta=9+16=25$，$x=\dfrac{-3
+                                                                                                                        \pm
+                                                                                                                        5}{4}$
+                                                                                                                    </div>
+                                                                                                                    <div
+                                                                                                                        class="step-item">
+                                                                                                                        第三步：$x_1=\dfrac{-3-5}{4}=-2$，$x_2=\dfrac{-3+5}{4}=\dfrac{1}{2}$
+                                                                                                                    </div>
+                                                                                                                    <div
+                                                                                                                        class="step-item">
+                                                                                                                        第四步：$a=2>0$，$\leq
+                                                                                                                        0$
+                                                                                                                        →
+                                                                                                                        "小于取中间"（含等号）
+                                                                                                                    </div>
+                                                                                                                    <div
+                                                                                                                        class="step-item">
+                                                                                                                        ✅
+                                                                                                                        答案：$-2
+                                                                                                                        \leq
+                                                                                                                        x
+                                                                                                                        \leq
+                                                                                                                        \dfrac{1}{2}$，即
+                                                                                                                        $\left[-2,
+                                                                                                                        \dfrac{1}{2}\right]$
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+
+                                                                                                    <!-- 例题4 -->
+                                                                                                    <div
+                                                                                                        class="example-block">
+                                                                                                        <div
+                                                                                                            class="example-title">
+                                                                                                            ✏️ 例题4 <span
+                                                                                                                class="tag tag-medium">进阶</span>
+                                                                                                        </div>
+                                                                                                        <div
+                                                                                                            class="example-content">
+                                                                                                            <p>解不等式：$-x^2
+                                                                                                                + 4x - 3
+                                                                                                                > 0$</p>
+                                                                                                            <button
+                                                                                                                class="step-toggle">👀
+                                                                                                                查看解题步骤</button>
+                                                                                                            <div
+                                                                                                                class="step-detail">
+                                                                                                                <div
+                                                                                                                    class="step-inner">
+                                                                                                                    <div
+                                                                                                                        class="step-item">
+                                                                                                                        第一步：两边乘以
+                                                                                                                        $-1$（不等号反转！）→
+                                                                                                                        $x^2
+                                                                                                                        -
+                                                                                                                        4x
+                                                                                                                        +
+                                                                                                                        3
+                                                                                                                        <
+                                                                                                                            0$</div>
+                                                                                                                            <div
+                                                                                                                                class="step-item">
+                                                                                                                                第二步：解方程
+                                                                                                                                $x^2-4x+3=0$，$(x-1)(x-3)=0$，$x_1=1,
+                                                                                                                                x_2=3$
+                                                                                                                            </div>
+                                                                                                                            <div
+                                                                                                                                class="step-item">
+                                                                                                                                第三步：现在是
+                                                                                                                                $a=1>0$，$
+                                                                                                                                <0$ → "小于取中间"
+                                                                                                                                    </div>
+                                                                                                                                    <div
+                                                                                                                                        class="step-item">
+                                                                                                                                        ✅
+                                                                                                                                        答案：$1
+                                                                                                                                        < x <
+                                                                                                                                            3$，即
+                                                                                                                                            $(1,
+                                                                                                                                            3)$</div>
+                                                                                                                                    </div>
+                                                                                                                            </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+
+                                                                                                                <!-- 例题5 -->
+                                                                                                                <div
+                                                                                                                    class="example-block">
+                                                                                                                    <div
+                                                                                                                        class="example-title">
+                                                                                                                        ✏️
+                                                                                                                        例题5
+                                                                                                                        <span
+                                                                                                                            class="tag tag-hard">挑战</span>
+                                                                                                                    </div>
+                                                                                                                    <div
+                                                                                                                        class="example-content">
+                                                                                                                        <p>解不等式：$x^2
+                                                                                                                            -
+                                                                                                                            2x
+                                                                                                                            +
+                                                                                                                            1
+                                                                                                                            >
+                                                                                                                            0$
+                                                                                                                        </p>
+                                                                                                                        <button
+                                                                                                                            class="step-toggle">👀
+                                                                                                                            查看解题步骤</button>
+                                                                                                                        <div
+                                                                                                                            class="step-detail">
+                                                                                                                            <div
+                                                                                                                                class="step-inner">
+                                                                                                                                <div
+                                                                                                                                    class="step-item">
+                                                                                                                                    第一步：$x^2-2x+1=(x-1)^2=0$，重根
+                                                                                                                                    $x_0=1$
+                                                                                                                                </div>
+                                                                                                                                <div
+                                                                                                                                    class="step-item">
+                                                                                                                                    第二步：$\Delta=0$，$(x-1)^2
+                                                                                                                                    \geq
+                                                                                                                                    0$
+                                                                                                                                    恒成立
+                                                                                                                                </div>
+                                                                                                                                <div
+                                                                                                                                    class="step-item">
+                                                                                                                                    第三步：$(x-1)^2
+                                                                                                                                    >
+                                                                                                                                    0$
+                                                                                                                                    在
+                                                                                                                                    $x
+                                                                                                                                    \neq
+                                                                                                                                    1$
+                                                                                                                                    时成立
+                                                                                                                                </div>
+                                                                                                                                <div
+                                                                                                                                    class="step-item">
+                                                                                                                                    ✅
+                                                                                                                                    答案：$x
+                                                                                                                                    \neq
+                                                                                                                                    1$
+                                                                                                                                    的所有实数，即
+                                                                                                                                    $(-\infty,1)
+                                                                                                                                    \cup
+                                                                                                                                    (1,+\infty)$
+                                                                                                                                </div>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+
+                                                                                                            </div>
+                                                                                                        </div>
+
+                                                                                                        <!-- ==================== 章节小测验 ==================== -->
+                                                                                                        <div
+                                                                                                            class="quiz-section">
+                                                                                                            <div
+                                                                                                                class="quiz-title">
+                                                                                                                🧪 第二章 ·
+                                                                                                                小测验
+                                                                                                            </div>
+
+                                                                                                            <!-- 题目1 -->
+                                                                                                            <div
+                                                                                                                class="quiz-card">
+                                                                                                                <div
+                                                                                                                    class="quiz-question">
+                                                                                                                    1.
+                                                                                                                    已知
+                                                                                                                    $a >
+                                                                                                                    b$，下列一定成立的是？
+                                                                                                                </div>
+                                                                                                                <div
+                                                                                                                    class="quiz-options">
+                                                                                                                    <button
+                                                                                                                        class="quiz-option"
+                                                                                                                        data-correct="false">A.
+                                                                                                                        $-a
+                                                                                                                        >
+                                                                                                                        -b$</button>
+                                                                                                                    <button
+                                                                                                                        class="quiz-option"
+                                                                                                                        data-correct="true">B.
+                                                                                                                        $a
+                                                                                                                        +
+                                                                                                                        1
+                                                                                                                        >
+                                                                                                                        b
+                                                                                                                        +
+                                                                                                                        1$</button>
+                                                                                                                    <button
+                                                                                                                        class="quiz-option"
+                                                                                                                        data-correct="false">C.
+                                                                                                                        $a^2
+                                                                                                                        >
+                                                                                                                        b^2$</button>
+                                                                                                                    <button
+                                                                                                                        class="quiz-option"
+                                                                                                                        data-correct="false">D.
+                                                                                                                        $\dfrac{a}{b}
+                                                                                                                        >
+                                                                                                                        1$</button>
+                                                                                                                </div>
+                                                                                                                <div
+                                                                                                                    class="quiz-explanation">
+                                                                                                                    💡
+                                                                                                                    A：乘以
+                                                                                                                    $-1$
+                                                                                                                    要反转。B：两边加同一个数，不等号不变
+                                                                                                                    ✅。C：$a,b$
+                                                                                                                    可能有负数。D：$b$
+                                                                                                                    可能为负。
+                                                                                                                </div>
+                                                                                                            </div>
+
+                                                                                                            <!-- 题目2 -->
+                                                                                                            <div
+                                                                                                                class="quiz-card">
+                                                                                                                <div
+                                                                                                                    class="quiz-question">
+                                                                                                                    2.
+                                                                                                                    解不等式
+                                                                                                                    $3x
+                                                                                                                    - 6
+                                                                                                                    > 0$
+                                                                                                                    的解集是？
+                                                                                                                </div>
+                                                                                                                <div
+                                                                                                                    class="quiz-options">
+                                                                                                                    <button
+                                                                                                                        class="quiz-option"
+                                                                                                                        data-correct="false">A.
+                                                                                                                        $x
+                                                                                                                        <
+                                                                                                                            2$</button>
+                                                                                                                            <button
+                                                                                                                                class="quiz-option"
+                                                                                                                                data-correct="true">B.
+                                                                                                                                $x
+                                                                                                                                >
+                                                                                                                                2$</button>
+                                                                                                                            <button
+                                                                                                                                class="quiz-option"
+                                                                                                                                data-correct="false">C.
+                                                                                                                                $x
+                                                                                                                                >
+                                                                                                                                -2$</button>
+                                                                                                                            <button
+                                                                                                                                class="quiz-option"
+                                                                                                                                data-correct="false">D.
+                                                                                                                                $x
+                                                                                                                                <
+                                                                                                                                    -2$</button>
+                                                                                                                </div>
+                                                                                                                <div
+                                                                                                                    class="quiz-explanation">
+                                                                                                                    💡
+                                                                                                                    $3x
+                                                                                                                    >
+                                                                                                                    6$，$x
+                                                                                                                    >
+                                                                                                                    2$。除以正数3，不等号不变。
+                                                                                                                </div>
+                                                                                                            </div>
+
+                                                                                                            <!-- 题目3 -->
+                                                                                                            <div
+                                                                                                                class="quiz-card">
+                                                                                                                <div
+                                                                                                                    class="quiz-question">
+                                                                                                                    3.
+                                                                                                                    解不等式
+                                                                                                                    $-2x
+                                                                                                                    \geq
+                                                                                                                    8$
+                                                                                                                    的解集是？
+                                                                                                                </div>
+                                                                                                                <div
+                                                                                                                    class="quiz-options">
+                                                                                                                    <button
+                                                                                                                        class="quiz-option"
+                                                                                                                        data-correct="false">A.
+                                                                                                                        $x
+                                                                                                                        \geq
+                                                                                                                        -4$</button>
+                                                                                                                    <button
+                                                                                                                        class="quiz-option"
+                                                                                                                        data-correct="true">B.
+                                                                                                                        $x
+                                                                                                                        \leq
+                                                                                                                        -4$</button>
+                                                                                                                    <button
+                                                                                                                        class="quiz-option"
+                                                                                                                        data-correct="false">C.
+                                                                                                                        $x
+                                                                                                                        \geq
+                                                                                                                        4$</button>
+                                                                                                                    <button
+                                                                                                                        class="quiz-option"
+                                                                                                                        data-correct="false">D.
+                                                                                                                        $x
+                                                                                                                        \leq
+                                                                                                                        4$</button>
+                                                                                                                </div>
+                                                                                                                <div
+                                                                                                                    class="quiz-explanation">
+                                                                                                                    💡
+                                                                                                                    两边除以
+                                                                                                                    $-2$（负数！），不等号反转：$x
+                                                                                                                    \leq
+                                                                                                                    -4$。选A的同学忘了反转不等号！
+                                                                                                                </div>
+                                                                                                            </div>
+
+                                                                                                            <!-- 题目4 -->
+                                                                                                            <div
+                                                                                                                class="quiz-card">
+                                                                                                                <div
+                                                                                                                    class="quiz-question">
+                                                                                                                    4.
+                                                                                                                    不等式组
+                                                                                                                    $\begin{cases}
+                                                                                                                    x >
+                                                                                                                    1 \\
+                                                                                                                    x >
+                                                                                                                    4
+                                                                                                                    \end{cases}$
+                                                                                                                    的解集是？
+                                                                                                                </div>
+                                                                                                                <div
+                                                                                                                    class="quiz-options">
+                                                                                                                    <button
+                                                                                                                        class="quiz-option"
+                                                                                                                        data-correct="false">A.
+                                                                                                                        $x
+                                                                                                                        >
+                                                                                                                        1$</button>
+                                                                                                                    <button
+                                                                                                                        class="quiz-option"
+                                                                                                                        data-correct="true">B.
+                                                                                                                        $x
+                                                                                                                        >
+                                                                                                                        4$</button>
+                                                                                                                    <button
+                                                                                                                        class="quiz-option"
+                                                                                                                        data-correct="false">C.
+                                                                                                                        $1
+                                                                                                                        < x <
+                                                                                                                            4$</button>
+                                                                                                                            <button
+                                                                                                                                class="quiz-option"
+                                                                                                                                data-correct="false">D.
+                                                                                                                                无解</button>
+                                                                                                                </div>
+                                                                                                                <div
+                                                                                                                    class="quiz-explanation">
+                                                                                                                    💡
+                                                                                                                    同大取大！两个都是
+                                                                                                                    $x
+                                                                                                                    >$，取较大的
+                                                                                                                    $x >
+                                                                                                                    4$。
+                                                                                                                </div>
+                                                                                                            </div>
+
+                                                                                                            <!-- 题目5 -->
+                                                                                                            <div
+                                                                                                                class="quiz-card">
+                                                                                                                <div
+                                                                                                                    class="quiz-question">
+                                                                                                                    5.
+                                                                                                                    不等式组
+                                                                                                                    $\begin{cases}
+                                                                                                                    x >
+                                                                                                                    5 \\
+                                                                                                                    x < 3
+                                                                                                                        \end{cases}$
+                                                                                                                        的解集是？</div>
+                                                                                                                        <div
+                                                                                                                            class="quiz-options">
+                                                                                                                            <button
+                                                                                                                                class="quiz-option"
+                                                                                                                                data-correct="false">A.
+                                                                                                                                $3
+                                                                                                                                < x <
+                                                                                                                                    5$</button>
+                                                                                                                                    <button
+                                                                                                                                        class="quiz-option"
+                                                                                                                                        data-correct="false">B.
+                                                                                                                                        $x
+                                                                                                                                        >
+                                                                                                                                        5$</button>
+                                                                                                                                    <button
+                                                                                                                                        class="quiz-option"
+                                                                                                                                        data-correct="false">C.
+                                                                                                                                        $x
+                                                                                                                                        <
+                                                                                                                                            3$</button>
+                                                                                                                                            <button
+                                                                                                                                                class="quiz-option"
+                                                                                                                                                data-correct="true">D.
+                                                                                                                                                无解</button>
+                                                                                                                        </div>
+                                                                                                                        <div
+                                                                                                                            class="quiz-explanation">
+                                                                                                                            💡
+                                                                                                                            大大小小无解！$x$
+                                                                                                                            不可能同时大于5又小于3。
+                                                                                                                        </div>
+                                                                                                                </div>
+
+                                                                                                                <!-- 题目6 -->
+                                                                                                                <div
+                                                                                                                    class="quiz-card">
+                                                                                                                    <div
+                                                                                                                        class="quiz-question">
+                                                                                                                        6.
+                                                                                                                        解不等式
+                                                                                                                        $x^2
+                                                                                                                        -
+                                                                                                                        4x
+                                                                                                                        +
+                                                                                                                        3
+                                                                                                                        >
+                                                                                                                        0$
+                                                                                                                        的解集是？
+                                                                                                                    </div>
+                                                                                                                    <div
+                                                                                                                        class="quiz-options">
+                                                                                                                        <button
+                                                                                                                            class="quiz-option"
+                                                                                                                            data-correct="false">A.
+                                                                                                                            $1
+                                                                                                                            < x <
+                                                                                                                                3$</button>
+                                                                                                                                <button
+                                                                                                                                    class="quiz-option"
+                                                                                                                                    data-correct="true">B.
+                                                                                                                                    $x
+                                                                                                                                    < 1$ 或
+                                                                                                                                        $x>
+                                                                                                                                        3$</button>
+                                                                                                                                <button
+                                                                                                                                    class="quiz-option"
+                                                                                                                                    data-correct="false">C.
+                                                                                                                                    $x
+                                                                                                                                    >
+                                                                                                                                    3$</button>
+                                                                                                                                <button
+                                                                                                                                    class="quiz-option"
+                                                                                                                                    data-correct="false">D.
+                                                                                                                                    $x
+                                                                                                                                    <
+                                                                                                                                        1$</button>
+                                                                                                                    </div>
+                                                                                                                    <div
+                                                                                                                        class="quiz-explanation">
+                                                                                                                        💡
+                                                                                                                        方程
+                                                                                                                        $x^2-4x+3=0$
+                                                                                                                        的根为
+                                                                                                                        $x=1,
+                                                                                                                        x=3$。$a>0$
+                                                                                                                        且
+                                                                                                                        $>0$，"大于取两边"：$x
+                                                                                                                        <1$ 或
+                                                                                                                            $x>
+                                                                                                                            3$。选A的同学用成了"小于取中间"！
+                                                                                                                    </div>
+                                                                                                                </div>
+
+                                                                                                                <!-- 题目7 -->
+                                                                                                                <div
+                                                                                                                    class="quiz-card">
+                                                                                                                    <div
+                                                                                                                        class="quiz-question">
+                                                                                                                        7.
+                                                                                                                        解不等式
+                                                                                                                        $x^2
+                                                                                                                        -
+                                                                                                                        4x
+                                                                                                                        +
+                                                                                                                        3
+                                                                                                                        < 0$
+                                                                                                                            的解集是？</div>
+                                                                                                                            <div
+                                                                                                                                class="quiz-options">
+                                                                                                                                <button
+                                                                                                                                    class="quiz-option"
+                                                                                                                                    data-correct="true">A.
+                                                                                                                                    $1
+                                                                                                                                    < x <
+                                                                                                                                        3$</button>
+                                                                                                                                        <button
+                                                                                                                                            class="quiz-option"
+                                                                                                                                            data-correct="false">B.
+                                                                                                                                            $x
+                                                                                                                                            < 1$ 或
+                                                                                                                                                $x>
+                                                                                                                                                3$</button>
+                                                                                                                                        <button
+                                                                                                                                            class="quiz-option"
+                                                                                                                                            data-correct="false">C.
+                                                                                                                                            $x
+                                                                                                                                            >
+                                                                                                                                            3$</button>
+                                                                                                                                        <button
+                                                                                                                                            class="quiz-option"
+                                                                                                                                            data-correct="false">D.
+                                                                                                                                            无解</button>
+                                                                                                                            </div>
+                                                                                                                            <div
+                                                                                                                                class="quiz-explanation">
+                                                                                                                                💡
+                                                                                                                                和上题同一个方程，根为1和3。$a>0$
+                                                                                                                                且
+                                                                                                                                $
+                                                                                                                                <0$，"小于取中间"：$1
+                                                                                                                                    <
+                                                                                                                                    x
+                                                                                                                                    <
+                                                                                                                                    3$。</div>
+                                                                                                                            </div>
+
+                                                                                                                            <!-- 题目8 -->
+                                                                                                                            <div
+                                                                                                                                class="quiz-card">
+                                                                                                                                <div
+                                                                                                                                    class="quiz-question">
+                                                                                                                                    8.
+                                                                                                                                    解不等式
+                                                                                                                                    $-x^2
+                                                                                                                                    +
+                                                                                                                                    2x
+                                                                                                                                    +
+                                                                                                                                    3
+                                                                                                                                    >
+                                                                                                                                    0$
+                                                                                                                                    的解集是？
+                                                                                                                                </div>
+                                                                                                                                <div
+                                                                                                                                    class="quiz-options">
+                                                                                                                                    <button
+                                                                                                                                        class="quiz-option"
+                                                                                                                                        data-correct="true">A.
+                                                                                                                                        $-1
+                                                                                                                                        < x <
+                                                                                                                                            3$</button>
+                                                                                                                                            <button
+                                                                                                                                                class="quiz-option"
+                                                                                                                                                data-correct="false">B.
+                                                                                                                                                $x
+                                                                                                                                                < -1$
+                                                                                                                                                    或
+                                                                                                                                                    $x>
+                                                                                                                                                    3$</button>
+                                                                                                                                            <button
+                                                                                                                                                class="quiz-option"
+                                                                                                                                                data-correct="false">C.
+                                                                                                                                                $x
+                                                                                                                                                >
+                                                                                                                                                3$</button>
+                                                                                                                                            <button
+                                                                                                                                                class="quiz-option"
+                                                                                                                                                data-correct="false">D.
+                                                                                                                                                无解</button>
+                                                                                                                                </div>
+                                                                                                                                <div
+                                                                                                                                    class="quiz-explanation">
+                                                                                                                                    💡
+                                                                                                                                    两边乘以
+                                                                                                                                    $-1$（反转！）→
+                                                                                                                                    $x^2-2x-3
+                                                                                                                                    < 0$。解方程
+                                                                                                                                        $(x+1)(x-3)=0$，根为
+                                                                                                                                        $-1$
+                                                                                                                                        和
+                                                                                                                                        $3$。$<0$
+                                                                                                                                        取中间：$-1
+                                                                                                                                        <
+                                                                                                                                        x
+                                                                                                                                        <
+                                                                                                                                        3$。</div>
+                                                                                                                                </div>
+
+                                                                                                                                <!-- 题目9 -->
+                                                                                                                                <div
+                                                                                                                                    class="quiz-card">
+                                                                                                                                    <div
+                                                                                                                                        class="quiz-question">
+                                                                                                                                        9.
+                                                                                                                                        不等式
+                                                                                                                                        $(x-1)^2
+                                                                                                                                        >
+                                                                                                                                        0$
+                                                                                                                                        的解集是？
+                                                                                                                                    </div>
+                                                                                                                                    <div
+                                                                                                                                        class="quiz-options">
+                                                                                                                                        <button
+                                                                                                                                            class="quiz-option"
+                                                                                                                                            data-correct="false">A.
+                                                                                                                                            $x
+                                                                                                                                            >
+                                                                                                                                            1$</button>
+                                                                                                                                        <button
+                                                                                                                                            class="quiz-option"
+                                                                                                                                            data-correct="false">B.
+                                                                                                                                            所有实数</button>
+                                                                                                                                        <button
+                                                                                                                                            class="quiz-option"
+                                                                                                                                            data-correct="true">C.
+                                                                                                                                            $x
+                                                                                                                                            \neq
+                                                                                                                                            1$
+                                                                                                                                            的所有实数</button>
+                                                                                                                                        <button
+                                                                                                                                            class="quiz-option"
+                                                                                                                                            data-correct="false">D.
+                                                                                                                                            无解</button>
+                                                                                                                                    </div>
+                                                                                                                                    <div
+                                                                                                                                        class="quiz-explanation">
+                                                                                                                                        💡
+                                                                                                                                        $(x-1)^2
+                                                                                                                                        \geq
+                                                                                                                                        0$
+                                                                                                                                        恒成立，等号在
+                                                                                                                                        $x=1$
+                                                                                                                                        时取到。所以
+                                                                                                                                        $(x-1)^2
+                                                                                                                                        >
+                                                                                                                                        0$
+                                                                                                                                        的解是
+                                                                                                                                        $x
+                                                                                                                                        \neq
+                                                                                                                                        1$。选B的同学忽略了
+                                                                                                                                        $x=1$
+                                                                                                                                        时等于0！
+                                                                                                                                    </div>
+                                                                                                                                </div>
+
+                                                                                                                                <!-- 题目10 -->
+                                                                                                                                <div
+                                                                                                                                    class="quiz-card">
+                                                                                                                                    <div
+                                                                                                                                        class="quiz-question">
+                                                                                                                                        10.
+                                                                                                                                        不等式
+                                                                                                                                        $x^2
+                                                                                                                                        +
+                                                                                                                                        2x
+                                                                                                                                        +
+                                                                                                                                        5
+                                                                                                                                        < 0$
+                                                                                                                                            的解集是？</div>
+                                                                                                                                            <div
+                                                                                                                                                class="quiz-options">
+                                                                                                                                                <button
+                                                                                                                                                    class="quiz-option"
+                                                                                                                                                    data-correct="false">A.
+                                                                                                                                                    所有实数</button>
+                                                                                                                                                <button
+                                                                                                                                                    class="quiz-option"
+                                                                                                                                                    data-correct="false">B.
+                                                                                                                                                    $x
+                                                                                                                                                    <
+                                                                                                                                                        -1$</button>
+                                                                                                                                                        <button
+                                                                                                                                                            class="quiz-option"
+                                                                                                                                                            data-correct="false">C.
+                                                                                                                                                            $-5
+                                                                                                                                                            < x <
+                                                                                                                                                                1$</button>
+                                                                                                                                                                <button
+                                                                                                                                                                    class="quiz-option"
+                                                                                                                                                                    data-correct="true">D.
+                                                                                                                                                                    无解（空集）</button>
+                                                                                                                                            </div>
+                                                                                                                                            <div
+                                                                                                                                                class="quiz-explanation">
+                                                                                                                                                💡
+                                                                                                                                                $\Delta
+                                                                                                                                                =
+                                                                                                                                                4
+                                                                                                                                                -
+                                                                                                                                                20
+                                                                                                                                                =
+                                                                                                                                                -16
+                                                                                                                                                <
+                                                                                                                                                    0$，方程无实根。$a=1>
+                                                                                                                                                    0$，抛物线始终在
+                                                                                                                                                    x
+                                                                                                                                                    轴上方，即
+                                                                                                                                                    $x^2+2x+5
+                                                                                                                                                    >
+                                                                                                                                                    0$
+                                                                                                                                                    恒成立。所以
+                                                                                                                                                    $
+                                                                                                                                                    < 0$
+                                                                                                                                                        无解。</div>
+                                                                                                                                            </div>
+
+                                                                                                                                            <!-- 测验结果 -->
+                                                                                                                                            <div
+                                                                                                                                                class="quiz-result">
+                                                                                                                                                <div
+                                                                                                                                                    class="score">
+                                                                                                                                                    0
+                                                                                                                                                    /
+                                                                                                                                                    10
+                                                                                                                                                </div>
+                                                                                                                                                <div
+                                                                                                                                                    class="score-text">
+                                                                                                                                                    正确率：0%
+                                                                                                                                                </div>
+                                                                                                                                                <div
+                                                                                                                                                    class="encouragement">
+                                                                                                                                                </div>
+                                                                                                                                                <button
+                                                                                                                                                    class="quiz-submit mt-3"
+                                                                                                                                                    onclick="resetQuiz()"
+                                                                                                                                                    style="background: var(--ch2);">🔄
+                                                                                                                                                    重新测验</button>
+                                                                                                                                            </div>
+
+                                                                                                                                    </div>
+
+                                                                                                                                </div>
+
+                                                                                                                                <!-- 页脚 -->
+                                                                                                                                <footer
+                                                                                                                                    class="site-footer">
+                                                                                                                                    <p>📐
+                                                                                                                                        高职高考数学
+                                                                                                                                        ·
+                                                                                                                                        轻松学
+                                                                                                                                    </p>
+                                                                                                                                    <p>第二章
+                                                                                                                                        ·
+                                                                                                                                        不等式
+                                                                                                                                        ✅
+                                                                                                                                    </p>
+                                                                                                                                </footer>
+
+                                                                                                                                <script
+                                                                                                                                    src="../js/main.js"></script>
+</body>
+
+</html>

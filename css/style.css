@@ -1,0 +1,725 @@
+/* ========================================
+   高职高考数学学习网站 - 全局样式
+   卡通活泼风格 · 移动端优先
+   ======================================== */
+
+/* ---------- CSS 变量 ---------- */
+:root {
+    /* 章节主题色 */
+    --ch0: #FF6B6B;
+    /* 预备知识 - 珊瑚红 */
+    --ch1: #4ECDC4;
+    /* 集合 - 薄荷绿 */
+    --ch2: #FFD93D;
+    /* 不等式 - 向日葵黄 */
+    --ch3: #6C5CE7;
+    /* 函数 - 梦幻紫 */
+    --ch4: #A8E6CF;
+    /* 指数对数 - 抹茶绿 */
+    --ch5: #FF8A5C;
+    /* 三角函数 - 橘子橙 */
+    --ch6: #78C1F3;
+    /* 数列 - 天空蓝 */
+    --ch7: #F2A7C3;
+    /* 平面向量 - 樱花粉 */
+    --ch8: #9B59B6;
+    /* 圆锥曲线 - 葡萄紫 */
+    --ch9: #2ECC71;
+    /* 概率统计 - 翡翠绿 */
+
+    /* 通用色 */
+    --bg: #FFF9F0;
+    --card-bg: #FFFFFF;
+    --text: #2D3436;
+    --text-light: #636E72;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --radius: 16px;
+    --radius-sm: 10px;
+
+    /* 字体 */
+    --font: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ---------- 顶部导航栏 ---------- */
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--card-bg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.top-nav .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.top-nav .back-btn:hover {
+    background: #f0f0f0;
+}
+
+.top-nav .nav-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    flex: 1;
+}
+
+/* ---------- 首页 - 章节卡片网格 ---------- */
+.hero {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+}
+
+.chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.chapter-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px 24px;
+    transition: transform 0.25s, box-shadow 0.25s;
+    cursor: pointer;
+    border-left: 6px solid var(--accent, #ccc);
+    position: relative;
+    overflow: hidden;
+}
+
+.chapter-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.chapter-card .ch-icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.chapter-card .ch-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.chapter-card .ch-desc {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* ---------- 章节页面容器 ---------- */
+.chapter-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 16px 60px;
+}
+
+.chapter-header {
+    text-align: center;
+    padding: 30px 0 20px;
+}
+
+.chapter-header .ch-emoji {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.chapter-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+}
+
+.chapter-header .ch-subtitle {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* ---------- 知识点导航（章节内） ---------- */
+.section-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 30px;
+    padding: 16px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.section-nav a {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: #f0f0f0;
+    transition: all 0.2s;
+}
+
+.section-nav a:hover,
+.section-nav a.active {
+    color: #fff;
+}
+
+/* ---------- 知识点卡片 ---------- */
+.knowledge-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 28px;
+    overflow: hidden;
+}
+
+.knowledge-card .card-header {
+    padding: 20px 24px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.knowledge-card .card-body {
+    padding: 24px;
+}
+
+/* ---------- 生活化引入 ---------- */
+.intro-box {
+    background: #FFF8E1;
+    border-left: 4px solid #FFD93D;
+    border-radius: var(--radius-sm);
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+.intro-box .intro-icon {
+    font-size: 1.3rem;
+    margin-right: 6px;
+}
+
+/* ---------- 公式展示区 ---------- */
+.formula-box {
+    background: linear-gradient(135deg, #667eea22, #764ba222);
+    border: 2px dashed #667eea88;
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    margin: 16px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 2;
+}
+
+.formula-box .formula-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.formula-box .katex {
+    font-size: 1.4rem;
+}
+
+.formula-highlight {
+    color: #E74C3C;
+    font-weight: 700;
+}
+
+.formula-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* ---------- 大白话讲解 ---------- */
+.explain-box {
+    background: #E8F8F5;
+    border-radius: var(--radius-sm);
+    padding: 16px 18px;
+    margin: 16px 0;
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+.explain-box::before {
+    content: '💡 大白话讲解';
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* ---------- 例题区域 ---------- */
+.example-block {
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius-sm);
+    margin: 16px 0;
+    overflow: hidden;
+}
+
+.example-block .example-title {
+    padding: 12px 18px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.example-block .example-content {
+    padding: 16px 18px;
+    background: #FAFAFA;
+    font-size: 0.95rem;
+    line-height: 2;
+}
+
+.example-block .example-content .katex {
+    font-size: 1.1rem;
+}
+
+/* 解题步骤折叠 */
+.step-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.2s;
+}
+
+.step-toggle:hover {
+    opacity: 0.8;
+}
+
+.step-detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background: #fff;
+    border-top: 1px dashed #e0e0e0;
+}
+
+.step-detail.open {
+    max-height: 2000px;
+}
+
+.step-detail .step-inner {
+    padding: 16px 18px;
+    line-height: 2.2;
+}
+
+.step-detail .step-item {
+    margin-bottom: 8px;
+    padding-left: 8px;
+    border-left: 3px solid;
+}
+
+/* ---------- 小测验区域 ---------- */
+.quiz-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 3px dashed #e0e0e0;
+}
+
+.quiz-section .quiz-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.quiz-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.quiz-card .quiz-question {
+    padding: 18px 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.8;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.quiz-card .quiz-options {
+    padding: 12px 20px;
+}
+
+.quiz-option {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px 16px;
+    margin: 6px 0;
+    border: 2px solid #e8e8e8;
+    border-radius: var(--radius-sm);
+    background: #FAFAFA;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    line-height: 1.6;
+}
+
+.quiz-option:hover {
+    border-color: #aaa;
+    background: #f5f5f5;
+}
+
+.quiz-option.correct {
+    border-color: #2ECC71;
+    background: #E8F8F0;
+    color: #27AE60;
+    font-weight: 600;
+}
+
+.quiz-option.wrong {
+    border-color: #E74C3C;
+    background: #FDEDEC;
+    color: #C0392B;
+}
+
+.quiz-option:disabled {
+    cursor: default;
+    opacity: 0.7;
+}
+
+.quiz-option:disabled:hover {
+    border-color: #e8e8e8;
+    background: #FAFAFA;
+}
+
+.quiz-option.correct:disabled,
+.quiz-option.wrong:disabled {
+    opacity: 1;
+}
+
+.quiz-explanation {
+    padding: 14px 20px;
+    background: #FFF8E1;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    display: none;
+    border-top: 1px solid #f0f0f0;
+}
+
+.quiz-explanation.show {
+    display: block;
+}
+
+/* 测验结果 */
+.quiz-result {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-top: 20px;
+    display: none;
+}
+
+.quiz-result.show {
+    display: block;
+}
+
+.quiz-result .score {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.quiz-result .score-text {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-top: 8px;
+}
+
+.quiz-result .encouragement {
+    font-size: 1.2rem;
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+/* 提交按钮 */
+.quiz-submit {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 24px auto 0;
+    padding: 14px;
+    border: none;
+    border-radius: var(--radius-sm);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.quiz-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- 进度条 ---------- */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    z-index: 200;
+    transition: width 0.3s;
+    border-radius: 0 2px 2px 0;
+}
+
+/* ---------- 页脚 ---------- */
+.site-footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+/* ---------- 工具类 ---------- */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 {
+    margin-top: 8px;
+}
+
+.mt-2 {
+    margin-top: 16px;
+}
+
+.mt-3 {
+    margin-top: 24px;
+}
+
+.mb-1 {
+    margin-bottom: 8px;
+}
+
+.mb-2 {
+    margin-bottom: 16px;
+}
+
+.mb-3 {
+    margin-bottom: 24px;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .chapter-grid {
+        grid-template-columns: 1fr;
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .chapter-container {
+        padding: 12px 12px 50px;
+    }
+
+    .chapter-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .knowledge-card .card-body {
+        padding: 16px;
+    }
+
+    .formula-box {
+        padding: 14px;
+        font-size: 1.1rem;
+    }
+
+    .formula-box .katex {
+        font-size: 1.15rem;
+    }
+
+    .quiz-card .quiz-question {
+        padding: 14px 16px;
+    }
+
+    .quiz-card .quiz-options {
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 380px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* ---------- 动画 ---------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-in {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* 延迟动画 */
+.delay-1 {
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+.delay-5 {
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+/* ---------- 滚动条美化 ---------- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* ---------- KaTeX 行内公式间距 ---------- */
+.katex {
+    font-size: 1.1em !important;
+}
+
+p .katex,
+li .katex {
+    padding: 0 2px;
+}
+
+/* ---------- 提示标签 ---------- */
+.tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.tag-easy {
+    background: #2ECC71;
+}
+
+.tag-medium {
+    background: #F39C12;
+}
+
+.tag-hard {
+    background: #E74C3C;
+}

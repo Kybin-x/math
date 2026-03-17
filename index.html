@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高职高考数学 · 轻松学</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 首页专属样式 */
+        .hero {
+            padding: 60px 20px 20px;
+        }
+
+        .hero .logo-emoji {
+            font-size: 4rem;
+            margin-bottom: 12px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero h1 {
+            background: linear-gradient(135deg, #FF6B6B, #6C5CE7, #4ECDC4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 2.2rem;
+        }
+
+        .hero .slogan {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .hero .tips-box {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #FFF;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .chapter-grid {
+            padding-bottom: 40px;
+        }
+
+        /* 章节卡片悬浮装饰 */
+        .chapter-card::after {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            opacity: 0.1;
+            background: var(--accent);
+        }
+
+        /* 底部波浪装饰 */
+        .wave-divider {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5rem;
+            color: var(--text-light);
+            letter-spacing: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+        <span class="nav-title">📐 高职高考数学 · 轻松学</span>
+    </nav>
+
+    <!-- 主视觉区 -->
+    <section class="hero">
+        <div class="logo-emoji">📚</div>
+        <h1>高职高考数学</h1>
+        <p class="slogan">零基础也能学会的数学课 🎯<br>用最简单的方式，搞定每一个知识点！</p>
+        <div class="tips-box">
+            💡 点击下方章节卡片，开始你的学习之旅吧~
+        </div>
+    </section>
+
+    <!-- 章节卡片网格 -->
+    <section class="chapter-grid">
+
+        <!-- 第零章 -->
+        <a href="chapters/chapter0.html" class="chapter-card animate-in delay-1"
+            style="--accent: var(--ch0); border-left-color: var(--ch0);">
+            <div class="ch-icon">🧱</div>
+            <div class="ch-title">第零章 · 预备知识</div>
+            <div class="ch-desc">乘法公式、分式运算、二次根式、一元二次方程、平面图形面积、勾股定理</div>
+        </a>
+
+        <!-- 第一章 -->
+        <a href="chapters/chapter1.html" class="chapter-card animate-in delay-2"
+            style="--accent: var(--ch1); border-left-color: var(--ch1);">
+            <div class="ch-icon">🧩</div>
+            <div class="ch-title">第一章 · 集合与充要条件</div>
+            <div class="ch-desc">集合的概念、交集并集补集、充分条件与必要条件</div>
+        </a>
+
+        <!-- 第二章 -->
+        <a href="chapters/chapter2.html" class="chapter-card animate-in delay-3"
+            style="--accent: var(--ch2); border-left-color: var(--ch2);">
+            <div class="ch-icon">⚖️</div>
+            <div class="ch-title">第二章 · 不等式</div>
+            <div class="ch-desc">不等式的性质、一元一次不等式、一元二次不等式、含绝对值不等式</div>
+        </a>
+
+        <!-- 第三章 -->
+        <a href="chapters/chapter3.html" class="chapter-card animate-in delay-4"
+            style="--accent: var(--ch3); border-left-color: var(--ch3);">
+            <div class="ch-icon">📈</div>
+            <div class="ch-title">第三章 · 函数</div>
+            <div class="ch-desc">函数的概念、定义域值域、单调性奇偶性、二次函数</div>
+        </a>
+
+        <!-- 第四章 -->
+        <a href="chapters/chapter4.html" class="chapter-card animate-in delay-5"
+            style="--accent: var(--ch4); border-left-color: var(--ch4);">
+            <div class="ch-icon">🚀</div>
+            <div class="ch-title">第四章 · 指数函数和对数函数</div>
+            <div class="ch-desc">指数运算、指数函数、对数运算、对数函数</div>
+        </a>
+
+        <!-- 第五章 -->
+        <a href="chapters/chapter5.html" class="chapter-card animate-in delay-1"
+            style="--accent: var(--ch5); border-left-color: var(--ch5);">
+            <div class="ch-icon">🎡</div>
+            <div class="ch-title">第五章 · 三角函数</div>
+            <div class="ch-desc">角的概念、三角函数定义、同角关系、诱导公式、正弦余弦函数图像</div>
+        </a>
+
+        <!-- 第六章 -->
+        <a href="chapters/chapter6.html" class="chapter-card animate-in delay-2"
+            style="--accent: var(--ch6); border-left-color: var(--ch6);">
+            <div class="ch-icon">🔢</div>
+            <div class="ch-title">第六章 · 数列</div>
+            <div class="ch-desc">等差数列、等比数列、通项公式、求和公式</div>
+        </a>
+
+        <!-- 第七章 -->
+        <a href="chapters/chapter7.html" class="chapter-card animate-in delay-3"
+            style="--accent: var(--ch7); border-left-color: var(--ch7);">
+            <div class="ch-icon">➡️</div>
+            <div class="ch-title">第七章 · 平面向量</div>
+            <div class="ch-desc">向量的概念、加减运算、数量积、坐标运算</div>
+        </a>
+
+        <!-- 第八章 -->
+        <a href="chapters/chapter8.html" class="chapter-card animate-in delay-4"
+            style="--accent: var(--ch8); border-left-color: var(--ch8);">
+            <div class="ch-icon">🪐</div>
+            <div class="ch-title">第八章 · 圆锥曲线</div>
+            <div class="ch-desc">椭圆、双曲线、抛物线的标准方程与性质</div>
+        </a>
+
+        <!-- 第九章 -->
+        <a href="chapters/chapter9.html" class="chapter-card animate-in delay-5"
+            style="--accent: var(--ch9); border-left-color: var(--ch9);">
+            <div class="ch-icon">🎲</div>
+            <div class="ch-title">第九章 · 概率与统计初步</div>
+            <div class="ch-desc">排列组合、古典概型、统计基础</div>
+        </a>
+
+    </section>
+
+    <!-- 底部装饰 -->
+    <div class="wave-divider">〰️〰️〰️</div>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <p>📐 高职高考数学 · 轻松学</p>
+        <p>零基础也能学会 · 每天进步一点点 💪</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

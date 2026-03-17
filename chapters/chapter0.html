@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第零章 · 预备知识 - 高职高考数学</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- KaTeX 数学公式渲染 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <style>
+        .card-header {
+            background: var(--ch0);
+        }
+
+        .section-nav a:hover,
+        .section-nav a.active {
+            background: var(--ch0);
+        }
+
+        .step-toggle {
+            border-color: var(--ch0);
+            color: var(--ch0);
+        }
+
+        .step-detail .step-item {
+            border-left-color: var(--ch0);
+        }
+
+        .quiz-submit {
+            background: var(--ch0);
+        }
+
+        .progress-bar {
+            background: var(--ch0);
+        }
+
+        .example-block .example-title {
+            background: #FFF0F0;
+            color: var(--ch0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 进度条 -->
+    <div class="progress-bar" style="width:0%"></div>
+
+    <!-- 顶部导航 -->
+    <nav class="top-nav">
+        <a href="../index.html" class="back-btn">⬅ 返回首页</a>
+        <span class="nav-title">第零章 · 预备知识</span>
+    </nav>
+
+    <div class="chapter-container">
+
+        <!-- 章节头部 -->
+        <div class="chapter-header">
+            <div class="ch-emoji">🧱</div>
+            <h1>第零章 · 预备知识</h1>
+            <p class="ch-subtitle">打好地基，才能盖高楼！这些是后面所有章节的基础 💪</p>
+        </div>
+
+        <!-- 知识点导航 -->
+        <div class="section-nav">
+            <a href="#s1">乘法公式</a>
+            <a href="#s2">分式运算</a>
+            <a href="#s3">二次根式</a>
+            <a href="#s4">一元二次方程</a>
+            <a href="#s5">平面图形面积</a>
+            <a href="#s6">勾股定理</a>
+        </div>
+
+        <!-- ==================== 知识点1：乘法公式 ==================== -->
+        <div class="knowledge-card" id="s1">
+            <div class="card-header">🔢 知识点一：乘法公式</div>
+            <div class="card-body">
+
+                <div class="intro-box">
+                    <span class="intro-icon">🎪</span>
+                    想象你在摆地摊卖东西，有时候需要快速算出两个数的乘积。比如 102 × 98，你会用竖式慢慢算吗？其实有个"秘密武器"——乘法公式，能让你几秒钟就算出来！
+                </div>
+
+                <!-- 公式1：平方差公式 -->
+                <div class="formula-box">
+                    <span class="formula-label">📐 平方差公式</span>
+                    $$(a+b)(a-b) = a^2 - b^2$$
+                </div>
+                <div class="explain-box">
+                    两个数的<strong>和</strong>乘以两个数的<strong>差</strong>，等于这两个数的<strong>平方之差</strong>。<br>
+                    简单记忆：<strong>"和乘差，等于平方差"</strong>。<br>
+                    注意：结果是 <strong>前面那个数的平方 减去 后面那个数的平方</strong>，顺序不能反！
+                </div>
+
+                <!-- 例题1 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+                    <div class="example-content">
+                        <p>展开：$(x+3)(x-3)$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：识别公式。这里 $a = x$，$b = 3$，符合 $(a+b)(a-b)$ 的形式</div>
+                                <div class="step-item">第二步：套公式。$a^2 - b^2 = x^2 - 3^2$</div>
+                                <div class="step-item">第三步：算出结果。$x^2 - 9$</div>
+                                <div class="step-item">✅ 答案：$(x+3)(x-3) = x^2 - 9$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题2 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+                    <div class="example-content">
+                        <p>计算：$102 \times 98$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：把数字拆开。$102 = 100 + 2$，$98 = 100 - 2$</div>
+                                <div class="step-item">第二步：发现符合平方差公式！$a = 100$，$b = 2$</div>
+                                <div class="step-item">第三步：套公式。$(100+2)(100-2) = 100^2 - 2^2 = 10000 - 4$</div>
+                                <div class="step-item">✅ 答案：$102 \times 98 = 9996$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题3 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+                    <div class="example-content">
+                        <p>展开：$(2a+5b)(2a-5b)$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：把 $2a$ 看成一个整体，$5b$ 看成一个整体</div>
+                                <div class="step-item">第二步：这里"$a$" $= 2a$，"$b$" $= 5b$</div>
+                                <div class="step-item">第三步：套公式。$(2a)^2 - (5b)^2 = 4a^2 - 25b^2$</div>
+                                <div class="step-item">✅ 答案：$(2a+5b)(2a-5b) = 4a^2 - 25b^2$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题4 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题4 <span class="tag tag-medium">进阶</span></div>
+                    <div class="example-content">
+                        <p>计算：$53 \times 47$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：$53 = 50 + 3$，$47 = 50 - 3$</div>
+                                <div class="step-item">第二步：套平方差公式，$a = 50$，$b = 3$</div>
+                                <div class="step-item">第三步：$50^2 - 3^2 = 2500 - 9 = 2491$</div>
+                                <div class="step-item">✅ 答案：$53 \times 47 = 2491$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 公式2：完全平方公式 -->
+                <div class="formula-box mt-3">
+                    <span class="formula-label">📐 完全平方公式</span>
+                    $$(a+b)^2 = a^2 + 2ab + b^2$$
+                    $$(a-b)^2 = a^2 - 2ab + b^2$$
+                </div>
+                <div class="explain-box">
+                    一个括号的平方，不是简单地把里面每个数平方就行了！<br>
+                    记忆口诀：<strong>"首平方，尾平方，二倍乘积在中央"</strong><br>
+                    ⚠️ 最常见的错误：$(a+b)^2 \neq a^2 + b^2$，千万别忘了中间的 $2ab$！
+                </div>
+
+                <!-- 例题5 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题5 <span class="tag tag-easy">入门</span></div>
+                    <div class="example-content">
+                        <p>展开：$(x+4)^2$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：$a = x$，$b = 4$</div>
+                                <div class="step-item">第二步：首平方 $= x^2$</div>
+                                <div class="step-item">第三步：尾平方 $= 4^2 = 16$</div>
+                                <div class="step-item">第四步：二倍乘积 $= 2 \times x \times 4 = 8x$</div>
+                                <div class="step-item">✅ 答案：$(x+4)^2 = x^2 + 8x + 16$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题6 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题6 <span class="tag tag-easy">入门</span></div>
+                    <div class="example-content">
+                        <p>展开：$(x-5)^2$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：$a = x$，$b = 5$，用的是 $(a-b)^2$ 公式</div>
+                                <div class="step-item">第二步：首平方 $= x^2$</div>
+                                <div class="step-item">第三步：尾平方 $= 25$</div>
+                                <div class="step-item">第四步：二倍乘积 $= 2 \times x \times 5 = 10x$，注意前面是<strong>减号</strong>
+                                </div>
+                                <div class="step-item">✅ 答案：$(x-5)^2 = x^2 - 10x + 25$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题7 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题7 <span class="tag tag-medium">进阶</span></div>
+                    <div class="example-content">
+                        <p>计算：$101^2$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：$101 = 100 + 1$，所以 $101^2 = (100+1)^2$</div>
+                                <div class="step-item">第二步：$a = 100$，$b = 1$</div>
+                                <div class="step-item">第三步：$100^2 + 2 \times 100 \times 1 + 1^2 = 10000 + 200 + 1$</div>
+                                <div class="step-item">✅ 答案：$101^2 = 10201$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题8 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题8 <span class="tag tag-medium">进阶</span></div>
+                    <div class="example-content">
+                        <p>展开：$(3x+2y)^2$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：$a = 3x$，$b = 2y$</div>
+                                <div class="step-item">第二步：首平方 $= (3x)^2 = 9x^2$</div>
+                                <div class="step-item">第三步：尾平方 $= (2y)^2 = 4y^2$</div>
+                                <div class="step-item">第四步：二倍乘积 $= 2 \times 3x \times 2y = 12xy$</div>
+                                <div class="step-item">✅ 答案：$(3x+2y)^2 = 9x^2 + 12xy + 4y^2$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==================== 知识点2：分式运算 ==================== -->
+        <div class="knowledge-card" id="s2">
+            <div class="card-header">➗ 知识点二：分式运算</div>
+            <div class="card-body">
+
+                <div class="intro-box">
+                    <span class="intro-icon">🍕</span>
+                    分式就像切披萨！一个披萨切成 $b$ 块，你拿了 $a$ 块，你拥有的就是 $\dfrac{a}{b}$。分式运算就是研究怎么把这些"披萨份数"加减乘除。
+                </div>
+
+                <div class="formula-box">
+                    <span class="formula-label">📐 分式的基本性质</span>
+                    $$\frac{a}{b} = \frac{a \times c}{b \times c} = \frac{a \div c}{b \div c} \quad (c \neq 0)$$
+                </div>
+                <div class="explain-box">
+                    分式的分子和分母<strong>同时乘以（或除以）同一个不为零的数</strong>，分式的值不变。<br>
+                    就像把一个披萨切成4块拿2块 $\dfrac{2}{4}$，和切成8块拿4块 $\dfrac{4}{8}$，吃到的量是一样的！
+                </div>
+
+                <div class="formula-box">
+                    <span class="formula-label">📐 分式的四则运算</span>
+                    $$\text{乘法：}\frac{a}{b} \times \frac{c}{d} = \frac{a \times c}{b \times d}$$
+                    $$\text{除法：}\frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \times \frac{d}{c} = \frac{a \times d}{b
+                    \times c}$$
+                    $$\text{同分母加减：}\frac{a}{c} \pm \frac{b}{c} = \frac{a \pm b}{c}$$
+                    $$\text{异分母加减：}\frac{a}{b} \pm \frac{c}{d} = \frac{ad \pm bc}{bd}$$
+                </div>
+                <div class="explain-box">
+                    <strong>乘法</strong>：分子乘分子，分母乘分母，很简单！<br>
+                    <strong>除法</strong>：除以一个分数 = 乘以它的倒数（把分子分母翻过来）<br>
+                    <strong>加减法</strong>：分母相同直接加减分子；分母不同要先"通分"（找公分母）
+                </div>
+
+                <!-- 例题1 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+                    <div class="example-content">
+                        <p>计算：$\dfrac{2}{3} \times \dfrac{5}{7}$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：分子乘分子 $= 2 \times 5 = 10$</div>
+                                <div class="step-item">第二步：分母乘分母 $= 3 \times 7 = 21$</div>
+                                <div class="step-item">✅ 答案：$\dfrac{2}{3} \times \dfrac{5}{7} = \dfrac{10}{21}$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题2 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+                    <div class="example-content">
+                        <p>计算：$\dfrac{3}{4} \div \dfrac{1}{2}$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：除以一个分数 = 乘以它的倒数</div>
+                                <div class="step-item">第二步：$\dfrac{3}{4} \times \dfrac{2}{1} = \dfrac{3 \times 2}{4
+                                    \times 1} = \dfrac{6}{4}$</div>
+                                <div class="step-item">第三步：约分 $= \dfrac{3}{2}$</div>
+                                <div class="step-item">✅ 答案：$\dfrac{3}{4} \div \dfrac{1}{2} = \dfrac{3}{2}$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题3 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+                    <div class="example-content">
+                        <p>计算：$\dfrac{1}{x} + \dfrac{2}{x}$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：分母相同，都是 $x$，直接加分子</div>
+                                <div class="step-item">第二步：$\dfrac{1+2}{x} = \dfrac{3}{x}$</div>
+                                <div class="step-item">✅ 答案：$\dfrac{1}{x} + \dfrac{2}{x} = \dfrac{3}{x}$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题4 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题4 <span class="tag tag-medium">进阶</span></div>
+                    <div class="example-content">
+                        <p>计算：$\dfrac{1}{2} + \dfrac{1}{3}$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：分母不同，需要通分。公分母 $= 2 \times 3 = 6$</div>
+                                <div class="step-item">第二步：$\dfrac{1}{2} = \dfrac{1 \times 3}{2 \times 3} =
+                                    \dfrac{3}{6}$</div>
+                                <div class="step-item">第三步：$\dfrac{1}{3} = \dfrac{1 \times 2}{3 \times 2} =
+                                    \dfrac{2}{6}$</div>
+                                <div class="step-item">第四步：$\dfrac{3}{6} + \dfrac{2}{6} = \dfrac{5}{6}$</div>
+                                <div class="step-item">✅ 答案：$\dfrac{1}{2} + \dfrac{1}{3} = \dfrac{5}{6}$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==================== 知识点3：二次根式 ==================== -->
+        <div class="knowledge-card" id="s3">
+            <div class="card-header">√ 知识点三：二次根式</div>
+            <div class="card-body">
+
+                <div class="intro-box">
+                    <span class="intro-icon">🌳</span>
+                    什么是"根"？就像一棵树的根一样，$\sqrt{9}$ 就是在问：什么数的平方等于9？答案是3，因为 $3^2 = 9$。这个"找根"的过程就是开平方！
+                </div>
+
+                <div class="formula-box">
+                    <span class="formula-label">📐 二次根式的性质</span>
+                    $$(\sqrt{a})^2 = a \quad (a \geq 0)$$
+                    $$\sqrt{a^2} = |a|$$
+                    $$\sqrt{ab} = \sqrt{a} \cdot \sqrt{b} \quad (a \geq 0, b \geq 0)$$
+                    $$\sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}} \quad (a \geq 0, b > 0)$$
+                </div>
+                <div class="explain-box">
+                    <strong>$(\sqrt{a})^2 = a$</strong>：先开方再平方，等于没做，回到原来的数。<br>
+                    <strong>$\sqrt{a^2} = |a|$</strong>：先平方再开方，结果一定是正数（加绝对值）。比如 $\sqrt{(-3)^2} = \sqrt{9} = 3$，不是
+                    $-3$！<br>
+                    <strong>乘法</strong>：根号里面的数可以分开算。<br>
+                    <strong>除法</strong>：根号里面的分数可以拆成上下分别开根号。
+                </div>
+
+                <!-- 例题1 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+                    <div class="example-content">
+                        <p>计算：$\sqrt{16}$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">问自己：什么数的平方等于16？</div>
+                                <div class="step-item">$4 \times 4 = 16$，所以 $\sqrt{16} = 4$</div>
+                                <div class="step-item">✅ 答案：$\sqrt{16} = 4$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题2 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+                    <div class="example-content">
+                        <p>化简：$\sqrt{12}$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：把12拆成一个完全平方数 × 另一个数：$12 = 4 \times 3$</div>
+                                <div class="step-item">第二步：$\sqrt{12} = \sqrt{4 \times 3} = \sqrt{4} \times \sqrt{3}$
+                                </div>
+                                <div class="step-item">第三步：$\sqrt{4} = 2$</div>
+                                <div class="step-item">✅ 答案：$\sqrt{12} = 2\sqrt{3}$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题3 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+                    <div class="example-content">
+                        <p>计算：$\sqrt{3} \times \sqrt{27}$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：根号相乘，可以合并。$\sqrt{3} \times \sqrt{27} = \sqrt{3 \times 27}$
+                                </div>
+                                <div class="step-item">第二步：$\sqrt{81} = 9$</div>
+                                <div class="step-item">✅ 答案：$\sqrt{3} \times \sqrt{27} = 9$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 例题4 -->
+                <div class="example-block">
+                    <div class="example-title">✏️ 例题4 <span class="tag tag-medium">进阶</span></div>
+                    <div class="example-content">
+                        <p>计算：$3\sqrt{2} + 5\sqrt{2}$</p>
+                        <button class="step-toggle">👀 查看解题步骤</button>
+                        <div class="step-detail">
+                            <div class="step-inner">
+                                <div class="step-item">第一步：$\sqrt{2}$ 就像一个"单位"，就像 3个苹果 + 5个苹果 = 8个苹果</div>
+                                <div class="step-item">第二步：$3\sqrt{2} + 5\sqrt{2} = (3+5)\sqrt{2} = 8\sqrt{2}$</div>
+                                <div class="step-item">✅ 答案：$3\sqrt{2} + 5\sqrt{2} = 8\sqrt{2}$</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==================== 知识点4：一元二次方程 ==================== -->
+        <div class="knowledge-card" id="s4">
+            <div class="card-header">🎯 知识点四：一元二次方程</div>
+            <div class="card-body">
+
+                <div class="intro-box">
+                    <span class="intro-icon">🎯</span>
+                    一元二次方程就是含有一个未知数 $x$，且 $x$ 的最高次数是2的方程。比如 $x^2 - 5x + 6 = 0$。解这种方程就是找出满足条件的 $x$ 的值。
+                </div>
+
+                <div class="formula-box">
+                    <span class="formula-label">📐 一元二次方程的一般形式</span>
+                    $$ax^2 + bx + c = 0 \quad (a \neq 0)$$
+                </div>
+
+                <div class="formula-box">
+                    <span class="formula-label">📐 求根公式（万能公式）</span>
+                    $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+                </div>
+
+                <div class="formula-box">
+                    <span class="formula-label">📐 判别式</span>
+                    $$\Delta = b^2 - 4ac$$
+                    $$\Delta > 0 \Rightarrow \text{两个不相等的实数根}$$
+                    $$\Delta = 0 \Rightarrow \text{两个相等的实数根（重根）}$$
+                    $$\Delta < 0 \Rightarrow \text{没有实数根}$$ </div>
+                        <div class="explain-box">
+                            $\Delta$（读作"德尔塔"）就像一个"探测器"，帮你提前判断方程有没有解、有几个解：<br>
+                            <strong>$\Delta > 0$</strong>：有两个不同的解 ✌️<br>
+                            <strong>$\Delta = 0$</strong>：有一个解（两个一样的）☝️<br>
+                            <strong>$\Delta < 0$</strong>：无解 ❌（根号里面是负数，开不了）<br><br>
+                                    解方程的三种常用方法：<br>
+                                    ① <strong>因式分解法</strong>（最快，优先用）<br>
+                                    ② <strong>求根公式法</strong>（万能，什么时候都能用）<br>
+                                    ③ <strong>配方法</strong>（了解即可）
+                        </div>
+
+                        <div class="formula-box">
+                            <span class="formula-label">📐 韦达定理（根与系数的关系）</span>
+                            $$x_1 + x_2 = -\frac{b}{a}$$
+                            $$x_1 \cdot x_2 = \frac{c}{a}$$
+                        </div>
+                        <div class="explain-box">
+                            如果方程 $ax^2+bx+c=0$ 有两个根 $x_1$ 和 $x_2$，那么：<br>
+                            <strong>两根之和</strong> $= -\dfrac{b}{a}$<br>
+                            <strong>两根之积</strong> $= \dfrac{c}{a}$<br>
+                            这个定理很有用！有时候题目不需要你真的把根算出来，只要知道和与积就行。
+                        </div>
+
+                        <!-- 例题1 -->
+                        <div class="example-block">
+                            <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+                            <div class="example-content">
+                                <p>解方程：$x^2 - 5x + 6 = 0$（因式分解法）</p>
+                                <button class="step-toggle">👀 查看解题步骤</button>
+                                <div class="step-detail">
+                                    <div class="step-inner">
+                                        <div class="step-item">第一步：找两个数，乘积为6，和为5 → 那就是2和3</div>
+                                        <div class="step-item">第二步：因式分解 $x^2 - 5x + 6 = (x-2)(x-3) = 0$</div>
+                                        <div class="step-item">第三步：$x - 2 = 0$ 或 $x - 3 = 0$</div>
+                                        <div class="step-item">✅ 答案：$x_1 = 2$，$x_2 = 3$</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 例题2 -->
+                        <div class="example-block">
+                            <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+                            <div class="example-content">
+                                <p>解方程：$x^2 - 4 = 0$</p>
+                                <button class="step-toggle">👀 查看解题步骤</button>
+                                <div class="step-detail">
+                                    <div class="step-inner">
+                                        <div class="step-item">第一步：移项 $x^2 = 4$</div>
+                                        <div class="step-item">第二步：两边开方 $x = \pm 2$</div>
+                                        <div class="step-item">✅ 答案：$x_1 = 2$，$x_2 = -2$</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 例题3 -->
+                        <div class="example-block">
+                            <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+                            <div class="example-content">
+                                <p>用求根公式解方程：$2x^2 + 3x - 2 = 0$</p>
+                                <button class="step-toggle">👀 查看解题步骤</button>
+                                <div class="step-detail">
+                                    <div class="step-inner">
+                                        <div class="step-item">第一步：确定 $a=2$，$b=3$，$c=-2$</div>
+                                        <div class="step-item">第二步：算判别式 $\Delta = 3^2 - 4 \times 2 \times (-2) = 9 + 16
+                                            = 25 > 0$，有两个不等实根</div>
+                                        <div class="step-item">第三步：代入求根公式 $x = \dfrac{-3 \pm \sqrt{25}}{2 \times 2} =
+                                            \dfrac{-3 \pm 5}{4}$</div>
+                                        <div class="step-item">第四步：$x_1 = \dfrac{-3+5}{4} = \dfrac{2}{4} = \dfrac{1}{2}$
+                                        </div>
+                                        <div class="step-item">第五步：$x_2 = \dfrac{-3-5}{4} = \dfrac{-8}{4} = -2$</div>
+                                        <div class="step-item">✅ 答案：$x_1 = \dfrac{1}{2}$，$x_2 = -2$</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 例题4 -->
+                        <div class="example-block">
+                            <div class="example-title">✏️ 例题4 <span class="tag tag-medium">进阶</span></div>
+                            <div class="example-content">
+                                <p>已知方程 $x^2 - 3x + 1 = 0$ 的两根为 $x_1, x_2$，求 $x_1^2 + x_2^2$ 的值。</p>
+                                <button class="step-toggle">👀 查看解题步骤</button>
+                                <div class="step-detail">
+                                    <div class="step-inner">
+                                        <div class="step-item">第一步：由韦达定理，$x_1 + x_2 = 3$，$x_1 \cdot x_2 = 1$</div>
+                                        <div class="step-item">第二步：利用公式 $x_1^2 + x_2^2 = (x_1+x_2)^2 - 2x_1 x_2$</div>
+                                        <div class="step-item">第三步：$= 3^2 - 2 \times 1 = 9 - 2 = 7$</div>
+                                        <div class="step-item">✅ 答案：$x_1^2 + x_2^2 = 7$</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+
+            <!-- ==================== 知识点5：平面图形面积 ==================== -->
+            <div class="knowledge-card" id="s5">
+                <div class="card-header">📏 知识点五：平面图形面积</div>
+                <div class="card-body">
+
+                    <div class="intro-box">
+                        <span class="intro-icon">🏠</span>
+                        装修房子要算地板面积、种草坪要算草地面积……面积公式是生活中最实用的数学知识之一！这里复习几个最常用的图形面积公式。
+                    </div>
+
+                    <div class="formula-box">
+                        <span class="formula-label">📐 常用面积公式</span>
+                        $$S_{\text{三角形}} = \frac{1}{2} \times \text{底} \times \text{高}$$
+                        $$S_{\text{矩形}} = \text{长} \times \text{宽}$$
+                        $$S_{\text{平行四边形}} = \text{底} \times \text{高}$$
+                        $$S_{\text{梯形}} = \frac{1}{2}(\text{上底} + \text{下底}) \times \text{高}$$
+                        $$S_{\text{圆}} = \pi r^2$$
+                    </div>
+                    <div class="explain-box">
+                        <strong>三角形</strong>：底 × 高 ÷ 2，记住一定要除以2！<br>
+                        <strong>平行四边形</strong>：和矩形类似，但注意"高"是垂直距离，不是斜边！<br>
+                        <strong>梯形</strong>：上底加下底的和 × 高 ÷ 2，口诀"上下底加起来乘高除以二"<br>
+                        <strong>圆</strong>：$\pi r^2$，$r$ 是半径。$\pi \approx 3.14$
+                    </div>
+
+                    <!-- 例题1 -->
+                    <div class="example-block">
+                        <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+                        <div class="example-content">
+                            <p>一个三角形底边长8cm，高5cm，求面积。</p>
+                            <button class="step-toggle">👀 查看解题步骤</button>
+                            <div class="step-detail">
+                                <div class="step-inner">
+                                    <div class="step-item">公式：$S = \dfrac{1}{2} \times \text{底} \times \text{高}$</div>
+                                    <div class="step-item">$S = \dfrac{1}{2} \times 8 \times 5 = 20 \text{ cm}^2$</div>
+                                    <div class="step-item">✅ 答案：面积为 $20 \text{ cm}^2$</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 例题2 -->
+                    <div class="example-block">
+                        <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+                        <div class="example-content">
+                            <p>一个圆的半径为3cm，求面积。</p>
+                            <button class="step-toggle">👀 查看解题步骤</button>
+                            <div class="step-detail">
+                                <div class="step-inner">
+                                    <div class="step-item">公式：$S = \pi r^2$</div>
+                                    <div class="step-item">$S = \pi \times 3^2 = 9\pi \approx 28.26 \text{ cm}^2$</div>
+                                    <div class="step-item">✅ 答案：面积为 $9\pi \text{ cm}^2$（约 $28.26 \text{ cm}^2$）</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 例题3 -->
+                    <div class="example-block">
+                        <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+                        <div class="example-content">
+                            <p>一个梯形上底4cm，下底10cm，高6cm，求面积。</p>
+                            <button class="step-toggle">👀 查看解题步骤</button>
+                            <div class="step-detail">
+                                <div class="step-inner">
+                                    <div class="step-item">公式：$S = \dfrac{1}{2}(\text{上底} + \text{下底}) \times \text{高}$
+                                    </div>
+                                    <div class="step-item">$S = \dfrac{1}{2} \times (4 + 10) \times 6 = \dfrac{1}{2}
+                                        \times 14 \times 6 = 42 \text{ cm}^2$</div>
+                                    <div class="step-item">✅ 答案：面积为 $42 \text{ cm}^2$</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 例题4 -->
+                    <div class="example-block">
+                        <div class="example-title">✏️ 例题4 <span class="tag tag-medium">进阶</span></div>
+                        <div class="example-content">
+                            <p>一个扇形的半径为6cm，圆心角为60°，求扇形面积。</p>
+                            <button class="step-toggle">👀 查看解题步骤</button>
+                            <div class="step-detail">
+                                <div class="step-inner">
+                                    <div class="step-item">扇形面积公式：$S = \dfrac{n}{360} \times \pi r^2$，其中 $n$ 是圆心角度数
+                                    </div>
+                                    <div class="step-item">$S = \dfrac{60}{360} \times \pi \times 6^2 = \dfrac{1}{6}
+                                        \times 36\pi = 6\pi \approx 18.84 \text{ cm}^2$</div>
+                                    <div class="step-item">✅ 答案：面积为 $6\pi \text{ cm}^2$（约 $18.84 \text{ cm}^2$）</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ==================== 知识点6：勾股定理 ==================== -->
+            <div class="knowledge-card" id="s6">
+                <div class="card-header">📐 知识点六：勾股定理</div>
+                <div class="card-body">
+
+                    <div class="intro-box">
+                        <span class="intro-icon">🏗️</span>
+                        古代工匠建房子的时候，怎么确认墙角是直角？他们用一根绳子，量出3、4、5的比例，就能得到一个完美的直角！这就是勾股定理的实际应用。
+                    </div>
+
+                    <div class="formula-box">
+                        <span class="formula-label">📐 勾股定理</span>
+                        $$a^2 + b^2 = c^2$$
+                    </div>
+                    <div class="explain-box">
+                        在一个<strong>直角三角形</strong>中，两条直角边（$a$ 和 $b$）的平方和，等于斜边（$c$）的平方。<br>
+                        简单记忆：<strong>"两条短边的平方加起来 = 最长边的平方"</strong><br><br>
+                        常见的勾股数组（建议背下来）：<br>
+                        • $3, 4, 5$（以及它的倍数 $6,8,10$ 等）<br>
+                        • $5, 12, 13$<br>
+                        • $8, 15, 17$
+                    </div>
+
+                    <!-- 例题1 -->
+                    <div class="example-block">
+                        <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+                        <div class="example-content">
+                            <p>直角三角形两直角边分别为3和4，求斜边长。</p>
+                            <button class="step-toggle">👀 查看解题步骤</button>
+                            <div class="step-detail">
+                                <div class="step-inner">
+                                    <div class="step-item">$c^2 = a^2 + b^2 = 3^2 + 4^2 = 9 + 16 = 25$</div>
+                                    <div class="step-item">$c = \sqrt{25} = 5$</div>
+                                    <div class="step-item">✅ 答案：斜边长为 $5$</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 例题2 -->
+                    <div class="example-block">
+                        <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+                        <div class="example-content">
+                            <p>直角三角形斜边为13，一条直角边为5，求另一条直角边。</p>
+                            <button class="step-toggle">👀 查看解题步骤</button>
+                            <div class="step-detail">
+                                <div class="step-inner">
+                                    <div class="step-item">$a^2 + 5^2 = 13^2$</div>
+                                    <div class="step-item">$a^2 = 169 - 25 = 144$</div>
+                                    <div class="step-item">$a = \sqrt{144} = 12$</div>
+                                    <div class="step-item">✅ 答案：另一条直角边为 $12$</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 例题3 -->
+                    <div class="example-block">
+                        <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+                        <div class="example-content">
+                            <p>判断三边为 $7, 24, 25$ 的三角形是否为直角三角形。</p>
+                            <button class="step-toggle">👀 查看解题步骤</button>
+                            <div class="step-detail">
+                                <div class="step-inner">
+                                    <div class="step-item">第一步：最长边为25，验证 $7^2 + 24^2$ 是否等于 $25^2$</div>
+                                    <div class="step-item">第二步：$7^2 + 24^2 = 49 + 576 = 625$</div>
+                                    <div class="step-item">第三步：$25^2 = 625$</div>
+                                    <div class="step-item">第四步：$625 = 625$ ✓</div>
+                                    <div class="step-item">✅ 答案：是直角三角形</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 例题4 -->
+                    <div class="example-block">
+                        <div class="example-title">✏️ 例题4 <span class="tag tag-medium">进阶</span></div>
+                        <div class="example-content">
+                            <p>一个长方形的长为8cm，对角线为10cm，求宽。</p>
+                            <button class="step-toggle">👀 查看解题步骤</button>
+                            <div class="step-detail">
+                                <div class="step-inner">
+                                    <div class="step-item">第一步：长方形的对角线把长方形分成两个直角三角形</div>
+                                    <div class="step-item">第二步：长和宽是直角边，对角线是斜边</div>
+                                    <div class="step-item">第三步：$8^2 + \text{宽}^2 = 10^2$</div>
+                                    <div class="step-item">第四步：$\text{宽}^2 = 100 - 64 = 36$</div>
+                                    <div class="step-item">第五步：$\text{宽} = 6$ cm</div>
+                                    <div class="step-item">✅ 答案：宽为 $6$ cm</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ==================== 章节小测验 ==================== -->
+            <div class="quiz-section">
+                <div class="quiz-title">🧪 第零章 · 小测验</div>
+
+                <!-- 题目1：乘法公式 -->
+                <div class="quiz-card">
+                    <div class="quiz-question">1. 展开 $(x+6)(x-6)$ 的结果是？</div>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-correct="false">A. $x^2 + 36$</button>
+                        <button class="quiz-option" data-correct="true">B. $x^2 - 36$</button>
+                        <button class="quiz-option" data-correct="false">C. $x^2 - 12x + 36$</button>
+                        <button class="quiz-option" data-correct="false">D. $x^2 + 12x + 36$</button>
+                    </div>
+                    <div class="quiz-explanation">💡 这是平方差公式 $(a+b)(a-b)=a^2-b^2$，所以 $(x+6)(x-6)=x^2-36$。</div>
+                </div>
+
+                <!-- 题目2：乘法公式 -->
+                <div class="quiz-card">
+                    <div class="quiz-question">2. $(x+3)^2$ 展开后等于？</div>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-correct="false">A. $x^2 + 9$</button>
+                        <button class="quiz-option" data-correct="false">B. $x^2 + 3x + 9$</button>
+                        <button class="quiz-option" data-correct="true">C. $x^2 + 6x + 9$</button>
+                        <button class="quiz-option" data-correct="false">D. $x^2 - 6x + 9$</button>
+                    </div>
+                    <div class="quiz-explanation">💡 完全平方公式 $(a+b)^2=a^2+2ab+b^2$，这里 $a=x, b=3$，所以
+                        $=x^2+6x+9$。最常见的错误就是选A，忘了中间的 $2ab$ 项！</div>
+                </div>
+
+                <!-- 题目3：分式运算 -->
+                <div class="quiz-card">
+                    <div class="quiz-question">3. $\dfrac{2}{5} \div \dfrac{4}{3}$ 的结果是？</div>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-correct="false">A. $\dfrac{8}{15}$</button>
+                        <button class="quiz-option" data-correct="true">B. $\dfrac{3}{10}$</button>
+                        <button class="quiz-option" data-correct="false">C. $\dfrac{6}{20}$</button>
+                        <button class="quiz-option" data-correct="false">D. $\dfrac{10}{3}$</button>
+                    </div>
+                    <div class="quiz-explanation">💡 除以一个分数等于乘以它的倒数：$\dfrac{2}{5} \times \dfrac{3}{4} = \dfrac{6}{20} =
+                        \dfrac{3}{10}$。注意C选项没有约分！</div>
+                </div>
+
+                <!-- 题目4：分式运算 -->
+                <div class="quiz-card">
+                    <div class="quiz-question">4. $\dfrac{1}{3} + \dfrac{1}{6}$ 的结果是？</div>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-correct="true">A. $\dfrac{1}{2}$</button>
+                        <button class="quiz-option" data-correct="false">B. $\dfrac{2}{9}$</button>
+                        <button class="quiz-option" data-correct="false">C. $\dfrac{1}{9}$</button>
+                        <button class="quiz-option" data-correct="false">D. $\dfrac{2}{6}$</button>
+                    </div>
+                    <div class="quiz-explanation">💡 通分：公分母为6，$\dfrac{1}{3}=\dfrac{2}{6}$，所以
+                        $\dfrac{2}{6}+\dfrac{1}{6}=\dfrac{3}{6}=\dfrac{1}{2}$。</div>
+                </div>
+
+                <!-- 题目5：二次根式 -->
+                <div class="quiz-card">
+                    <div class="quiz-question">5. $\sqrt{50}$ 化简后等于？</div>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-correct="false">A. $10\sqrt{5}$</button>
+                        <button class="quiz-option" data-correct="true">B. $5\sqrt{2}$</button>
+                        <button class="quiz-option" data-correct="false">C. $2\sqrt{5}$</button>
+                        <button class="quiz-option" data-correct="false">D. $25\sqrt{2}$</button>
+                    </div>
+                    <div class="quiz-explanation">💡 $50=25 \times 2$，所以 $\sqrt{50}=\sqrt{25}\times\sqrt{2}=5\sqrt{2}$。
+                    </div>
+                </div>
+
+                <!-- 题目6：二次根式 -->
+                <div class="quiz-card">
+                    <div class="quiz-question">6. $2\sqrt{3} + 4\sqrt{3}$ 的结果是？</div>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-correct="false">A. $6\sqrt{6}$</button>
+                        <button class="quiz-option" data-correct="false">B. $6\sqrt{9}$</button>
+                        <button class="quiz-option" data-correct="true">C. $6\sqrt{3}$</button>
+                        <button class="quiz-option" data-correct="false">D. $8\sqrt{3}$</button>
+                    </div>
+                    <div class="quiz-explanation">💡 同类根式相加，系数相加即可：$(2+4)\sqrt{3}=6\sqrt{3}$。根号里面的数不变！</div>
+                </div>
+
+                <!-- 题目7：一元二次方程 -->
+                <div class="quiz-card">
+                    <div class="quiz-question">7. 方程 $x^2 - 7x + 12 = 0$ 的两个根是？</div>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-correct="false">A. $x=2, x=6$</button>
+                        <button class="quiz-option" data-correct="true">B. $x=3, x=4$</button>
+                        <button class="quiz-option" data-correct="false">C. $x=-3, x=-4$</button>
+                        <button class="quiz-option" data-correct="false">D. $x=1, x=12$</button>
+                    </div>
+                    <div class="quiz-explanation">💡 找两个数，乘积为12，和为7 → 3和4。因式分解：$(x-3)(x-4)=0$，所以 $x=3$ 或 $x=4$。</div>
+                </div>
+
+                <!-- 题目8：一元二次方程 -->
+                <div class="quiz-card">
+                    <div class="quiz-question">8. 方程 $x^2 + 2x + 5 = 0$ 的判别式 $\Delta$ 等于多少？该方程有实数根吗？</div>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-correct="false">A. $\Delta=24$，有两个不等实根</button>
+                        <button class="quiz-option" data-correct="false">B. $\Delta=0$，有两个相等实根</button>
+                        <button class="quiz-option" data-correct="true">C. $\Delta=-16$，没有实数根</button>
+                        <button class="quiz-option" data-correct="false">D. $\Delta=16$，有两个不等实根</button>
+                    </div>
+                    <div class="quiz-explanation">💡 $\Delta=b^2-4ac=4-20=-16 < 0$，所以没有实数根。根号里面是负数，开不了！</div>
+                    </div>
+
+                    <!-- 题目9：平面图形面积 -->
+                    <div class="quiz-card">
+                        <div class="quiz-question">9. 一个梯形上底3cm，下底7cm，高4cm，面积是？</div>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-correct="true">A. $20 \text{ cm}^2$</button>
+                            <button class="quiz-option" data-correct="false">B. $40 \text{ cm}^2$</button>
+                            <button class="quiz-option" data-correct="false">C. $14 \text{ cm}^2$</button>
+                            <button class="quiz-option" data-correct="false">D. $28 \text{ cm}^2$</button>
+                        </div>
+                        <div class="quiz-explanation">💡 $S=\dfrac{1}{2}(3+7)\times 4=\dfrac{1}{2}\times 10\times 4=20
+                            \text{ cm}^2$。选B的同学忘了除以2！</div>
+                    </div>
+
+                    <!-- 题目10：平面图形面积 -->
+                    <div class="quiz-card">
+                        <div class="quiz-question">10. 一个圆的直径为10cm，面积是？</div>
+                        <div class="quiz_option" data-correct="false">A. $10\pi \text{ cm}^2$</button>
+                            <button class="quiz-option" data-correct="true">B. $25\pi \text{ cm}^2$</button>
+                            <button class="quiz-option" data-correct="false">C. $100\pi \text{ cm}^2$</button>
+                            <button class="quiz-option" data-correct="false">D. $50\pi \text{ cm}^2$</button>
+                        </div>
+                        <div class="quiz-explanation">💡 直径10cm，所以半径 $r=5$ cm。$S=\pi r^2=\pi \times 25=25\pi \text{
+                            cm}^2$。选C的同学把直径当半径了！</div>
+                    </div>
+
+                    <!-- 题目11：勾股定理 -->
+                    <div class="quiz-card">
+                        <div class="quiz-question">11. 直角三角形两直角边分别为6和8，斜边长为？</div>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-correct="false">A. $14$</button>
+                            <button class="quiz-option" data-correct="true">B. $10$</button>
+                            <button class="quiz-option" data-correct="false">C. $\sqrt{48}$</button>
+                            <button class="quiz-option" data-correct="false">D. $7$</button>
+                        </div>
+                        <div class="quiz-explanation">💡 $c^2=6^2+8^2=36+64=100$，$c=\sqrt{100}=10$。这就是经典的 $3,4,5$
+                            的2倍：$6,8,10$。</div>
+                    </div>
+
+                    <!-- 题目12：勾股定理 -->
+                    <div class="quiz-card">
+                        <div class="quiz-question">12. 三边长分别为 $5, 12, 13$ 的三角形是直角三角形吗？</div>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-correct="true">A. 是，因为 $5^2+12^2=13^2$</button>
+                            <button class="quiz-option" data-correct="false">B. 不是，因为 $5+12 \neq 13^2$</button>
+                            <button class="quiz-option" data-correct="false">C. 是，因为 $5+12=17$</button>
+                            <button class="quiz-option" data-correct="false">D. 不确定</button>
+                        </div>
+                        <div class="quiz-explanation">💡 验证：$5^2+12^2=25+144=169=13^2$ ✓ 满足勾股定理，所以是直角三角形。$5,12,13$
+                            是常见勾股数组，建议记住！</div>
+                    </div>
+
+                    <!-- 测验结果 -->
+                    <div class="quiz-result">
+                        <div class="score">0 / 12</div>
+                        <div class="score-text">正确率：0%</div>
+                        <div class="encouragement"></div>
+                        <button class="quiz-submit mt-3" onclick="resetQuiz()" style="background: var(--ch0);">🔄
+                            重新测验</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- 页脚 -->
+            <footer class="site-footer">
+                <p>📐 高职高考数学 · 轻松学</p>
+                <p>第零章 · 预备知识 ✅</p>
+            </footer>
+
+            <script src="../js/main.js"></script>
+</body>
+
+</html>
