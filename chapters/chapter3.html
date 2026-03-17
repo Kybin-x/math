@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第三章 · 函数 - 高职高考数学</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <style>
+    .card-header { background: var(--ch3); }
+    .section-nav a:hover, .section-nav a.active { background: var(--ch3); }
+    .step-toggle { border-color: var(--ch3); color: var(--ch3); }
+    .step-detail .step-item { border-left-color: var(--ch3); }
+    .quiz-submit { background: var(--ch3); }
+    .progress-bar { background: var(--ch3); }
+    .example-block .example-title { background: #EDE7F6; color: #7E57C2; }
+  </style>
+</head>
+<body>
+
+  <div class="progress-bar" style="width:0%"></div>
+
+  <nav class="top-nav">
+    <a href="../index.html" class="back-btn">⬅ 返回首页</a>
+    <span class="nav-title">第三章 · 函数</span>
+  </nav>
+
+  <div class="chapter-container">
+
+    <div class="chapter-header">
+      <div class="ch-emoji">📈</div>
+      <h1>第三章 · 函数</h1>
+      <p class="ch-subtitle">输入一个数，输出一个结果——函数就是数学里的"自动贩卖机" 🎰</p>
+    </div>
+
+    <div class="section-nav">
+      <a href="#s1">函数的概念</a>
+      <a href="#s2">一次与二次函数</a>
+      <a href="#s3">指数与对数函数</a>
+    </div>
+
+    <!-- ==================== 知识点1：函数的概念 ==================== -->
+    <div class="knowledge-card" id="s1">
+      <div class="card-header">🔧 知识点一：函数的概念</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🎰</span>
+          你往自动贩卖机里投一枚硬币（输入 $x$），它就吐出一瓶饮料（输出 $y$）。每投一枚硬币，只会出一瓶饮料，不会出两瓶。这就是函数：<strong>每个输入对应唯一一个输出</strong>。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 函数的定义</span>
+          $$y = f(x)$$
+          $$\text{定义域：x 的取值范围（能投什么硬币）}$$
+          $$\text{值域：y 的取值范围（能出什么饮料）}$$
+        </div>
+        <div class="explain-box">
+          函数三要素：<strong>定义域、对应法则、值域</strong>。<br>
+          两个函数相同，当且仅当定义域和对应法则都相同。<br><br>
+          常见求定义域的限制：<br>
+          • 分母不能为零：$\dfrac{1}{x}$ → $x \neq 0$<br>
+          • 偶次根号下不能为负：$\sqrt{x}$ → $x \geq 0$<br>
+          • 对数的真数必须为正：$\ln x$ → $x > 0$
+        </div>
+
+        <!-- 例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>求函数 $f(x) = \dfrac{1}{x-2}$ 的定义域。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">分母不能为零：$x - 2 \neq 0$</div>
+                <div class="step-item">$x \neq 2$</div>
+                <div class="step-item">✅ 答案：$\{x \mid x \neq 2\}$，即 $(-\infty, 2) \cup (2, +\infty)$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>求函数 $f(x) = \sqrt{3-x}$ 的定义域。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">根号下不能为负：$3 - x \geq 0$</div>
+                <div class="step-item">$x \leq 3$</div>
+                <div class="step-item">✅ 答案：$(-\infty, 3]$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>求函数 $f(x) = \dfrac{\sqrt{x-1}}{x-3}$ 的定义域。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">条件1：根号下 $\geq 0$：$x - 1 \geq 0 \Rightarrow x \geq 1$</div>
+                <div class="step-item">条件2：分母 $\neq 0$：$x - 3 \neq 0 \Rightarrow x \neq 3$</div>
+                <div class="step-item">取交集：$x \geq 1$ 且 $x \neq 3$</div>
+                <div class="step-item">✅ 答案：$[1, 3) \cup (3, +\infty)$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题4：函数值 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题4 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>已知 $f(x) = 2x^2 - 3x + 1$，求 $f(2)$ 和 $f(-1)$。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$f(2) = 2 \times 4 - 3 \times 2 + 1 = 8 - 6 + 1 = 3$</div>
+                <div class="step-item">$f(-1) = 2 \times 1 - 3 \times (-1) + 1 = 2 + 3 + 1 = 6$</div>
+                <div class="step-item">✅ 答案：$f(2) = 3$，$f(-1) = 6$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 知识点2：一次函数与二次函数 ==================== -->
+    <div class="knowledge-card" id="s2">
+      <div class="card-header">📉 知识点二：一次函数与二次函数</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">📏</span>
+          一次函数画出来是一条直线，二次函数画出来是一条抛物线。它们是高考中最常考的两类函数，掌握好图像和性质就能拿分！
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 一次函数</span>
+          $$y = kx + b \quad (k \neq 0)$$
+          $$k > 0 \text{：从左到右上升（递增）}$$
+          $$k < 0 \text{：从左到右下降（递减）}$$
+        </div>
+        <div class="explain-box">
+          $k$ 是斜率（决定倾斜程度），$b$ 是截距（直线与 y 轴的交点）。<br>
+          $k > 0$：越往右越高；$k < 0$：越往右越低。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 二次函数</span>
+          $$y = ax^2 + bx + c \quad (a \neq 0)$$
+          $$\text{顶点坐标：}\left(-\frac{b}{2a}, \; \frac{4ac-b^2}{4a}\right)$$
+          $$\text{对称轴：} x = -\frac{b}{2a}$$
+        </div>
+        <div class="explain-box">
+          <strong>$a > 0$</strong>：开口朝上（碗形 🥣），顶点是<strong>最低点</strong><br>
+          <strong>$a < 0$</strong>：开口朝下（帽形 🎩），顶点是<strong>最高点</strong><br><br>
+          💡 顶点公式记忆技巧：<br>
+          x 坐标：$-\dfrac{b}{2a}$（"负b除以2a"）<br>
+          y 坐标：把 x 坐标代入原函数算出来就行
+        </div>
+
+        <!-- 例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>函数 $y = -2x + 3$ 是递增还是递减？与 y 轴交于哪一点？</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$k = -2 < 0$，所以是递减函数</div>
+                <div class="step-item">$b = 3$，与 y 轴交于 $(0, 3)$</div>
+                <div class="step-item">✅ 答案：递减，交于 $(0, 3)$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>求二次函数 $y = x^2 - 4x + 3$ 的顶点坐标和对称轴。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$a=1, b=-4, c=3$</div>
+                <div class="step-item">对称轴：$x = -\dfrac{-4}{2 \times 1} = 2$</div>
+                <div class="step-item">顶点 y 坐标：$y = 2^2 - 4 \times 2 + 3 = 4 - 8 + 3 = -1$</div>
+                <div class="step-item">✅ 答案：顶点 $(2, -1)$，对称轴 $x = 2$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>求函数 $y = -x^2 + 2x + 3$ 的最大值。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$a = -1 < 0$，开口朝下，顶点是最高点</div>
+                <div class="step-item">对称轴：$x = -\dfrac{2}{2 \times (-1)} = 1$</div>
+                <div class="step-item">最大值：$y = -(1)^2 + 2(1) + 3 = -1 + 2 + 3 = 4$</div>
+                <div class="step-item">✅ 答案：最大值为 $4$，在 $x = 1$ 时取到</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题4 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题4 <span class="tag tag-hard">挑战</span></div>
+          <div class="example-content">
+            <p>函数 $y = x^2 - 2x - 3$ 在 $[0, 3]$ 上的最小值和最大值分别是？</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">第一步：$a=1>0$，开口朝上，顶点是最低点</div>
+                <div class="step-item">第二步：对称轴 $x = -\dfrac{-2}{2} = 1$，在 $[0,3]$ 内</div>
+                <div class="step-item">第三步：最小值在顶点 $x=1$：$y=1-2-3=-4$</div>
+                <div class="step-item">第四步：比较端点值 $f(0)=0-0-3=-3$，$f(3)=9-6-3=0$</div>
+                <div class="step-item">第五步：最大值取端点较大值 $f(3)=0$</div>
+                <div class="step-item">✅ 答案：最小值 $-4$（$x=1$），最大值 $0$（$x=3$）</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 知识点3：指数函数与对数函数 ==================== -->
+    <div class="knowledge-card" id="s3">
+      <div class="card-header">🚀 知识点三：指数函数与对数函数</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🧬</span>
+          细菌每小时翻一倍：$1 \to 2 \to 4 \to 8 \to ...$，这就是指数增长 $y = 2^x$。反过来问"翻了几次才到1024？"就是对数：$\log_2 1024 = 10$。指数和对数是一对"互逆操作"。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 指数运算法则</span>
+          $$a^m \cdot a^n = a^{m+n}$$
+          $$\frac{a^m}{a^n} = a^{m-n}$$
+          $$(a^m)^n = a^{mn}$$
+          $$a^0 = 1 \quad (a \neq 0)$$
+          $$a^{-n} = \frac{1}{a^n}$$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 指数函数</span>
+          $$y = a^x \quad (a > 0, \; a \neq 1)$$
+          $$a > 1 \text{：递增（越来越大）}$$
+          $$0 < a < 1 \text{：递减（越来越小）}$$
+          $$\text{必过定点 } (0, 1)$$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 对数</span>
+          $$a^b = N \iff \log_a N = b$$
+          $$\text{常用对数：} \lg N = \log_{10} N$$
+          $$\text{自然对数：} \ln N = \log_e N$$
+        </div>
+        <div class="explain-box">
+          对数就是"指数的逆运算"。$2^3 = 8$，反过来 $\log_2 8 = 3$（"2的几次方等于8？答：3次"）。<br><br>
+          对数运算法则：<br>
+          • $\log_a (MN) = \log_a M + \log_a N$<br>
+          • $\log_a \dfrac{M}{N} = \log_a M - \log_a N$<br>
+          • $\log_a M^n = n \log_a M$<br>
+          • $\log_a a = 1$，$\log_a 1 = 0$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 对数函数</span>
+          $$y = \log_a x \quad (a > 0, \; a \neq 1, \; x > 0)$$
+          $$a > 1 \text{：递增}$$
+          $$0 < a < 1 \text{：递减}$$
+          $$\text{必过定点 } (1, 0)$$
+        </div>
+
+        <!-- 例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>计算：$2^3 \times 2^2$，$\dfrac{3^5}{3^2}$，$(2^3)^2$</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$2^3 \times 2^2 = 2^{3+2} = 2^5 = 32$</div>
+                <div class="step-item">$\dfrac{3^5}{3^2} = 3^{5-2} = 3^3 = 27$</div>
+                <div class="step-item">$(2^3)^2 = 2^{3 \times 2} = 2^6 = 64$</div>
+                <div class="step-item">✅ 答案：$32$，$27$，$64$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>求值：$\log_2 8$，$\log_3 27$，$\lg 100$，$\ln e^2$</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$\log_2 8 = \log_2 2^3 = 3$</div>
+                <div class="step-item">$\log_3 27 = \log_3 3^3 = 3$</div>
+                <div class="step-item">$\lg 100 = \lg 10^2 = 2$</div>
+                <div class="step-item">$\ln e^2 = 2 \ln e = 2$</div>
+                <div class="step-item">✅ 答案：$3, 3, 2, 2$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>比较大小：$2^{0.3}$，$2^{0.5}$，$2^{-1}$</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">底数 $a = 2 > 1$，指数函数递增</div>
+                <div class="step-item">指数越大，函数值越大：$-1 < 0.3 < 0.5$</div>
+                <div class="step-item">✅ 答案：$2^{-1} < 2^{0.3} < 2^{0.5}$，即 $\dfrac{1}{2} < 2^{0.3} < \sqrt{2}$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题4 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题4 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>用对数运算法则化简：$\lg 2 + \lg 5$</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$\lg 2 + \lg 5 = \lg(2 \times 5) = \lg 10 = 1$</div>
+                <div class="step-item">✅ 答案：$1$</div>
+                <div class="step-item">💡 $\lg 2 + \lg 5 = 1$ 是常考结论，建议记住！</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题5 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题5 <span class="tag tag-hard">挑战</span></div>
+          <div class="example-content">
+            <p>化简：$\lg 25 + \lg 4$</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$\lg 25 + \lg 4 = \lg(25 \times 4) = \lg 100 = 2$</div>
+                <div class="step-item">✅ 答案：$2$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 章节小测验 ==================== -->
+    <div class="quiz-section">
+      <div class="quiz-title">🧪 第三章 · 小测验</div>
+
+      <!-- 题目1 -->
+      <div class="quiz-card">
+        <div class="quiz-question">1. 函数 $f(x) = \sqrt{x-2}$ 的定义域是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $x > 2$</button>
+          <button class="quiz-option" data-correct="true">B. $x \geq 2$</button>
+          <button class="quiz-option" data-correct="false">C. $x \leq 2$</button>
+          <button class="quiz-option" data-correct="false">D. 所有实数</button>
+        </div>
+        <div class="quiz-explanation">💡 根号下 $\geq 0$：$x - 2 \geq 0$，$x \geq 2$。注意是 $\geq$ 不是 $>$，因为 $\sqrt{0} = 0$ 是可以的。</div>
+      </div>
+
+      <!-- 题目2 -->
+      <div class="quiz-card">
+        <div class="quiz-question">2. 已知 $f(x) = x^2 - 1$，则 $f(3)$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $2$</button>
+          <button class="quiz-option" data-correct="false">B. $6$</button>
+          <button class="quiz-option" data-correct="true">C. $8$</button>
+          <button class="quiz-option" data-correct="false">D. $10$</button>
+        </div>
+        <div class="quiz-explanation">💡 $f(3) = 3^2 - 1 = 9 - 1 = 8$。</div>
+      </div>
+
+      <!-- 题目3 -->
+      <div class="quiz-card">
+        <div class="quiz-question">3. 一次函数 $y = 3x - 2$ 是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. 递增函数</button>
+          <button class="quiz-option" data-correct="false">B. 递减函数</button>
+          <button class="quiz-option" data-correct="false">C. 先增后减</button>
+          <button class="quiz-option" data-correct="false">D. 无法判断</button>
+        </div>
+        <div class="quiz-explanation">💡 $k = 3 > 0$，所以是递增函数。</div>
+      </div>
+
+      <!-- 题目4 -->
+      <div class="quiz-card">
+        <div class="quiz-question">4. 二次函数 $y = x^2 - 6x + 5$ 的对称轴是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $x = -3$</button>
+          <button class="quiz-option" data-correct="true">B. $x = 3$</button>
+          <button class="quiz-option" data-correct="false">C. $x = 6$</button>
+          <button class="quiz-option" data-correct="false">D. $x = -6$</button>
+        </div>
+        <div class="quiz-explanation">💡 $x = -\dfrac{b}{2a} = -\dfrac{-6}{2} = 3$。</div>
+      </div>
+
+      <!-- 题目5 -->
+      <div class="quiz-card">
+        <div class="quiz-question">5. 函数 $y = -x^2 + 4x$ 的最大值是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $0$</button>
+          <button class="quiz-option" data-correct="false">B. $2$</button>
+          <button class="quiz-option" data-correct="true">C. $4$</button>
+          <button class="quiz-option" data-correct="false">D. $8$</button>
+        </div>
+        <div class="quiz-explanation">💡 $a=-1<0$，开口朝下，顶点是最高点。$x=-\dfrac{4}{-2}=2$，$y=-(4)+8=4$。</div>
+      </div>
+
+      <!-- 题目6 -->
+      <div class="quiz-card">
+        <div class="quiz-question">6. $2^{-3}$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $-8$</button>
+          <button class="quiz-option" data-correct="false">B. $-6$</button>
+          <button class="quiz-option" data-correct="true">C. $\dfrac{1}{8}$</button>
+          <button class="quiz-option" data-correct="false">D. $8$</button>
+        </div>
+        <div class="quiz-explanation">💡 $2^{-3} = \dfrac{1}{2^3} = \dfrac{1}{8}$。负指数是取倒数，不是变负号！选A的同学把"负指数"和"负号"搞混了。</div>
+      </div>
+
+      <!-- 题目7 -->
+      <div class="quiz-card">
+        <div class="quiz-question">7. $\log_2 16$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $2$</button>
+          <button class="quiz-option" data-correct="false">B. $3$</button>
+          <button class="quiz-option" data-correct="true">C. $4$</button>
+          <button class="quiz-option" data-correct="false">D. $8$</button>
+        </div>
+        <div class="quiz-explanation">💡 $2^4 = 16$，所以 $\log_2 16 = 4$。问自己："2的几次方等于16？"答：4次。</div>
+      </div>
+
+      <!-- 题目8 -->
+      <div class="quiz-card">
+        <div class="quiz-question">8. $\lg 2 + \lg 50$ 等于？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $\lg 52$</button>
+          <button class="quiz-option" data-correct="true">B. $2$</button>
+          <button class="quiz-option" data-correct="false">C. $\lg 100$（和B一样但选这个）</button>
+          <button class="quiz-option" data-correct="false">D. $1$</button>
+        </div>
+        <div class="quiz-explanation">💡 $\lg 2 + \lg 50 = \lg(2 \times 50) = \lg 100 = 2$。对数相加等于乘积取对数！</div>
+      </div>
+
+      <!-- 题目9 -->
+      <div class="quiz-card">
+        <div class="quiz-question">9. 指数函数 $y = \left(\dfrac{1}{2}\right)^x$ 是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. 递增函数</button>
+          <button class="quiz-option" data-correct="true">B. 递减函数</button>
+          <button class="quiz-option" data-correct="false">C. 先增后减</button>
+          <button class="quiz-option" data-correct="false">D. 常数函数</button>
+        </div>
+        <div class="quiz-explanation">💡 底数 $a = \dfrac{1}{2}$，满足 $0 < a < 1$，所以是递减函数。x越大，$\left(\dfrac{1}{2}\right)^x$ 越小。</div>
+      </div>
+
+      <!-- 题目10 -->
+      <div class="quiz-card">
+        <div class="quiz-question">10. 函数 $f(x) = \dfrac{\sqrt{x}}{\ln x}$ 的定义域不包含下列哪个值？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $x = 2$</button>
+          <button class="quiz-option" data-correct="true">B. $x = 1$</button>
+          <button class="quiz-option" data-correct="false">C. $x = e$</button>
+          <button class="quiz-option" data-correct="false">D. $x = 4$</button>
+        </div>
+        <div class="quiz-explanation">💡 需要 $x \geq 0$（根号）且 $x > 0$（对数真数）且 $\ln x \neq 0$（分母）。$\ln 1 = 0$，所以 $x=1$ 不在定义域内！</div>
+      </div>
+
+      <!-- 测验结果 -->
+      <div class="quiz-result">
+        <div class="score">0/ 10</div>
+        <div class="score-text">正确率：0%</div>
+        <div class="encouragement"></div>
+        <button class="quiz-submit mt-3" onclick="resetQuiz()" style="background: var(--ch3);">🔄 重新测验</button>
+      </div></div></div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <p>📐 高职高考数学 ·轻松学</p>
+    <p>第三章 · 函数 ✅</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
