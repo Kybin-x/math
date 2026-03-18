@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第九章 · 立体几何初步 - 高职高考数学</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- KaTeX（方案三：cloudflare CDN）-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+  <style>
+    .card-header { background: var(--ch9); }
+    .section-nav a:hover, .section-nav a.active { background: var(--ch9); }
+    .step-toggle { border-color: var(--ch9); color: var(--ch9); }
+    .step-detail .step-item { border-left-color: var(--ch9); }
+    .quiz-submit { background: var(--ch9); }
+    .progress-bar { background: var(--ch9); }
+    .example-block .example-title { background: #FFF3E0; color: #E65100; }
+  </style>
+</head>
+<body>
+  <div class="progress-bar" style="width:0%"></div>
+
+  <nav class="top-nav">
+    <a href="../index.html" class="back-btn">⬅ 返回首页</a>
+    <span class="nav-title">第九章 · 立体几何初步</span>
+  </nav>
+
+  <div class="chapter-container">
+
+    <div class="chapter-header">
+      <div class="ch-emoji">📦</div>
+      <h1>第九章 · 立体几何初步</h1>
+      <p class="ch-subtitle">从平面走向空间——认识三维世界的形状🏗️</p>
+    </div>
+
+    <div class="section-nav">
+      <a href="#s1">空间几何体</a>
+      <a href="#s2">表面积</a>
+      <a href="#s3">体积</a>
+      <a href="#s4">位置关系</a>
+    </div>
+
+    <!--==================== 知识点1：空间几何体的认识 ==================== -->
+    <div class="knowledge-card" id="s1">
+      <div class="card-header">🧊 知识点一：空间几何体的认识</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">📦</span>
+          快递箱是<strong>长方体</strong>，冰淇淋蛋筒是<strong>圆锥</strong>，易拉罐是<strong>圆柱</strong>，篮球是<strong>球</strong>——生活中到处都是立体图形！高职高考主要考查这些基本几何体的<strong>表面积</strong>和<strong>体积</strong>。
+        </div>
+
+        <div class="explain-box">
+          <strong>常见几何体分类：</strong><br><br>
+          🔷 <strong>棱柱</strong>：上下两个底面平行且全等，侧面是平行四边形<br>
+          &nbsp;&nbsp;&nbsp;· 特例：长方体、正方体、三棱柱、四棱柱…<br><br>
+          🔷 <strong>棱锥</strong>：一个底面，其余面是三角形，汇聚到一个顶点<br>
+          &nbsp;&nbsp;&nbsp;· 特例：三棱锥（四面体）、四棱锥（金字塔形）…<br><br>
+          🔵 <strong>圆柱</strong>：两个平行的圆形底面 + 侧面展开是矩形<br>
+          🔵 <strong>圆锥</strong>：一个圆形底面 + 一个顶点，侧面展开是扇形<br>
+          🔵 <strong>球</strong>：到定点距离相等的所有点组成的图形<br><br>
+          ⚠️ 考试中，画立体图形通常用<strong>斜二测画法</strong>（了解即可）。
+        </div>
+
+      </div>
+    </div>
+
+    <!--==================== 知识点2：表面积 ==================== -->
+    <div class="knowledge-card" id="s2">
+      <div class="card-header">📐 知识点二：表面积公式</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🎁</span>
+          给一个礼物盒包装纸——需要多少纸？这就是求<strong>表面积</strong>！表面积 = 所有表面面积之和。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 长方体</span>
+          $$S = 2(ab + bc + ac)$$
+          $$\text{长} a\text{，宽 } b\text{，高 } c$$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 正方体</span>
+          $$S = 6a^2$$
+          $$\text{棱长为 } a$$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 圆柱</span>
+          $$S = 2\pi r^2 + 2\pi r h$$
+          $$\text{（两个底面 + 侧面展开的矩形）}$$
+        </div><div class="explain-box">
+          💡 圆柱侧面展开是一个矩形，长= 底面周长 $2\pi r$，宽 = 高 $h$。<br>
+          所以侧面积 = $2\pi rh$。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 圆锥</span>
+          $$S = \pi r^2 + \pi r l$$
+          $$\text{底面半径 } r\text{，母线长 } l$$
+        </div>
+        <div class="explain-box">
+          💡 圆锥侧面展开是一个<strong>扇形</strong>，面积 = $\pirl$。<br>
+          母线 $l$ 就是从顶点到底面圆周的斜边，$l = \sqrt{r^2+h^2}$。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 球</span>
+          $$S = 4\pi R^2$$
+          $$\text{半径为 } R$$
+        </div><!-- 例题1-->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>求棱长为 $3$ 的正方体的表面积。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$S = 6a^2 = 6 \times 3^2 = 6 \times 9 = 54$</div>
+                <div class="step-item">✅ 答案：$S = 54$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>求底面半径 $r=2$，高 $h=5$ 的圆柱的侧面积。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">侧面积 $= 2\pi rh = 2\pi \times 2 \times 5 = 20\pi$</div>
+                <div class="step-item">✅ 答案：侧面积 $= 20\pi$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>圆锥底面半径 $r=3$，高 $h=4$，求全面积。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">母线 $l=\sqrt{r^2+h^2}=\sqrt{9+16}=\sqrt{25}=5$</div>
+                <div class="step-item">底面积 $= \pi r^2 = 9\pi$</div>
+                <div class="step-item">侧面积 $= \pirl = \pi\times3\times5= 15\pi$</div>
+                <div class="step-item">全面积 $= 9\pi+15\pi = 24\pi$</div>
+                <div class="step-item">✅ 答案：$S = 24\pi$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题4 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题4 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>求半径 $R=3$ 的球的表面积。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$S = 4\pi R^2 = 4\pi \times 9 = 36\pi$</div>
+                <div class="step-item">✅ 答案：$S = 36\pi$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 知识点3：体积 ==================== -->
+    <div class="knowledge-card" id="s3">
+      <div class="card-header">📏 知识点三：体积公式</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🥛</span>
+          一个杯子能装多少水？这就是<strong>体积</strong>——空间中一个物体所占的大小。体积公式是高考高频考点，必须熟记！
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 长方体</span>
+          $$V = abc$$
+          $$\text{长 } a\text{，宽 } b\text{，高 } c$$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 正方体</span>
+          $$V = a^3$$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 棱柱 / 圆柱</span>
+          $$V = Sh$$
+          $$\text{底面积 } S \text{，高 } h$$
+          $$\text{圆柱：} V = \pi r^2 h$$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 棱锥 / 圆锥</span>
+          $$V = \frac{1}{3}Sh$$
+          $$\text{圆锥：} V = \frac{1}{3}\pi r^2 h$$
+        </div>
+        <div class="explain-box">
+          💡 <strong>超级重要</strong>：锥体体积 = 柱体体积 × $\dfrac{1}{3}$！<br>
+          同样的底面和高，锥体只有柱体的<strong>三分之一</strong>。<br>
+          记忆：柱体 → $Sh$，锥体 → $\dfrac{1}{3}Sh$。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 球</span>
+          $$V = \frac{4}{3}\pi R^3$$
+        </div>
+        <div class="explain-box">
+          💡 球的公式记忆：表面积 $4\pi R^2$（"四拍啊平方"），体积 $\dfrac{4}{3}\pi R^3$（"三分之四拍啊立方"）。
+        </div>
+
+        <!-- 例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>求底面半径 $r=3$，高 $h=4$ 的圆柱体积。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$V = \pi r^2 h = \pi \times 9 \times 4 = 36\pi$</div>
+                <div class="step-item">✅ 答案：$V = 36\pi$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>求底面半径 $r=3$，高 $h=4$ 的圆锥体积。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$V = \dfrac{1}{3}\pi r^2 h = \dfrac{1}{3}\pi\times9\times4 = 12\pi$</div>
+                <div class="step-item">✅ 答案：$V = 12\pi$（正好是上题圆柱的$\dfrac{1}{3}$！）</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>一个半径为 $R=3$ 的球，求体积。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$V = \dfrac{4}{3}\pi R^3 = \dfrac{4}{3}\pi\times27 = 36\pi$</div>
+                <div class="step-item">✅ 答案：$V = 36\pi$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题4 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题4 <span class="tag tag-hard">挑战</span></div>
+          <div class="example-content">
+            <p>正三棱柱的底面是边长为 $2$ 的等边三角形，高为 $3$，求体积。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">底面为等边三角形，面积 $S = \dfrac{\sqrt{3}}{4}a^2 = \dfrac{\sqrt{3}}{4}\times4= \sqrt{3}$</div>
+                <div class="step-item">棱柱体积 $V = Sh = \sqrt{3}\times3 = 3\sqrt{3}$</div>
+                <div class="step-item">✅ 答案：$V = 3\sqrt{3}$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 知识点4：空间位置关系 ==================== -->
+    <div class="knowledge-card" id="s4">
+      <div class="card-header">🔗 知识点四：空间中的位置关系</div>
+      <div class="card-body">
+
+        <div class="intro-box">
+          <span class="intro-icon">🏠</span>
+          想象你在一个房间里：地板和天花板<strong>平行</strong>，地板和墙壁<strong>垂直</strong>，两面相邻的墙<strong>相交</strong>。空间中的直线和平面有各种位置关系，高考重点考<strong>平行</strong>和<strong>垂直</strong>的判断。
+        </div>
+
+        <div class="explain-box">
+          <strong>🔹 直线与直线：</strong><br>
+          · 平行、相交、<strong>异面</strong>（空间特有！既不平行也不相交）<br><br>
+          <strong>🔹 直线与平面：</strong><br>
+          · 直线在平面内、平行、相交（特别地，垂直）<br><br>
+          <strong>🔹 平面与平面：</strong><br>
+          · 平行、相交（特别地，垂直）
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 线面平行判定定理</span>
+          $$\text{平面外一条直线与平面内一条直线平行}$$
+          $$\implies \text{该直线与平面平行}$$
+        </div>
+        <div class="explain-box">
+          💡 口诀：<strong>"线线平行 → 线面平行"</strong><br>
+          关键：一条在面外，一条在面内，它们平行 → 外面那条和整个平面平行。
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 线面垂直判定定理</span>
+          $$\text{一条直线与平面内两条相交直线都垂直}$$
+          $$\implies \text{该直线与平面垂直}$$
+        </div>
+        <div class="explain-box">
+          💡 口诀：<strong>"垂直两条相交线 → 垂直整个面"</strong><br>
+          注意必须是"<strong>相交</strong>"的两条线，平行的两条不行！
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 面面平行判定定理</span>
+          $$\text{一个平面内两条相交直线分别平行于另一个平面}$$
+          $$\implies \text{两平面平行}$$
+        </div>
+
+        <div class="formula-box">
+          <span class="formula-label">📐 面面垂直判定定理</span>
+          $$\text{一个平面过另一个平面的一条垂线}$$
+          $$\implies \text{两平面垂直}$$
+        </div>
+
+        <!-- 例题1 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题1 <span class="tag tag-easy">入门</span></div>
+          <div class="example-content">
+            <p>正方体 $ABCD$-$A_1B_1C_1D_1$ 中，$AB_1$ 与 $CD_1$ 的位置关系是？</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$AB_1$ 在正方体的一条面对角线方向</div>
+                <div class="step-item">$CD_1$ 在对面的面对角线方向，方向相同</div>
+                <div class="step-item">但两线既不相交也不在同一平面内</div>
+                <div class="step-item">$AB_1 \parallel CD_1$（平行）</div>
+                <div class="step-item">✅ 答案：平行</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题2 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题2 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>正方体 $ABCD$-$A_1B_1C_1D_1$ 中，判断对角线 $AC_1$ 与底面 $ABCD$ 的关系。</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">$A$ 在底面上，$C_1$ 在上面</div>
+                <div class="step-item">$AC_1$ 穿过底面（通过点 $A$），不平行</div>
+                <div class="step-item">$AC_1$ 与底面的夹角不是 $90°$，不垂直</div>
+                <div class="step-item">✅ 答案：$AC_1$ 与底面$ABCD$ 相交（斜交）</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 例题3 -->
+        <div class="example-block">
+          <div class="example-title">✏️ 例题3 <span class="tag tag-medium">进阶</span></div>
+          <div class="example-content">
+            <p>在正方体中，$AA_1\perp$ 底面 $ABCD$ 吗？为什么？</p>
+            <button class="step-toggle">👀 查看解题步骤</button>
+            <div class="step-detail">
+              <div class="step-inner">
+                <div class="step-item">底面内有 $AB$ 和 $AD$，它们在$A$ 点相交</div>
+                <div class="step-item">正方体中$AA_1 \perp AB$，$AA_1 \perp AD$</div>
+                <div class="step-item">$AA_1$ 垂直于面内两条相交直线 → 线面垂直判定定理</div>
+                <div class="step-item">✅ 答案：是，$AA_1 \perp$ 底面 $ABCD$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== 章节小测验 ==================== -->
+    <div class="quiz-section">
+      <div class="quiz-title">🧪 第九章 · 小测验</div>
+
+      <!-- 题目1 -->
+      <div class="quiz-card">
+        <div class="quiz-question">1. 棱长为 $2$ 的正方体的体积是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $4$</button>
+          <button class="quiz-option" data-correct="true">B. $8$</button>
+          <button class="quiz-option" data-correct="false">C. $12$</button>
+          <button class="quiz-option" data-correct="false">D. $24$</button>
+        </div>
+        <div class="quiz-explanation">💡 $V = a^3 = 2^3 = 8$。</div>
+      </div>
+
+      <!-- 题目2 -->
+      <div class="quiz-card">
+        <div class="quiz-question">2. 棱长为 $2$ 的正方体的表面积是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $8$</button>
+          <button class="quiz-option" data-correct="false">B. $16$</button>
+          <button class="quiz-option" data-correct="true">C. $24$</button>
+          <button class="quiz-option" data-correct="false">D. $48$</button>
+        </div>
+        <div class="quiz-explanation">💡 $S = 6a^2 = 6\times4 = 24$。</div>
+      </div>
+
+      <!-- 题目3 -->
+      <div class="quiz-card">
+        <div class="quiz-question">3. 圆柱底面半径 $r=2$，高 $h=3$，体积是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $12\pi$</button>
+          <button class="quiz-option" data-correct="false">B. $6\pi$</button>
+          <button class="quiz-option" data-correct="false">C. $18\pi$</button>
+          <button class="quiz-option" data-correct="false">D. $4\pi$</button>
+        </div>
+        <div class="quiz-explanation">💡 $V = \pi r^2 h = \pi\times4\times3 = 12\pi$。</div>
+      </div>
+
+      <!-- 题目4 -->
+      <div class="quiz-card">
+        <div class="quiz-question">4. 圆锥底面半径 $r=3$，高 $h=6$，体积是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $54\pi$</button>
+          <button class="quiz-option" data-correct="true">B. $18\pi$</button>
+          <button class="quiz-option" data-correct="false">C. $27\pi$</button>
+          <button class="quiz-option" data-correct="false">D. $9\pi$</button>
+        </div>
+        <div class="quiz-explanation">💡 $V = \dfrac{1}{3}\pi r^2 h = \dfrac{1}{3}\pi\times9\times6 = 18\pi$。别忘了$\dfrac{1}{3}$！</div>
+      </div>
+
+      <!-- 题目5 -->
+      <div class="quiz-card">
+        <div class="quiz-question">5. 半径为 $2$ 的球的表面积是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $16\pi$</button>
+          <button class="quiz-option" data-correct="false">B. $8\pi$</button>
+          <button class="quiz-option" data-correct="false">C. $32\pi$</button>
+          <button class="quiz-option" data-correct="false">D. $4\pi$</button>
+        </div>
+        <div class="quiz-explanation">💡 $S = 4\pi R^2 = 4\pi\times4= 16\pi$。</div>
+      </div>
+
+      <!-- 题目6 -->
+      <div class="quiz-card">
+        <div class="quiz-question">6. 半径为 $2$ 的球的体积是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. $16\pi$</button>
+          <button class="quiz-option" data-correct="true">B. $\dfrac{32}{3}\pi$</button>
+          <button class="quiz-option" data-correct="false">C. $32\pi$</button>
+          <button class="quiz-option" data-correct="false">D. $\dfrac{16}{3}\pi$</button>
+        </div>
+        <div class="quiz-explanation">💡 $V = \dfrac{4}{3}\pi R^3 = \dfrac{4}{3}\pi\times8= \dfrac{32}{3}\pi$。</div>
+      </div>
+
+      <!-- 题目7 -->
+      <div class="quiz-card">
+        <div class="quiz-question">7. 圆锥底面半径 $r=3$，高 $h=4$，母线长是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $5$</button>
+          <button class="quiz-option" data-correct="false">B. $7$</button>
+          <button class="quiz-option" data-correct="false">C. $\sqrt{7}$</button>
+          <button class="quiz-option" data-correct="false">D. $12$</button>
+        </div>
+        <div class="quiz-explanation">💡 $l = \sqrt{r^2+h^2} = \sqrt{9+16} = \sqrt{25} = 5$。3-4-5！</div>
+      </div>
+
+      <!-- 题目8 -->
+      <div class="quiz-card">
+        <div class="quiz-question">8. 锥体体积与同底同高柱体体积的关系？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. 相等</button>
+          <button class="quiz-option" data-correct="false">B. $\dfrac{1}{2}$</button>
+          <button class="quiz-option" data-correct="true">C. $\dfrac{1}{3}$</button>
+          <button class="quiz-option" data-correct="false">D. $2$倍</button>
+        </div>
+        <div class="quiz-explanation">💡 锥体 = $\dfrac{1}{3}Sh$，柱体 = $Sh$，所以锥体是柱体的 $\dfrac{1}{3}$。</div>
+      </div>
+
+      <!-- 题目9 -->
+      <div class="quiz-card">
+        <div class="quiz-question">9. 线面垂直判定定理的条件是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="false">A. 直线垂直平面内一条线</button>
+          <button class="quiz-option" data-correct="true">B. 直线垂直平面内两条相交直线</button>
+          <button class="quiz-option" data-correct="false">C. 直线垂直平面内两条平行线</button>
+          <button class="quiz-option" data-correct="false">D. 直线垂直平面内所有直线</button>
+        </div>
+        <div class="quiz-explanation">💡 必须是面内"两条<strong>相交</strong>直线"，垂直平行的两条线不能保证线面垂直。</div>
+      </div>
+
+      <!-- 题目10 -->
+      <div class="quiz-card">
+        <div class="quiz-question">10. 长方体长 $3$、宽 $4$、高 $5$，体积是？</div>
+        <div class="quiz-options">
+          <button class="quiz-option" data-correct="true">A. $60$</button>
+          <button class="quiz-option" data-correct="false">B. $94$</button>
+          <button class="quiz-option" data-correct="false">C. $12$</button>
+          <button class="quiz-option" data-correct="false">D. $47$</button>
+        </div>
+        <div class="quiz-explanation">💡 $V = abc = 3\times4\times5 = 60$。（$94$ 是表面积哦！$2(12+20+15)=94$）</div>
+      </div>
+
+      <!-- 测验结果 -->
+      <div class="quiz-result">
+        <div class="score">0/ 10</div>
+        <div class="score-text">正确率：0%</div>
+        <div class="encouragement"></div>
+        <button class="quiz-submit mt-3" onclick="resetQuiz()" style="background: var(--ch9);">🔄 重新测验</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <p>📐 高职高考数学 ·轻松学</p>
+    <p>第九章 · 立体几何初步 ✅</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
